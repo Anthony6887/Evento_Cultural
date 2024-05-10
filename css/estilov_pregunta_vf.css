@@ -1,27 +1,21 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #efefef, #0040ff);
+    background-color: #f3f3f3;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 70%;
-    margin: 50px auto;
+    max-width: 600px;
+    margin: 100px auto;
     background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     text-align: center;
-}
-
-.timer {
-    font-size: 20px;
-    margin-bottom: 20px;
 }
 
 .question {
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -31,11 +25,11 @@ body {
 }
 
 .options {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-.true-btn,
-.false-btn {
+.option-btn {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -44,66 +38,23 @@ body {
     margin: 0 10px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
-.true-btn:hover,
-.false-btn:hover {
+.option-btn:hover {
     background-color: #0056b3;
 }
 
-.loader-wrapper {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.loaderBar {
-    width: calc(70% / 0.707);
-    height: 10px;
-    background: #F9F9F9;
-    border-radius: 10px;
-    border: 1px solid #006DFE;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.loaderBar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 5px;
-    background: repeating-linear-gradient(45deg, #0031F2 0 30px, #006DFE 0 40px) right/200% 100%;
-    animation: fillProgress 30s ease-in-out infinite, lightEffect 1s infinite linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fillProgress {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-
-.timeout-message,
-.correct-message,
-.incorrect-message {
+#message {
+    margin-top: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.timeout-message {
-    color: red;
-}
-
-.correct-message {
+.correct {
     color: green;
 }
 
-.incorrect-message {
+.incorrect {
     color: red;
 }

@@ -3,73 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta de Verdadero o Falso</title>
+    <title>Juego Kahoot</title>
     <link rel="stylesheet" href="../css/estilov_pregunta_vf.css">
+    <script src="../js/script.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="timer">Tiempo restante: <span id="countdown">30</span> segundos</div>
-        <div class="loader-wrapper">
-            <div class="loaderBar"></div>
-        </div>
         <div class="question">
-            <h1>Los Juegos Olímpicos se originaron en Grecia.</h1>
+            <h1>Pregunta 1: Los Juegos Olímpicos se originaron en Grecia.</h1>
         </div>
         <div class="options">
-            <button id="trueButton" class="true-btn" onclick="checkAnswer(true)">Verdadero</button>
-            <button id="falseButton" class="false-btn" onclick="checkAnswer(false)">Falso</button>
+            <button id="trueButton" class="option-btn" onclick="checkAnswer(true)">Verdadero</button>
+            <button id="falseButton" class="option-btn" onclick="checkAnswer(false)">Falso</button>
         </div>
         <div id="message"></div>
     </div>
 
-    <script>
-        var timeLeft = 30; // Cambiado a 30 segundos
-        var answered = false; // Variable para verificar si ya se ha respondido
-        var countdown = document.getElementById('countdown');
-        var timer = setInterval(function() {
-            timeLeft--;
-            countdown.textContent = timeLeft;
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                showTimeoutMessage();
-            }
-        }, 1000);
-
-        function showTimeoutMessage() {
-            var messageDiv = document.getElementById('message');
-            messageDiv.innerHTML = "<p class='timeout-message'>¡Tiempo acabado!</p>";
-            setTimeout(function() {
-                // Aquí puedes redirigir al usuario a la siguiente pregunta
-                window.location.href = 'verdadero_falso2.html';
-            }, 2000); // Esperar 2 segundos (2000 milisegundos) antes de pasar a la siguiente pregunta
-        }
-
-        function checkAnswer(answer) {
-            if (answered) return; // Si ya se ha respondido, no hacer nada
-            clearInterval(timer); // Detener el temporizador
-            var messageDiv = document.getElementById('message');
-            if (answer) {
-                messageDiv.innerHTML = "<p class='correct-message'>¡Correcto!</p><p>Siguiente pregunta en 3 segundos...</p>";
-            } else {
-                messageDiv.innerHTML = "<p class='incorrect-message'>¡Incorrecto!</p><p>Siguiente pregunta en 3 segundos...</p>";
-            }
-
-            setTimeout(function() {
-                // Aquí puedes redirigir al usuario a la siguiente pregunta
-                window.location.href = 'verdadero_falso2.html';
-            }, 3000); // Esperar 3 segundos antes de pasar a la siguiente pregunta
-            
-            // Ocultar el sliderbar
-            var loaderWrapper = document.querySelector('.loader-wrapper');
-            loaderWrapper.style.display = 'none';
-            
-            // Desactivar los botones de respuesta
-            document.getElementById('trueButton').disabled = true;
-            document.getElementById('falseButton').disabled = true;
-            
-            // Marcar que ya se ha respondido
-            answered = true;
-        }
-    </script>
+    
 </body>
 </html>
