@@ -6,14 +6,16 @@
     <title>Puntaje Final</title>
     <link rel="stylesheet" href="../../css/estilov_pregunta_vf.css">
     <script src="../../js/script.js" defer></script>
+</head>
 <body>
-    <h1>Tu puntaje total es: <span id="puntaje"></span></h1>
+    <div class="container">
+        <h1>Tu puntaje total es: <span id="puntaje"></span></h1>
+
+        <a href="../../../verdadero_falso.html" class="boton-volver" onclick="borrarPuntaje()">Volver al menú principal</a>
+    </div>
 
     <script>
-
         document.getElementById('puntaje').innerText = localStorage.getItem('puntaje');
     </script>
-  <a href="../../../verdadero_falso.html" class="boton-volver" onclick="borrarPuntaje()">Volver al menú principal</a>
-
 </body>
 </html>

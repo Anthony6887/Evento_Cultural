@@ -8,13 +8,15 @@
     <script src="../../js/script.js" defer></script>
 </head>
 <body>
-    <div class="loaderBar"></div>
-    <h1>Pregunta 2: ¿La ballena es un mamífero?</h1>
-    <button onclick="verificarRespuesta(true, this)">Verdadero</button>
-<button onclick="verificarRespuesta(false, this)">Falso</button>
+    <div class="container">
+        <div class="loaderBar"></div>
+        <h1 class="question">Pregunta 2: ¿La ballena no es un mamífero?</h1>
+        <button class="trueButton" onclick="verificarRespuesta(false, this)">Verdadero</button>
+        <button class="falseButton" onclick="verificarRespuesta(true, this)">Falso</button>
 
-    <div id="resultado"></div>
-    <p>Puntaje: <span id="puntaje" class="puntaje"></span></p>
+        <div id="resultado" class="result"></div>
+        <p class="score">Puntaje: <span id="puntaje" class="score-value"></span></p>
+    </div>
 
     <script>
         // Mostrar el puntaje desde el localStorage

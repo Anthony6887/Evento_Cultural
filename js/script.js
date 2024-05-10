@@ -1,7 +1,7 @@
 let puntaje = localStorage.getItem('puntaje') ? parseInt(localStorage.getItem('puntaje')) : 0;
 
 function verificarRespuesta(respuesta, botonPresionado) {
-    if (botonPresionado.disabled) return; // Salir si el botón ya está desactivado
+    if (botonPresionado && botonPresionado.disabled) return; // Salir si el botón ya está desactivado
 
     // Desactivar todos los botones para evitar múltiples selecciones
     let botones = document.querySelectorAll('button');
@@ -20,9 +20,9 @@ function verificarRespuesta(respuesta, botonPresionado) {
 
     // Redirigir al usuario a la siguiente pregunta
     if (document.location.href.includes('/preguntas/Verdadero_Falso/verdadero_falso1.html')) {
-        setTimeout(() => { window.location.href = '/preguntas/Verdadero_Falso/verdadero_falso2.html'; }, 1000); // Redirige a pregunta2.html después de 1 segundo
+        setTimeout(() => { window.location.href = '/preguntas/Verdadero_Falso/verdadero_falso2.html'; }, 2000); // Redirige a pregunta2.html después de 1 segundo
     } else if (document.location.href.includes('/preguntas/Verdadero_Falso/verdadero_falso2.html')) {
-        setTimeout(() => { window.location.href = '/preguntas/Verdadero_Falso/verdadero_falsoFinal.html'; }, 1000); // Redirige a puntaje.html después de 1 segundo
+        setTimeout(() => { window.location.href = '/preguntas/Verdadero_Falso/verdadero_falsoFinal.html'; }, 2000); // Redirige a puntaje.html después de 1 segundo
     }
 }
 
@@ -49,8 +49,7 @@ function actualizarContador() {
 function tiempoAgotado() {
     document.getElementById('resultado').innerText = 'Tiempo agotado';
     document.getElementById('resultado').style.color = 'red';
-    // Agregar lógica para manejar la respuesta cuando se acaba el tiempo (por ejemplo, tomarlo como incorrecto)
-    // Aquí puedes llamar a la función verificarRespuesta() con false para tomar la respuesta como incorrecta
+    // Tomar la respuesta como incorrecta cuando se agote el tiempo
     verificarRespuesta(false);
 }
 
