@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado Final</title>
+    <title>Puntaje Final</title>
     <link rel="stylesheet" href="../css/estilov_pregunta_vf.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>¡Juego Kahoot completado!</h1>
-        <div id="finalScore">Tu puntaje final es: <span id="finalScoreCount">0</span></div>
-    </div>
+    <h1>Tu puntaje total es: <span id="puntaje"></span></h1>
 
     <script>
-        // Recuperar el puntaje del localStorage
-        var finalScore = localStorage.getItem('score');
-        document.getElementById('finalScoreCount').textContent = finalScore;
-        // Limpiar el localStorage
-        localStorage.removeItem('score');
+
+        document.getElementById('puntaje').innerText = localStorage.getItem('puntaje');
     </script>
+    <a href="../verdadero_falso.html" class="boton-volver">Volver al menú principal</a>
 </body>
 </html>

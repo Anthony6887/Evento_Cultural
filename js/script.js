@@ -1,29 +1,49 @@
-function checkAnswer(answer) {
-    var messageDiv = document.getElementById('message');
-    var scoreCount = document.getElementById('scoreCount');
-    var correctAnswer = true; // Respuesta correcta para esta pregunta
-    
-    if (answer === correctAnswer) {
-        messageDiv.textContent = "¡Correcto!";
-        messageDiv.classList.add('correct');
-        updateScore(10); // Suma 10 puntos por respuesta correcta
-        var currentScore = parseInt(scoreCount.textContent);
-        localStorage.setItem('score', currentScore); // Almacenar el puntaje en localStorage
-        setTimeout(function() {
-            window.location.href = 'verdadero_falso2.html'; // Redirigir a la siguiente pregunta
-        }, 2000); // Esperar 2 segundos antes de redirigir
-    } else {
-        messageDiv.textContent = "¡Incorrecto!";
-        messageDiv.classList.add('incorrect');
-    }
+let puntaje = localStorage.getItem('puntaje') ? parseInt(localStorage.getItem('puntaje')) : 0;
 
-    // Deshabilitar botones después de responder
-    document.getElementById('trueButton').disabled = true;
-    document.getElementById('falseButton').disabled = true;
+function verificarRespuesta(respuesta) {
+    if (respuesta) {
+        puntaje += 10; // Sumar 10 puntos por respuesta correcta
+        document.getElementById('resultado').innerText = '¡Correcto!';
+    } else {
+        document.getElementById('resultado').innerText = '¡Incorrecto!';
+    }
+    mostrarPuntaje(); // Mostrar el puntaje actualizado
+
+    // Guardar el puntaje en localStorage para mostrar en la página de puntaje total
+    localStorage.setItem('puntaje', puntaje);
+
+    // Redirigir al usuario a la siguiente pregunta
+    if (document.location.href.includes('verdadero_falso1.html')) {
+        setTimeout(() => { window.location.href = 'verdadero_falso2.html'; }, 1000); // Redirige a pregunta2.html después de 1 segundo
+    } else if (document.location.href.includes('verdadero_falso2.html')) {
+        setTimeout(() => { window.location.href = 'verdadero_falsoFinal.html'; }, 1000); // Redirige a puntaje.html después de 1 segundo
+    }
 }
 
-function updateScore(points) {
-    var scoreElement = document.getElementById('scoreCount');
-    var currentScore = parseInt(scoreElement.textContent);
-    scoreElement.textContent = currentScore + points;
+function mostrarPuntaje() {
+    // Mostrar el puntaje actualizado en todas las pantallas
+    let puntajeElements = document.getElementsByClassName('puntaje');
+    for (let element of puntajeElements) {
+        element.innerText = puntaje;
+    }
+}
+
+// Contador de tiempo
+let tiempoRestante = 30; // Tiempo en segundos
+let intervalo = setInterval(actualizarContador, 1000); // Actualizar el contador cada segundo
+
+function actualizarContador() {
+    tiempoRestante--;
+    if (tiempoRestante <= 0) {
+        clearInterval(intervalo); // Detener el contador cuando el tiempo se acaba
+        tiempoAgotado(); // Llamar a la función cuando se agota el tiempo
+    }
+}
+
+function tiempoAgotado() {
+    document.getElementById('resultado').innerText = 'Tiempo agotado';
+    document.getElementById('resultado').style.color = 'red';
+    // Agregar lógica para manejar la respuesta cuando se acaba el tiempo (por ejemplo, tomarlo como incorrecto)
+    // Aquí puedes llamar a la función verificarRespuesta() con false para tomar la respuesta como incorrecta
+    verificarRespuesta(false);
 }

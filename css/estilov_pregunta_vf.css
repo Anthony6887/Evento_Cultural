@@ -1,60 +1,96 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
 .container {
-    max-width: 600px;
-    margin: 100px auto;
-    background-color: #fff;
+    max-width: 800px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: center; /* Centrar contenido */
 }
 
-.question {
-    margin-bottom: 30px;
-}
-
-.question h1 {
-    font-size: 24px;
+h1 {
     color: #333;
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
-.options {
-    display: flex;
-    justify-content: center;
-}
-
-.option-btn {
-    background-color: #007bff;
+button {
+    background-color: #4caf50;
     color: #fff;
     border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
-    margin: 0 10px;
+    padding: 15px 30px; /* Aumentar tamaño del botón */
+    font-size: 20px; /* Aumentar tamaño de texto */
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+    margin: 10px; /* Espaciado entre botones */
 }
 
-.option-btn:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #45a049;
 }
 
-#message {
-    margin-top: 20px;
-    font-size: 18px;
+#resultado {
+    margin-top: 20px; /* Espaciado superior */
     font-weight: bold;
+    font-size: 24px; /* Aumentar tamaño de texto */
+    color: #4caf50; /* Color de texto para correcto */
 }
 
-.correct {
-    color: green;
+.puntaje {
+    font-size: 28px; /* Aumentar tamaño de texto */
+    font-weight: bold;
+    color: #4caf50;
 }
 
-.incorrect {
-    color: red;
+.boton-volver {
+    display: inline-block;
+    background-color: #337ab7;
+    color: #fff;
+    padding: 15px 30px; /* Aumentar tamaño del botón */
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px; /* Aumentar tamaño de texto */
+    margin-top: 30px; /* Espaciado superior */
+}
+
+.boton-volver:hover {
+    background-color: #286090;
+}
+
+
+.loaderBar {
+    width: calc(160px / 0.707);
+    height: 10px;
+    background: #F9F9F9;
+    border-radius: 10px;
+    border: 1px solid #006DFE;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.loaderBar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: repeating-linear-gradient(45deg, #0031F2 0 30px, #006DFE 0 40px) right/200% 100%;
+    animation: fillProgress 30s linear forwards; /* Duración de 30 segundos */
+}
+
+@keyframes fillProgress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }

@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego Kahoot - Pregunta 2</title>
+    <title>Pregunta 2</title>
     <link rel="stylesheet" href="../css/estilov_pregunta_vf.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="question">
-            <h1>Pregunta 2: Otra pregunta interesante.</h1>
-        </div>
-        <div class="options">
-            <!-- Opciones de la pregunta 2 -->
-        </div>
-        <div id="message"></div>
-        <div id="score">Puntos: <span id="scoreCount">0</span></div>
-    </div>
+    <div class="loaderBar"></div>
+    <h1>Pregunta 2: ¿La ballena es un mamífero?</h1>
+    <button onclick="verificarRespuesta(true)">Verdadero</button>
+    <button onclick="verificarRespuesta(false)">Falso</button>
+    <div id="resultado"></div>
+    <p>Puntaje: <span id="puntaje" class="puntaje"></span></p>
 
     <script>
-        // Recuperar el puntaje acumulado de la página anterior desde el localStorage
-        var previousScore = localStorage.getItem('score');
-        if (previousScore !== null) {
-            document.getElementById('scoreCount').textContent = previousScore;
-        }
+        // Mostrar el puntaje desde el localStorage
+        document.getElementById('puntaje').innerText = localStorage.getItem('puntaje') || 0;
     </script>
-    <script src="../js/script.js"></script>
 </body>
 </html>

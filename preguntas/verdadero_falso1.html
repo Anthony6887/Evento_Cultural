@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego Kahoot</title>
+    <title>Pregunta 1</title>
     <link rel="stylesheet" href="../css/estilov_pregunta_vf.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="question">
-            <h1>Pregunta 1: Los Juegos Olímpicos se originaron en Grecia.</h1>
-        </div>
-        <div class="options">
-            <button id="trueButton" class="option-btn" onclick="checkAnswer(true)">Verdadero</button>
-            <button id="falseButton" class="option-btn" onclick="checkAnswer(false)">Falso</button>
-        </div>
-        <div id="message"></div>
-        <div id="score">Puntos: <span id="scoreCount">0</span></div>
-    </div>
+    <div class="loaderBar"></div>
+    <h1>Pregunta 1: ¿Los Juegos Olímpicos se realizaron en Grecia?</h1>
+    <button onclick="verificarRespuesta(true)">Verdadero</button>
+    <button onclick="verificarRespuesta(false)">Falso</button>
+    <div id="resultado"></div>
+    <p>Puntaje: <span id="puntaje" class="puntaje"></span></p>
 
-    <script src="../js/script.js"></script>
+    <script>
+        // Mostrar el puntaje desde el localStorage
+        document.getElementById('puntaje').innerText = localStorage.getItem('puntaje') || 0;
+    </script>
 </body>
 </html>
