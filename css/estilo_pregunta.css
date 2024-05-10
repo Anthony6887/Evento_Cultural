@@ -1,18 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #6b939ab9;
     margin: 0;
     padding: 0;
+    background-color: #1453dcd6;
 }
+
 
 .container {
     max-width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #ffffff8c;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
 }
 
 .inner-container {
@@ -94,10 +94,43 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .timer {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
 }
 
+/* Estilos para la barra de progreso del tiempo */
+.loaderBar {
+    width: calc(100% - 40px); /* Ajustado para que ocupe todo el ancho disponible */
+    height: 10px;
+    background: #F9F9F9;
+    border-radius: 10px;
+    border: 1px solid #006DFE;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 20px; /* Centrado y espacio inferior */
+}
 
+.loaderBar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: repeating-linear-gradient(45deg, #0031F2 0 30px, #006DFE 0 40px) right/200% 100%;
+    animation: fillProgress 30s linear infinite; /* Ajustado para que dure 30 segundos */
+    animation-fill-mode: forwards;
+}
+
+@keyframes fillProgress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

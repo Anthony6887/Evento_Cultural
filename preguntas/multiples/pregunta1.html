@@ -11,6 +11,9 @@
 <body>
     <div class="container">
         <div class="inner-container">
+            <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
+            <br>
+            <div class="loaderBar"></div> 
             <h1>Pregunta 1</h1>
             <p>¿Cuál es el lugar más frío de la tierra?</p>
             <div class="team-container">
@@ -29,9 +32,12 @@
             <div id="message" class="message"></div>
             <button id="submitButton" class="submit-button">Enviar respuesta</button>
             <a href="../../multiple_choice.html" class="boton-volver">Volver al menú principal</a>
+           
         </div>
     </div>
-    <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
+    
+
+
     <script>
         document.getElementById("submitButton").addEventListener("click", function () {
             // Obtener el formulario
