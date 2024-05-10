@@ -126,6 +126,46 @@ a {
     background-color: #0095ff;
 }
 
+/* CSS para deshabilitar enlaces de preguntas incorrectas */
+/* Utiliza los identificadores de las preguntas para seleccionar los enlaces */
+/* Pregunta 4 */
+#pregunta1[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 5 */
+#pregunta2[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 6 */
+#pregunta3[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 4 */
+#pregunta4[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 5 */
+#pregunta5[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 6 */
+#pregunta6[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+
+
 
 a:hover {
     background-color: #0095ff;

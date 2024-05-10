@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 2</title>
+    <link rel="stylesheet" href="../../css/estilo_pregunta.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <h1>Pregunta 2</h1>
+            <p>¿Quién escribió La Odisea?</p>
+            <div class="team-container">
+                <div>
+                    <h2>Equipo A</h2>
+                    <form id="formA">
+                        <input type="radio" id="opcion_a" name="respuesta" value="A">
+                        <label for="opcion_a">A) Platón</label><br>
+                        <input type="radio" id="opcion_b" name="respuesta" value="B">
+                        <label for="opcion_b">B) Homero</label><br>
+                        <input type="radio" id="opcion_c" name="respuesta" value="C">
+                        <label for="opcion_c">C) Sócrates</label><br><br>
+                    </form>
+                </div>
+            </div>
+            <div id="message" class="message"></div>
+            <button id="submitButton" class="submit-button">Enviar respuesta</button>
+            <a href="../../multiple_choice.html" class="boton-volver">Volver al menú principal</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function () {
+            // Obtener el formulario
+            var form = document.getElementById("formA");
+            // Obtener la opción seleccionada
+            var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+            // Verificar si la opción seleccionada es la correcta (opción A)
+            if (selectedOption && selectedOption.value === "B") {
+                // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
+                localStorage.setItem("respuesta_pregunta2", "B");
+                window.location.href = '../multiple_choice.html';
+            } else {
+                // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
+                var message = document.getElementById("message");
+                message.textContent = "Respuesta incorrecta. Por favor, intenta de nuevo.";
+                message.classList.add("error");
+                // Guardar el valor de la opción seleccionada en localStorage
+                if (selectedOption) {
+                    localStorage.setItem("respuesta_incorrecta_pregunta2", selectedOption.value);
+                    window.location.href = '../multiple_choice.html';
+                }
+                // Bloquear el botón de enviar respuesta
+                document.getElementById("submitButton").disabled = true;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
