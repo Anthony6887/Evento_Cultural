@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6b939ab9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.inner-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button, .boton-volver {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.boton-volver {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.boton-volver:hover {
+    color: #0056b3;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.submit-button:disabled,
+.next-button:disabled,
+.boton-volver:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.submit-button, .next-button, .boton-volver {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+

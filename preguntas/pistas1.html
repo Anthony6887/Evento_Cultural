@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta con Pistas</title>
+    <link rel="stylesheet" href="../css/estilo_pistas.css">
+</head>
+<body>
+    <div class="container">
+        <div class="question">
+            <h1>¿Quién compuso la música del himno nacional de Ecuador?</h1>
+        </div>
+        <div class="hints">
+            <button class="hint-btn" onclick="showHint(1)">Pista 1</button>
+            <button class="hint-btn" onclick="showHint(2)">Pista 2</button>
+            <button class="hint-btn" onclick="showHint(3)">Pista 3</button>
+        </div>
+        <div id="hint1" class="hint">Origen europeo</div>
+        <div id="hint2" class="hint">Murió en Quito</div>
+        <div id="hint3" class="hint">Amigo de un ambateño</div>
+        <form action="respuesta.html" method="post">
+            <input type="text" name="respuesta" placeholder="Escribe tu respuesta aquí">
+            <input type="submit" value="Ver respuesta">
+        </form>
+        <a href="../preguntas_con_pIstas.html"boton-volver">Volver al menú principal</a>
+    </div>
+
+    <script>
+        function showHint(hintNumber) {
+            var hint = document.getElementById('hint' + hintNumber);
+            hint.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

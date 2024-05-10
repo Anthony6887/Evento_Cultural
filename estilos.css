@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.png'); /* Cambiar el fondo a una imagen */
+    background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.inner-container {
+    max-width: 800px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.285); /* Fondo semi-transparente */
+    border-radius: 20px; /* Aumentamos el radio del borde para hacerlo más redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Hacemos que la sombra sea más pronunciada */
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff; /* Cambiamos el color del título a uno más llamativo */
+    font-size: 36px; /* Aumentamos el tamaño del título */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Añadimos un efecto de sombra al texto */
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333; /* Cambiamos el color del texto a uno más oscuro */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 15px 30px; /* Aumentamos el espacio alrededor del texto del botón */
+    background-color: #0044ff; /* Cambiamos el color del botón a uno más vibrante */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Aumentamos el radio del borde del botón */
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #008cff; /* Cambiamos el color del botón al pasar el mouse */
+}
+
+/* Agregamos una animación a los botones al hacer hover */
+a:hover {
+    animation: bounce 0.5s infinite alternate; /* Definimos la animación 'bounce' */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}

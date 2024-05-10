@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 1</title>
+    <link rel="stylesheet" href="../css/estilo_pregunta.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <h1>Pregunta 2</h1>
+            <p>¿Quién escribió La Odisea?</p>
+            <div class="team-container">
+                <div>
+                    <h2>Equipo A</h2>
+                    <form id="formA">
+                        <input type="radio" id="opcion_a" name="respuesta" value="A">
+                        <label for="opcion_a">A) Platón</label><br>
+                        <input type="radio" id="opcion_b" name="respuesta" value="B">
+                        <label for="opcion_b">B) Homero</label><br>
+                        <input type="radio" id="opcion_c" name="respuesta" value="C">
+                        <label for="opcion_c">C) Sócrates</label><br><br>
+                    </form>
+                </div>
+                <div>
+                    <h2>Equipo B</h2>
+                    <form id="formB">
+                        <input type="radio" id="opcion_d" name="respuesta" value="D">
+                        <label for="opcion_d">A) Platón</label><br>
+                        <input type="radio" id="opcion_e" name="respuesta" value="E">
+                        <label for="opcion_e">B) Homero</label><br>
+                        <input type="radio" id="opcion_f" name="respuesta" value="F">
+                        <label for="opcion_f">C) Sócrates</label><br><br>
+                    </form>
+                </div>
+            </div>
+            <div id="message" class="message"></div>
+            <button id="submitButton" class="submit-button">Enviar respuesta</button>
+            <button id="nextButton" class="next-button" onclick="window.location.href = 'pregunta2.html';" disabled>Siguiente</button>
+            <a href="../multiple_choice.html" class="boton-volver">Volver al menú principal</a>
+        </div>
+    </div>
+
+    <script>
+        var correctAnswers = {
+            'formA': 'B', // Respuesta correcta para Equipo A
+            'formB': 'E'  // Respuesta correcta para Equipo B
+        };
+        
+        var formA = document.getElementById('formA');
+        var formB = document.getElementById('formB');
+        var submitButton = document.getElementById('submitButton');
+        var nextButton = document.getElementById('nextButton');
+        var messageDiv = document.getElementById('message');
+
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+            var selectedAnswerA = getSelectedAnswer(formA);
+            var selectedAnswerB = getSelectedAnswer(formB);
+
+            var correctTeamA = selectedAnswerA === correctAnswers['formA'];
+            var correctTeamB = selectedAnswerB === correctAnswers['formB'];
+
+            if (!selectedAnswerA && !selectedAnswerB) {
+                messageDiv.textContent = 'Nadie ha respondido correctamente. La respuesta es: A';
+            } else if (correctTeamA && correctTeamB) {
+                messageDiv.textContent = 'Ambos equipos han respondido correctamente.';
+            } else if (correctTeamA) {
+                messageDiv.textContent = '¡Correcto! El Equipo A ha respondido correctamente.';
+            } else if (correctTeamB) {
+                messageDiv.textContent = '¡Correcto! El Equipo B ha respondido correctamente.';
+            } else {
+                messageDiv.textContent = '¡Ningún equipo ha respondido correctamente! Respuesta: B';
+                
+            }
+
+            // Desactivar botón de enviar
+            submitButton.disabled = true;
+
+            // Habilitar botón de siguiente
+            nextButton.disabled = false;
+        });
+
+        function getSelectedAnswer(form) {
+            var selectedAnswer = null;
+            var options = form.elements['respuesta'];
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].checked) {
+                    selectedAnswer = options[i].value;
+                    break;
+                }
+            }
+            return selectedAnswer;
+        }
+    </script>
+</body>
+</html>
+
