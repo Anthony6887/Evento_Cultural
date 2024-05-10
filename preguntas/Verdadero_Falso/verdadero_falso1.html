@@ -10,8 +10,9 @@
 <body>
     <div class="loaderBar"></div>
     <h1>Pregunta 1: ¿Los Juegos Olímpicos se realizaron en Grecia?</h1>
-    <button onclick="verificarRespuesta(true)">Verdadero</button>
-    <button onclick="verificarRespuesta(false)">Falso</button>
+    <button onclick="verificarRespuesta(true, this)">Verdadero</button>
+<button onclick="verificarRespuesta(false, this)">Falso</button>
+
     <div id="resultado"></div>
     <p>Puntaje: <span id="puntaje" class="puntaje"></span></p>
 

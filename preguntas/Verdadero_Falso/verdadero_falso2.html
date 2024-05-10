@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregunta 2</title>
-    <link rel="stylesheet" href="../css/estilov_pregunta_vf.css">
+    <link rel="stylesheet" href="../../css/estilov_pregunta_vf.css">
     <script src="../../js/script.js" defer></script>
 </head>
 <body>
     <div class="loaderBar"></div>
     <h1>Pregunta 2: ¿La ballena es un mamífero?</h1>
-    <button onclick="verificarRespuesta(true)">Verdadero</button>
-    <button onclick="verificarRespuesta(false)">Falso</button>
+    <button onclick="verificarRespuesta(true, this)">Verdadero</button>
+<button onclick="verificarRespuesta(false, this)">Falso</button>
+
     <div id="resultado"></div>
     <p>Puntaje: <span id="puntaje" class="puntaje"></span></p>
 
