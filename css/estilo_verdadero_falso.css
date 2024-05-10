@@ -1,8 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #efefef, #0040ff);
-    font-family: Arial, sans-serif;
+    background-image: url('/fondo.png');
+    background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .container {
@@ -11,10 +12,21 @@ body {
     height: 100vh;
 }
 
+
+.inner-container {
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #ffffff;
 }
 
 .questions-container {

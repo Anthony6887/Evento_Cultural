@@ -17,7 +17,7 @@ body {
 .inner-container {
     max-width: 800px;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.308);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -26,7 +26,7 @@ body {
 
 /* Estilos para el título */
 h2 {
-    color: #0048ff;
+    color: #f7f7f7;
     font-size: 32px;
     margin-bottom: 20px;
 }
