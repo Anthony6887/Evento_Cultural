@@ -1,4 +1,4 @@
-/* Estilos para la página principal y las preguntas */
+/* Estilos para el cuerpo */
 body {
     margin: 0;
     padding: 0;
@@ -6,54 +6,76 @@ body {
     background-size: cover;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
-
+/* Estilos para el contenedor principal */
 .container {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 600px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 
-h2 {
+/* Estilos para el contenedor interno */
+.inner-container {
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
+    animation: fadeIn 1s ease;
 }
 
+/* Estilos para el título */
+h2 {
+    color: #0048ff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de las preguntas */
 .questions-container {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Estilos para las columnas */
+.columnas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espacio entre las columnas */
 }
 
-li {
-    margin-bottom: 10px;
+/* Estilos para las columnas individuales */
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-a {
+/* Estilos para los enlaces de las preguntas */
+.columna a {
     display: block;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    margin-bottom: 10px; /* Separación entre botones */
     background-color: #0048ff;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 0.3s ease;
 }
 
-a:hover {
-    background-color: #002366;
+.columna a:hover {
+    background-color: #0095ff;
 }
 
+/* Estilos para el botón de volver */
 .boton-volver {
     display: block;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #00ff00;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    width: 100%;
+    border-radius: 20px;
     transition: background-color 0.3s ease;
 }
 

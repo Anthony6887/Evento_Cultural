@@ -21,17 +21,50 @@
             <div id="hint2" class="hint">Murió en Quito</div>
             <div id="hint3" class="hint">Amigo de un ambateño</div>
         </div>
-        <form action="respuesta.html" method="post">
-            <input type="text" name="respuesta" placeholder="Escribe tu respuesta aquí">
-            <input type="submit" value="Ver respuesta">
+        <form id="answerForm">
+            <input type="text" id="respuestaInput" name="respuesta" placeholder="Escribe tu respuesta aquí">
+            <input type="button" id="verRespuestaBtn" value="Ver respuesta" onclick="verificarRespuesta()">
         </form>
+        <div id="respuestaMensaje"></div>
+        <div id="timer"></div> <!-- Aquí se mostrará el temporizador -->
         <a href="../../preguntas_con_pIstas.html" class="boton-volver">Volver al menú principal</a>
     </div>
 
     <script>
+        var tiempoRestante = 30; // Tiempo restante en segundos
+        var timerElement = document.getElementById('timer');
+
+        function actualizarTemporizador() {
+            timerElement.textContent = 'Tiempo restante: ' + tiempoRestante + ' segundos';
+            if (tiempoRestante <= 0) {
+                clearInterval(intervalId); // Detener el temporizador cuando el tiempo llega a cero
+                document.getElementById('verRespuestaBtn').disabled = true; // Deshabilitar el botón de ver respuesta
+                document.getElementById('respuestaMensaje').textContent = '¡Tiempo agotado!';
+                document.getElementById('respuestaMensaje').style.color = 'red';
+            }
+            tiempoRestante--;
+        }
+
+        // Actualizar el temporizador cada segundo
+        var intervalId = setInterval(actualizarTemporizador, 1000);
+
         function showHint(hintNumber) {
             var hint = document.getElementById('hint' + hintNumber);
             hint.style.display = 'block';
+        }
+
+        function verificarRespuesta() {
+            var respuestaInput = document.getElementById('respuestaInput').value;
+            var respuestaCorrecta = "Antonio Neumane"; // Respuesta correcta
+
+            if (respuestaInput.trim().toLowerCase() === respuestaCorrecta.toLowerCase()) {
+                document.getElementById('respuestaMensaje').innerHTML = "¡Respuesta correcta!";
+                document.getElementById('respuestaMensaje').style.color = "green";
+                window.location.href = '../../preguntas_con_pIstas.html';
+            } else {
+                document.getElementById('respuestaMensaje').innerHTML = "Respuesta incorrecta. Intenta de nuevo.";
+                document.getElementById('respuestaMensaje').style.color = "red";
+            }
         }
     </script>
 </body>

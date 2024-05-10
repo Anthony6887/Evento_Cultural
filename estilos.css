@@ -14,13 +14,13 @@ body {
 }
 
 .inner-container {
-    max-width: 95%;
+    max-width: 85%;
     padding: 80px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     text-align: center;
-    font-size: 24px; /* Aumentamos el tamaño de la fuente */
+    font-size: 20px; /* Aumentamos el tamaño de la fuente */
 }
 
 h1 {
