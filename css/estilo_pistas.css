@@ -1,56 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Cambiar el color de fondo */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 10px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    background-color: #ffffff; /* Cambiar el color de fondo */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Agregar sombra */
 }
 
 .question {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.question h1 {
-    font-size: 24px;
-    color: #333;
+    margin-bottom: 20px;
 }
 
 .hints {
-    text-align: center;
     margin-bottom: 20px;
 }
 
 .hint-btn {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #0048ff;
+    color: white;
     border: none;
     padding: 10px 20px;
+    margin-right: 10px;
     border-radius: 5px;
-    margin: 0 10px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.hint-btn:hover {
+    background-color: #002366;
+}
+
+.hints-content {
+    margin-bottom: 20px;
 }
 
 .hint {
     display: none;
-    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     margin-bottom: 10px;
 }
 
 form {
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 input[type="text"] {
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -58,25 +63,33 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #0048ff;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #002366;
 }
 
 .boton-volver {
     display: block;
-    margin-top: 20px;
+    background-color: #00ff00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .boton-volver:hover {
-    color: #0056b3;
+    background-color: #00cc00;
 }

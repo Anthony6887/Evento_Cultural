@@ -1,59 +1,62 @@
+/* Estilos para la página principal y las preguntas */
 body {
     margin: 0;
     padding: 0;
     background-image: url('/fondo.png');
-    background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+    background-size: cover;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .container {
-    display: grid;
-    place-items: center;
-    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #007bff;
 }
 
 .questions-container {
-    max-width: 600px;
-    width: 100%;
+    margin-top: 20px;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas flexibles */
-    gap: 20px; /* Espacio entre los elementos */
 }
 
 li {
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 a {
     display: block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 10px 20px;
+    background-color: #0048ff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 a:hover {
-    background-color: #1a3f66;
+    background-color: #002366;
 }
 
 .boton-volver {
     display: block;
     margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: white;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
+.boton-volver:hover {
+    background-color: #00cc00;
+}
