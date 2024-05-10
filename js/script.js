@@ -13,10 +13,10 @@ function verificarRespuesta(respuesta) {
     localStorage.setItem('puntaje', puntaje);
 
     // Redirigir al usuario a la siguiente pregunta
-    if (document.location.href.includes('verdadero_falso1.html')) {
-        setTimeout(() => { window.location.href = 'verdadero_falso2.html'; }, 1000); // Redirige a pregunta2.html después de 1 segundo
-    } else if (document.location.href.includes('verdadero_falso2.html')) {
-        setTimeout(() => { window.location.href = 'verdadero_falsoFinal.html'; }, 1000); // Redirige a puntaje.html después de 1 segundo
+    if (document.location.href.includes('../Verdadero_Falso/verdadero_falso1.html')) {
+        setTimeout(() => { window.location.href = '../Verdadero_Falso/verdadero_falso2.html'; }, 1000); // Redirige a pregunta2.html después de 1 segundo
+    } else if (document.location.href.includes('../Verdadero_Falso/verdadero_falso2.html')) {
+        setTimeout(() => { window.location.href = '../Verdadero_Falso/verdadero_falsoFinal.html'; }, 1000); // Redirige a puntaje.html después de 1 segundo
     }
 }
 
@@ -46,4 +46,8 @@ function tiempoAgotado() {
     // Agregar lógica para manejar la respuesta cuando se acaba el tiempo (por ejemplo, tomarlo como incorrecto)
     // Aquí puedes llamar a la función verificarRespuesta() con false para tomar la respuesta como incorrecta
     verificarRespuesta(false);
+}
+
+function borrarPuntaje() {
+    localStorage.removeItem('puntaje');
 }
