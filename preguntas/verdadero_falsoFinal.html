@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Final</title>
+    <link rel="stylesheet" href="../css/estilov_pregunta_vf.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Juego Kahoot completado!</h1>
+        <div id="finalScore">Tu puntaje final es: <span id="finalScoreCount">0</span></div>
+    </div>
+
+    <script>
+        // Recuperar el puntaje del localStorage
+        var finalScore = localStorage.getItem('score');
+        document.getElementById('finalScoreCount').textContent = finalScore;
+        // Limpiar el localStorage
+        localStorage.removeItem('score');
+    </script>
+</body>
+</html>
