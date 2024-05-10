@@ -58,14 +58,18 @@
                     localStorage.removeItem("groupBPoints");
                 }
             </script>
-            
+
         </div>
     </div>
-    
+
 
     <script>
         // Esperar a que el DOM esté completamente cargado
         document.addEventListener("DOMContentLoaded", function () {
+
+
+                document.getElementById("pregunta1").removeAttribute("disabled");
+
             // Función para actualizar los puntos del Grupo A y Grupo B
             function updateGroupPoints() {
                 // Obtener las respuestas correctas almacenadas en localStorage
@@ -121,6 +125,8 @@
                 var respuestaIncorrectaPregunta4 = localStorage.getItem("respuesta_incorrecta_pregunta4");
                 var respuestaIncorrectaPregunta5 = localStorage.getItem("respuesta_incorrecta_pregunta5");
                 var respuestaIncorrectaPregunta6 = localStorage.getItem("respuesta_incorrecta_pregunta6");
+
+                var respuestaVaciaPregunta1 = localStorage.getItem("respuesta_vacia_pregunta1");
 
                 if (respuestaIncorrectaPregunta1) {
                     document.getElementById("pregunta1").setAttribute("disabled", true);

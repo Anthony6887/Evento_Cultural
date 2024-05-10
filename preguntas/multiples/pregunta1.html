@@ -31,7 +31,7 @@
             <a href="../../multiple_choice.html" class="boton-volver">Volver al menú principal</a>
         </div>
     </div>
-
+    <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
     <script>
         document.getElementById("submitButton").addEventListener("click", function () {
             // Obtener el formulario
@@ -58,6 +58,34 @@
                 document.getElementById("submitButton").disabled = true;
             }
         });
+
+        // Temporizador de 30 segundos
+        var secondsLeft = 30;
+        var timerElement = document.getElementById("timer");
+        var timerInterval = setInterval(function () {
+            secondsLeft--;
+            timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            if (secondsLeft === 0) {
+                clearInterval(timerInterval);
+                var form = document.getElementById("formA");
+                var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+                if (!selectedOption) {
+                    var message = document.getElementById("message");
+                    message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                    message.classList.add("error");
+                    // Capturar la respuesta incorrecta en localStorage
+                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
+                    if (selectedIncorrectOption) {
+                        localStorage.setItem("respuesta_vacia_pregunta1", selectedIncorrectOption.value);
+                    } else {
+                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
+                        localStorage.setItem("respuesta_vacia_pregunta1", "");
+                    }
+                    // Recargar la página multiple_choice.html
+                    window.location.href = '../../multiple_choice.html';
+                }
+            }
+        }, 1000); // 1 segundo en milisegundos
     </script>
 
 </body>

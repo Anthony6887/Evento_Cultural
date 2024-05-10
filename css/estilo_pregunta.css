@@ -94,5 +94,10 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+.timer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
 
 
