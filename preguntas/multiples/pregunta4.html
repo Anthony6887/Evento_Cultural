@@ -45,7 +45,7 @@
                     // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
                     localStorage.setItem("respuesta_pregunta4", "F");
                     // Redirigir a la página multiple_choice.html
-                    window.location.href = '../multiple_choice.html';
+                    window.location.href = '../../multiple_choice.html';
                 } else {
                     // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
                     var message = document.getElementById("message");
@@ -54,7 +54,7 @@
                     // Guardar el valor de la opción seleccionada en localStorage
                     if (selectedOption) {
                         localStorage.setItem("respuesta_incorrecta_pregunta4", selectedOption.value);
-                        window.location.href = '../multiple_choice.html';
+                        window.location.href = '../../multiple_choice.html';
                     }
                     // Bloquear el botón de enviar respuesta
                     document.getElementById("submitButton").disabled = true;
