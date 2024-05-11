@@ -45,7 +45,7 @@
             // Verificar si la opción seleccionada es la correcta (opción A)
             if (selectedOption && selectedOption.value === "A") {
                 // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                localStorage.setItem("respuesta_pregunta6", "A");
+                localStorage.setItem("respuesta_pregunta6VF", "A");
                 // Redirigir a la página multiple_choice.html
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
@@ -58,7 +58,7 @@
                 message.classList.add("error");
                 // Guardar el valor de la opción seleccionada en localStorage
                 if (selectedOption) {
-                    localStorage.setItem("respuesta_incorrecta_pregunta6", selectedOption.value);
+                    localStorage.setItem("respuesta_incorrecta_pregunta6VF", selectedOption.value);
                 }
             }
             // Bloquear el botón de enviar respuesta
@@ -85,7 +85,7 @@
                     message.textContent = "Tiempo agotado. Respuesta incorrecta.";
                     message.classList.add("error");
                     // Capturar la respuesta incorrecta en localStorage
-                    localStorage.setItem("respuesta_incorrecta_pregunta6", "");
+                    localStorage.setItem("respuesta_incorrecta_pregunta6VF  ", "");
                     // Ocultar la barra de carga
                     ocultarSlidebard();
                     // Recargar la página verdadero_falso.html

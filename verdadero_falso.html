@@ -20,9 +20,9 @@
                         <p>Puntos: <span id="group-a-points">0</span></p>
                     </div>
                     <ul>
-                        <li><a id="pregunta1" href="preguntas/Verdadero_Falso/verdadero_falso1.html">Pregunta 1</a></li>
-                        <li><a id="pregunta2" href="preguntas/Verdadero_Falso/verdadero_falso2.html">Pregunta 2</a></li>
-                        <li><a id="pregunta3" href="preguntas/Verdadero_Falso/verdadero_falso3.html">Pregunta 3</a></li>
+                        <li><a id="pregunta1VF" href="preguntas/Verdadero_Falso/verdadero_falso1.html">Pregunta 1</a></li>
+                        <li><a id="pregunta2VF" href="preguntas/Verdadero_Falso/verdadero_falso2.html">Pregunta 2</a></li>
+                        <li><a id="pregunta3VF" href="preguntas/Verdadero_Falso/verdadero_falso3.html">Pregunta 3</a></li>
                     </ul>
                 </div>
                 <div class="group group-b">
@@ -31,9 +31,9 @@
                         <p>Puntos: <span id="group-b-points">0</span></p>
                     </div>
                     <ul>
-                        <li><a id="pregunta4" href="preguntas/Verdadero_Falso/verdadero_falso4.html">Pregunta 4</a></li>
-                        <li><a id="pregunta5" href="preguntas/Verdadero_Falso/verdadero_falso5.html">Pregunta 5</a></li>
-                        <li><a id="pregunta6" href="preguntas/Verdadero_Falso/verdadero_falso6.html">Pregunta 6</a></li>
+                        <li><a id="pregunta4VF" href="preguntas/Verdadero_Falso/verdadero_falso4.html">Pregunta 4</a></li>
+                        <li><a id="pregunta5VF" href="preguntas/Verdadero_Falso/verdadero_falso5.html">Pregunta 5</a></li>
+                        <li><a id="pregunta6VF" href="preguntas/Verdadero_Falso/verdadero_falso6.html">Pregunta 6</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,50 +51,50 @@
             // Función para actualizar los puntos del Grupo A y Grupo B
             function updateGroupPoints() {
                 // Obtener las respuestas correctas almacenadas en localStorage
-                var correctAnswer1 = localStorage.getItem("respuesta_pregunta1");
-                var correctAnswer2 = localStorage.getItem("respuesta_pregunta2");
-                var correctAnswer3 = localStorage.getItem("respuesta_pregunta3");
-                var correctAnswer4 = localStorage.getItem("respuesta_pregunta4");
-                var correctAnswer5 = localStorage.getItem("respuesta_pregunta5");
-                var correctAnswer6 = localStorage.getItem("respuesta_pregunta6");
+                var correctAnswer1VF = localStorage.getItem("respuesta_pregunta1VF");
+                var correctAnswer2VF = localStorage.getItem("respuesta_pregunta2VF");
+                var correctAnswer3VF = localStorage.getItem("respuesta_pregunta3VF");
+                var correctAnswer4VF = localStorage.getItem("respuesta_pregunta4VF");
+                var correctAnswer5VF = localStorage.getItem("respuesta_pregunta5VF");
+                var correctAnswer6VF = localStorage.getItem("respuesta_pregunta6VF");
 
                 // Contadores de puntos para Grupo A y Grupo B
-                var totalPointsA = 0;
-                var totalPointsB = 0;
+                var totalPointsAVF = 0;
+                var totalPointsBVF = 0;
 
                 // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo A
-                if (correctAnswer1 === "A") {
-                    totalPointsA++;
+                if (correctAnswer1VF === "A") {
+                    totalPointsAVF++;
                 }
-                if (correctAnswer2 === "A") {
-                    totalPointsA++;
+                if (correctAnswer2VF === "A") {
+                    totalPointsAVF++;
                 }
-                if (correctAnswer3 === "A") {
-                    totalPointsA++;
+                if (correctAnswer3VF === "A") {
+                    totalPointsAVF++;
                 }
 
                 // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo B
-                if (correctAnswer4 === "A") {
-                    totalPointsB++;
+                if (correctAnswer4VF === "A") {
+                    totalPointsBVF++;
                 }
-                if (correctAnswer5 === "A") {
-                    totalPointsB++;
+                if (correctAnswer5VF === "A") {
+                    totalPointsBVF++;
                 }
-                if (correctAnswer6 === "A") {
-                    totalPointsB++;
+                if (correctAnswer6VF === "A") {
+                    totalPointsBVF++;
                 }
 
                 // Obtener los contadores de puntos para los Grupos A y B
-                var groupAPoints = document.getElementById("group-a-points");
-                var groupBPoints = document.getElementById("group-b-points");
+                var groupAPointsVF = document.getElementById("group-a-points");
+                var groupBPointsVF = document.getElementById("group-b-points");
 
                 // Actualizar los contadores de puntos para los Grupos A y B
-                groupAPoints.textContent = totalPointsA;
-                groupBPoints.textContent = totalPointsB;
+                groupAPointsVF.textContent = totalPointsAVF;
+                groupBPointsVF.textContent = totalPointsBVF;
 
                 // Guardar los puntos de los Grupos A y B en localStorage
-                localStorage.setItem("groupAPoints", totalPointsA);
-                localStorage.setItem("groupBPoints", totalPointsB);
+                localStorage.setItem("groupAPointsVF", totalPointsAVF);
+                localStorage.setItem("groupBPointsVF", totalPointsBVF);
 
                 // Deshabilitar los enlaces de las preguntas incorrectas
                 var respuestaIncorrectaPregunta1 = localStorage.getItem("respuesta_incorrecta_pregunta1");
@@ -105,22 +105,22 @@
                 var respuestaIncorrectaPregunta6 = localStorage.getItem("respuesta_incorrecta_pregunta6");
 
                 if (respuestaIncorrectaPregunta1) {
-                    document.getElementById("pregunta1").setAttribute("disabled", true);
+                    document.getElementById("pregunta1VF").setAttribute("disabled", true);
                 }
                 if (respuestaIncorrectaPregunta2) {
-                    document.getElementById("pregunta2").setAttribute("disabled", true);
+                    document.getElementById("pregunta2VF").setAttribute("disabled", true);
                 }
                 if (respuestaIncorrectaPregunta3) {
-                    document.getElementById("pregunta3").setAttribute("disabled", true);
+                    document.getElementById("pregunta3VF").setAttribute("disabled", true);
                 }
                 if (respuestaIncorrectaPregunta4) {
-                    document.getElementById("pregunta4").setAttribute("disabled", true);
+                    document.getElementById("pregunta4VF").setAttribute("disabled", true);
                 }
                 if (respuestaIncorrectaPregunta5) {
-                    document.getElementById("pregunta5").setAttribute("disabled", true);
+                    document.getElementById("pregunta5VF").setAttribute("disabled", true);
                 }
                 if (respuestaIncorrectaPregunta6) {
-                    document.getElementById("pregunta6").setAttribute("disabled", true);
+                    document.getElementById("pregunta6VF").setAttribute("disabled", true);
                 }
 
                 // Deshabilitar los enlaces de las preguntas después de que se haya seleccionado una respuesta
@@ -132,22 +132,22 @@
                 var respuestaCorrectaPregunta6 = localStorage.getItem("respuesta_pregunta6");
 
                 if (respuestaCorrectaPregunta1) {
-                    document.getElementById("pregunta1").setAttribute("disabled", true);
+                    document.getElementById("pregunta1VF").setAttribute("disabled", true);
                 }
                 if (respuestaCorrectaPregunta2) {
-                    document.getElementById("pregunta2").setAttribute("disabled", true);
+                    document.getElementById("pregunta2VF").setAttribute("disabled", true);
                 }
                 if (respuestaCorrectaPregunta3) {
-                    document.getElementById("pregunta3").setAttribute("disabled", true);
+                    document.getElementById("pregunta3VF").setAttribute("disabled", true);
                 }
                 if (respuestaCorrectaPregunta4) {
-                    document.getElementById("pregunta4").setAttribute("disabled", true);
+                    document.getElementById("pregunta4VF").setAttribute("disabled", true);
                 }
                 if (respuestaCorrectaPregunta5) {
-                    document.getElementById("pregunta5").setAttribute("disabled", true);
+                    document.getElementById("pregunta5VF").setAttribute("disabled", true);
                 }
                 if (respuestaCorrectaPregunta6) {
-                    document.getElementById("pregunta6").setAttribute("disabled", true);
+                    document.getElementById("pregunta6VF").setAttribute("disabled", true);
                 }
             }
 
