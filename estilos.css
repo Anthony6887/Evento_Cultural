@@ -105,3 +105,57 @@ a:hover {
         transform: translateY(-10px);
     }
 }
+
+.puntuacion {
+    position: fixed;
+    top: 10%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #fff; /* Cambiamos el fondo a blanco */
+    padding: 20px;
+    border-radius: 10px; /* Reducimos el radio del borde para un aspecto más moderno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregamos una sombra suave */
+}
+
+.puntuacion h2 {
+    margin-top: 0;
+    font-size: 24px; /* Aumentamos el tamaño del título */
+    font-weight: bold; /* Hacemos que el título sea más audaz */
+    color: #333; /* Cambiamos el color del texto */
+}
+
+.grupo-a,
+.grupo-b {
+    margin-bottom: 15px; /* Aumentamos el espacio entre los grupos */
+}
+
+.grupo-a label,
+.grupo-b label {
+    display: inline-block;
+    width: 100px; /* Aumentamos el ancho del label para que sea más legible */
+    font-weight: bold; /* Hacemos que el texto del label sea más audaz */
+    color: #555; /* Cambiamos el color del texto */
+}
+
+.grupo-a input,
+.grupo-b input {
+    width: 60px; /* Aumentamos el ancho del input */
+    padding: 8px; /* Aumentamos el espacio dentro del input */
+    border: 1px solid #ccc; /* Agregamos un borde para separar visualmente el input */
+    border-radius: 5px; /* Redondeamos las esquinas del input */
+}
+
+button#reiniciar {
+    padding: 10px 20px; /* Aumentamos el espacio alrededor del texto del botón */
+    background-color: #ff3333; /* Cambiamos el color del botón a rojo */
+    color: #fff; /* Cambiamos el color del texto a blanco */
+    border: none; /* Quitamos el borde del botón */
+    border-radius: 5px; /* Redondeamos las esquinas del botón */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Agregamos una transición suave al color de fondo */
+}
+
+button#reiniciar:hover {
+    background-color: #cc0000; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
+}
+
