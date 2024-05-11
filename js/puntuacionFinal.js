@@ -19,3 +19,44 @@ document.addEventListener('DOMContentLoaded', function () {
     // Actualizar el campo de puntuación en el HTML para el grupo B
     document.getElementById('puntuacion-b').value = puntuacionBTotal.toString();
 });
+
+function reiniciarPuntuaciones() {
+    // Borrar todas las puntuaciones del almacenamiento local
+    localStorage.removeItem('groupAPoints');
+    localStorage.removeItem('groupAPointsVF');
+    localStorage.removeItem('groupBPoints');
+    localStorage.removeItem('groupBPointsVF');
+
+    localStorage.removeItem('respuesta_pregunta1');
+    localStorage.removeItem('respuesta_pregunta2');
+    localStorage.removeItem('respuesta_pregunta3');
+    localStorage.removeItem('respuesta_pregunta4');
+    localStorage.removeItem('respuesta_pregunta5');
+    localStorage.removeItem('respuesta_pregunta6');
+
+    localStorage.removeItem('respuesta_pregunta1VF');
+    localStorage.removeItem('respuesta_pregunta2VF');
+    localStorage.removeItem('respuesta_pregunta3VF');
+    localStorage.removeItem('respuesta_pregunta4VF');
+    localStorage.removeItem('respuesta_pregunta5VF');
+    localStorage.removeItem('respuesta_pregunta6VF');
+
+    localStorage.removeItem('respuesta_incorrecta_pregunta1');
+    localStorage.removeItem('respuesta_incorrecta_pregunta2');
+    localStorage.removeItem('respuesta_incorrecta_pregunta3');
+    localStorage.removeItem('respuesta_incorrecta_pregunta4');
+    localStorage.removeItem('respuesta_incorrecta_pregunta5');
+    localStorage.removeItem('respuesta_incorrecta_pregunta6');
+
+    localStorage.removeItem('respuesta_incorrecta_pregunta1VF');
+    localStorage.removeItem('respuesta_incorrecta_pregunta2VF');
+    localStorage.removeItem('respuesta_incorrecta_pregunta3VF');
+    localStorage.removeItem('respuesta_incorrecta_pregunta4VF');
+    localStorage.removeItem('respuesta_incorrecta_pregunta5VF');
+    localStorage.removeItem('respuesta_incorrecta_pregunta6VF');
+
+
+
+    document.getElementById('puntuacion-a').value = '0';
+    document.getElementById('puntuacion-b').value = '0';
+}
