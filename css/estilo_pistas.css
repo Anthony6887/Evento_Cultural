@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #93b0b5;
+    background-color: #1453dcd6;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
@@ -12,12 +12,17 @@ body {
     justify-content: center;
     margin: auto;
     max-width: 600px;
-    background-color: #ffffff;
+    background-color: #ffffff8c;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     height: 80vh; /* Ajusta la altura del contenedor */
     margin-top: 8vh; /* Ajusta la posición vertical del contenedor */
+}
+
+
+.timer {
+    text-align: center; /* Centrar el texto */
 }
 
 
@@ -86,4 +91,104 @@ input[type="submit"],
 input[type="submit"]:hover,
 .boton-volver:hover {
     background-color: #002366;
+}
+
+#respuestaMensaje {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#mostrarRespuestaBtn {
+    background-color: #0048ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#mostrarRespuestaBtn:hover {
+    background-color: #002366;
+}
+
+#respuesta {
+    display: none;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#timer {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.boton-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0048ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #002366;
+}
+.timer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilos para la barra de progreso del tiempo */
+.loaderBar {
+    width: calc(100% - 40px); /* Ajustado para que ocupe todo el ancho disponible */
+    height: 10px;
+    background: #F9F9F9;
+    border-radius: 10px;
+    border: 1px solid #006DFE;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 20px; /* Centrado y espacio inferior */
+}
+
+.loaderBar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: repeating-linear-gradient(45deg, #0031F2 0 30px, #006DFE 0 40px) right/200% 100%;
+    animation: fillProgress 30s linear infinite; /* Ajustado para que dure 30 segundos */
+    animation-fill-mode: forwards;
+}
+
+@keyframes fillProgress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+#respuestaMensaje {
+    color: blue; /* Cambiar el color del texto a azul */
+    text-align: center; /* Centrar el texto */
+}
+
+#respuesta {
+    color: red; /* Cambiar el color del texto a rojo */
+    text-align: center; /* Centrar el texto */
+}
+.boton-volver {
+    display: block; /* Hacer que el enlace sea un bloque para poder centrarlo */
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Agregar un espacio superior */
 }

@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregunta con Pistas</title>
     <link rel="stylesheet" href="../../css/estilo_pistas.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="question">
-            <h1>¿Quién compuso la música del himno nacional de Ecuador?</h1>
+        <div class="inner-container">
+            <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
+            <br>
+            <div class="loaderBar"></div>
+            <div class="question">
+                <h1>¿Quién compuso la música del himno nacional de Ecuador?</h1>
+            </div>
+            <div class="hints">
+                <button class="hint-btn" onclick="showHint(1)">Pista 1</button>
+                <button class="hint-btn" onclick="showHint(2)">Pista 2</button>
+                <button class="hint-btn" onclick="showHint(3)">Pista 3</button>
+                <button id="mostrarRespuestaBtn" onclick="mostrarRespuesta()">Mostrar Respuesta</button>
+            </div>
+            <div class="hints-content">
+                <div id="hint1" class="hint">Origen europeo</div>
+                <div id="hint2" class="hint">Murió en Quito</div>
+                <div id="hint3" class="hint">Amigo de un ambateño</div>
+            </div>
+            <div id="respuesta" style="display: none; color: red; text-align: center;">Antonio Neumane</div>
+
+            <a href="../../preguntas_con_pIstas.html" class="boton-volver" style="display: block; text-align: center; margin-top: 20px;">Volver al menú principal</a>
+
         </div>
-        <div class="hints">
-            <button class="hint-btn" onclick="showHint(1)">Pista 1</button>
-            <button class="hint-btn" onclick="showHint(2)">Pista 2</button>
-            <button class="hint-btn" onclick="showHint(3)">Pista 3</button>
-        </div>
-        <div class="hints-content">
-            <div id="hint1" class="hint">Origen europeo</div>
-            <div id="hint2" class="hint">Murió en Quito</div>
-            <div id="hint3" class="hint">Amigo de un ambateño</div>
-        </div>
-        <form id="answerForm">
-            <input type="text" id="respuestaInput" name="respuesta" placeholder="Escribe tu respuesta aquí">
-            <input type="button" id="verRespuestaBtn" value="Ver respuesta" onclick="verificarRespuesta()">
-        </form>
-        <div id="respuestaMensaje"></div>
-        <div id="timer"></div> <!-- Aquí se mostrará el temporizador -->
-        <a href="../../preguntas_con_pIstas.html" class="boton-volver">Volver al menú principal</a>
     </div>
 
     <script>
+        function mostrarRespuesta() {
+            var respuesta = document.getElementById("respuesta");
+            respuesta.style.display = "block";
+        }
+
         var tiempoRestante = 30; // Tiempo restante en segundos
         var timerElement = document.getElementById('timer');
 
@@ -66,6 +76,36 @@
                 document.getElementById('respuestaMensaje').style.color = "red";
             }
         }
+
+
+        // Temporizador de 30 segundos
+        var secondsLeft = 30;
+        var timerElement = document.getElementById("timer");
+        var timerInterval = setInterval(function () {
+            secondsLeft--;
+            timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            if (secondsLeft === 0) {
+                clearInterval(timerInterval);
+                var form = document.getElementById("formA");
+                var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+                if (!selectedOption) {
+                    var message = document.getElementById("message");
+                    message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                    message.classList.add("error");
+                    // Capturar la respuesta incorrecta en localStorage
+                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
+                    if (selectedIncorrectOption) {
+                        localStorage.setItem("respuesta_vacia_pregunta1", selectedIncorrectOption.value);
+                    } else {
+                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
+                        localStorage.setItem("respuesta_vacia_pregunta1", "");
+                    }
+                    // Recargar la página multiple_choice.html
+                    window.location.href = '../../verdadero_falso.html';
+                }
+            }
+        }, 1000); // 1 segundo en milisegundos
     </script>
 </body>
+
 </html>

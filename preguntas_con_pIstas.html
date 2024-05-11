@@ -11,23 +11,34 @@
 <body>
     <div class="container">
         <div class="inner-container">
-            <h2>Preguntas con Pistas</h2>
-            <div class="questions-container">
-                <div class="columnas">
-                    <div class="columna">
-                        <a href="preguntas/pistas/pistas1.html">Pregunta 1</a>
-                        <a href="preguntas/pistas/pistas2.html">Pregunta 2</a>
+            <h1>Preguntas con Pistas</h1>
+            <p>Selecciona una pregunta:</p>
+            <div class="group-container">
+                <div class="group group-a">
+                    <h2>Grupo A</h2>
+                    <div class="points-counter">
+<!--                         <p>Puntos: <span id="group-a-points">0</span></p> -->
                     </div>
-                    <div class="columna">
-                        <a href="preguntas/pistas/pistas3.html">Pregunta 3</a>
-                        <a href="preguntas/pistas/pistas4.html">Pregunta 4</a>
+                    <ul>
+                        <li><a href="preguntas/pistas/pistas1.html">Pregunta 1</a></li>
+                        <li><a href="preguntas/pistas/pistas2.html">Pregunta 2</a></li>
+                    </ul>
+                </div>
+                <div class="group group-b">
+                    <h2>Grupo B</h2>
+                    <div class="points-counter">
+<!--                         <p>Puntos: <span id="group-b-points">0</span></p> -->
                     </div>
-                    <!-- Agrega más preguntas aquí -->
+                    <ul>
+                        <li><a href="preguntas/pistas/pistas3.html">Pregunta 3</a></li>
+                        <li><a href="preguntas/pistas/pistas4.html">Pregunta 4</a></li>
+                    </ul>
                 </div>
             </div>
-            <a href="index.html" class="boton-volver">Volver al menú principal</a>
+            <a href="index.html" class="boton-volver" onclick="limpiarLocalStorage()">Volver al menú principal</a>
         </div>
     </div>
+    
 </body>
 
 </html>
