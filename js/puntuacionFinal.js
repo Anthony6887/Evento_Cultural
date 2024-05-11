@@ -60,3 +60,17 @@ function reiniciarPuntuaciones() {
     document.getElementById('puntuacion-a').value = '0';
     document.getElementById('puntuacion-b').value = '0';
 }
+
+function mostrarGanador() {
+    var puntuacionA = parseInt(localStorage.getItem('groupAPoints') || '0');
+    var puntuacionB = parseInt(localStorage.getItem('groupBPoints') || '0');
+
+    if (puntuacionA > puntuacionB) {
+        alert('El ganador es el Grupo A');
+    } else if (puntuacionB > puntuacionA) {
+        alert('El ganador es el Grupo B');
+    } else {
+        alert('Hay un empate');
+    }
+}
+
