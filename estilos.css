@@ -159,3 +159,18 @@ button#reiniciar:hover {
     background-color: #cc0000; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
 }
 
+
+button#ganador {
+    padding: 10px 20px; /* Aumentamos el espacio alrededor del texto del botón */
+    background-color: #0d8a17; /* Cambiamos el color del botón a rojo */
+    color: #fff; /* Cambiamos el color del texto a blanco */
+    border: none; /* Quitamos el borde del botón */
+    border-radius: 5px; /* Redondeamos las esquinas del botón */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Agregamos una transición suave al color de fondo */
+}
+
+button#ganador:hover {
+    background-color: #197012; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
+}
+
