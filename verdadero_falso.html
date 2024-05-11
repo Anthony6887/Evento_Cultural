@@ -48,6 +48,8 @@
         // Esperar a que el DOM esté completamente cargado
         document.addEventListener("DOMContentLoaded", function () {
 
+            document.getElementById("pregunta1VF").removeAttribute("disabled");
+
             // Función para actualizar los puntos del Grupo A y Grupo B
             function updateGroupPoints() {
                 // Obtener las respuestas correctas almacenadas en localStorage
@@ -123,30 +125,23 @@
                     document.getElementById("pregunta6VF").setAttribute("disabled", true);
                 }
 
-                // Deshabilitar los enlaces de las preguntas después de que se haya seleccionado una respuesta
-                var respuestaCorrectaPregunta1VF = localStorage.getItem("respuesta_pregunta1VF");
-                var respuestaCorrectaPregunta2VF = localStorage.getItem("respuesta_pregunta2VF");
-                var respuestaCorrectaPregunta3VF = localStorage.getItem("respuesta_pregunta3VF");
-                var respuestaCorrectaPregunta4VF = localStorage.getItem("respuesta_pregunta4VF");
-                var respuestaCorrectaPregunta5VF = localStorage.getItem("respuesta_pregunta5VF");
-                var respuestaCorrectaPregunta6VF = localStorage.getItem("respuesta_pregunta6VF");
-
-                if (respuestaCorrectaPregunta1VF) {
+                if (correctAnswer1VF) {
+                    console.log("Pregunta 1 deshabilitada");
                     document.getElementById("pregunta1VF").setAttribute("disabled", true);
                 }
-                if (respuestaCorrectaPregunta2VF) {
+                if (correctAnswer2VF) {
                     document.getElementById("pregunta2VF").setAttribute("disabled", true);
                 }
-                if (respuestaCorrectaPregunta3VF) {
+                if (correctAnswer3VF) {
                     document.getElementById("pregunta3VF").setAttribute("disabled", true);
                 }
-                if (respuestaCorrectaPregunta4VF) {
+                if (correctAnswer4VF) {
                     document.getElementById("pregunta4VF").setAttribute("disabled", true);
                 }
-                if (respuestaCorrectaPregunta5VF) {
+                if (correctAnswer5VF) {
                     document.getElementById("pregunta5VF").setAttribute("disabled", true);
                 }
-                if (respuestaCorrectaPregunta6VF) {
+                if (correctAnswer6VF) {
                     document.getElementById("pregunta6VF").setAttribute("disabled", true);
                 }
             }
