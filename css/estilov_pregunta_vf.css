@@ -5,80 +5,112 @@ body {
     background-color: #1453dcd6;
 }
 
+
 .container {
     max-width: 800px;
     margin: 50px auto;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ffffff5d;
+    background-color: #ffffff8c;
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-gap: 20px;
 }
 
-.question {
+.inner-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
     color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
     margin-bottom: 20px;
 }
 
-.trueButton, .falseButton {
-    padding: 20px 30px; /* Ajusta el tamaño del padding para hacer los botones un poco más pequeños */
-    border-radius: 50px;
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button, .boton-volver {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border: 0;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 17px;
-    transition: all 0.5s ease;
-    margin: 5px auto; /* Centra los botones horizontalmente */
-    max-width: 200px; /* Limita el ancho máximo de los botones */
-    width: auto; /* Permite que los botones se ajusten a su contenido */
+    transition: background-color 0.3s ease;
 }
 
-
-.trueButton:hover, .falseButton:hover {
-    letter-spacing: 3px;
-    background-color: hsl(231, 80%, 48%);
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgb(24, 132, 220) 0px 7px 29px 0px;
+button {
+    background-color: #007bff;
+    color: #fff;
 }
 
-.trueButton:active, .falseButton:active {
-    letter-spacing: 3px;
-    background-color: hsl(132, 80%, 48%);
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgb(24, 220, 63) 0px 0px 0px 0px;
-    transform: translateY(10px);
-    transition: 100ms;
+button:hover {
+    background-color: #0056b3;
 }
 
-.result {
+.boton-volver {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.boton-volver:hover {
+    color: #0056b3;
+}
+
+#message {
     margin-top: 20px;
     font-weight: bold;
-    font-size: 24px;
-    color: #ffffff;
 }
 
-.score {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
+.submit-button:disabled,
+.next-button:disabled,
+.boton-volver:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
+.submit-button, .next-button, .boton-volver {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilos para la barra de progreso del tiempo */
 .loaderBar {
-    width: 80%; /* Ajusta el ancho del slider */
+    width: calc(100% - 40px); /* Ajustado para que ocupe todo el ancho disponible */
     height: 10px;
-    background: #f9f9f9;
+    background: #F9F9F9;
     border-radius: 10px;
-    border: 1px solid #006dfe;
+    border: 1px solid #006DFE;
     position: relative;
     overflow: hidden;
-    margin: 50px auto; /* Centra el slider */
+    margin: 0 auto 20px; /* Centrado y espacio inferior */
 }
 
 .loaderBar::before {
@@ -88,53 +120,17 @@ body {
     left: 0;
     height: 100%;
     border-radius: 5px;
-    background: repeating-linear-gradient(45deg, #0031f2 0 30px, #006dfe 0 40px) right/200% 100%;
-    animation: fillProgress 30s linear forwards;
+    background: repeating-linear-gradient(45deg, #0031F2 0 30px, #006DFE 0 40px) right/200% 100%;
+    animation: fillProgress 30s linear infinite; /* Ajustado para que dure 30 segundos */
+    animation-fill-mode: forwards;
 }
 
 @keyframes fillProgress {
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
 }
-
-
-
-
-
-h1 {
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#puntaje {
-    font-weight: bold;
-    color: #cdfffd;
-}
-
-.boton-volver {
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 50px;
-    background-color: #4caf50;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-    
-}
-
-.boton-volver:hover {
-    background-color: #45a049;
-}
-
-.boton-volver:active {
-    background-color: #45a049;
-    transform: translateY(2px);
-}
-

@@ -1,26 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregunta 2</title>
     <link rel="stylesheet" href="../../css/estilov_pregunta_vf.css">
-    <script src="../../js/script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
-        <div class="loaderBar"></div>
-        <h1 class="question">Pregunta 2: ¿La ballena no es un mamífero?</h1>
-        <button class="trueButton" onclick="verificarRespuesta(false, this)">Verdadero</button>
-        <button class="falseButton" onclick="verificarRespuesta(true, this)">Falso</button>
+        <div class="inner-container">
+            <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
+            <br>
+            <div class="loaderBar"></div>
+            <h1>Pregunta 2</h1>
+            <p>¿La Antártida es el lugar más frío de la Tierra?</p>
+            <div class="team-container">
+                <div>
+                    <h2>Equipo A</h2>
+                    <form id="formA">
+                        <input type="radio" id="opcion_a" name="respuesta" value="A">
+                        <label for="opcion_a">A) Verdadero</label><br>
+                        <input type="radio" id="opcion_b" name="respuesta" value="B">
+                        <label for="opcion_b">B) Falso</label><br>
 
-        <div id="resultado" class="result"></div>
-        <p class="score">Puntaje: <span id="puntaje" class="score-value"></span></p>
+                    </form>
+                </div>
+            </div>
+            <div id="message" class="message"></div>
+            <button id="submitButton" class="submit-button">Enviar respuesta</button>
+            <a href="../../verdadero_falso.html" class="boton-volver">Volver al menú principal</a>
+
+        </div>
     </div>
 
+
     <script>
-        // Mostrar el puntaje desde el localStorage
-        document.getElementById('puntaje').innerText = localStorage.getItem('puntaje') || 0;
+        document.getElementById("submitButton").addEventListener("click", function () {
+            // Obtener el formulario
+            var form = document.getElementById("formA");
+            // Obtener la opción seleccionada
+            var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+            // Verificar si la opción seleccionada es la correcta (opción A)
+            if (selectedOption && selectedOption.value === "A") {
+                // Enviar la respuesta correcta al contador de puntos en la página de verdadero_falso.html
+                localStorage.setItem("respuesta_pregunta2", "A");
+                // Redirigir a la página verdadero_falso.html
+                var message = document.getElementById("message");
+                message.textContent = "Respuesta Correcta.";
+                clearInterval(timerInterval); // Detener el temporizador
+                // Actualizar puntos en verdadero_falso.html
+                updateGroupPoints("A");
+            } else {
+                // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
+                var message = document.getElementById("message");
+                message.textContent = "Respuesta incorrecta. Por favor, intenta de nuevo.";
+                message.classList.add("error");
+                // Guardar el valor de la opción seleccionada en localStorage
+                if (selectedOption) {
+                    localStorage.setItem("respuesta_incorrecta_pregunta2", selectedOption.value);
+                }
+                // Actualizar puntos en verdadero_falso.html
+                updateGroupPoints("B");
+            }
+            // Bloquear el botón de enviar respuesta
+            document.getElementById("submitButton").disabled = true;
+        });
+
+
+
+        // Temporizador de 30 segundos
+        var secondsLeft = 30;
+        var timerElement = document.getElementById("timer");
+        var timerInterval = setInterval(function () {
+            secondsLeft--;
+            timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            if (secondsLeft === 0) {
+                clearInterval(timerInterval);
+                var form = document.getElementById("formA");
+                var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+                if (!selectedOption) {
+                    var message = document.getElementById("message");
+                    message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                    message.classList.add("error");
+                    // Capturar la respuesta incorrecta en localStorage
+                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
+                    if (selectedIncorrectOption) {
+                        localStorage.setItem("respuesta_vacia_pregunta2", selectedIncorrectOption.value);
+                    } else {
+                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
+                        localStorage.setItem("respuesta_vacia_pregunta2", "");
+                    }
+                    // Recargar la página verdadero_falso.html
+                    window.location.href = '../../verdadero_falso.html';
+                }
+            }
+        }, 1000); // 1 segundo en milisegundos
+
+        // Función para actualizar los puntos en verdadero_falso.html
+        function updateGroupPoints(selectedOption) {
+            var groupAPoints = localStorage.getItem("groupAPoints") || 0;
+            var groupBPoints = localStorage.getItem("groupBPoints") || 0;
+
+            if (selectedOption === "A") {
+                groupAPoints++;
+            } else {
+                groupBPoints++;
+            }
+
+            localStorage.setItem("groupAPoints", groupAPoints);
+            localStorage.setItem("groupBPoints", groupBPoints);
+        }
     </script>
+
 </body>
+
 </html>
