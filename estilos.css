@@ -66,6 +66,37 @@ a:hover {
     animation: bounce 0.5s infinite alternate;
 }
 
+.puntuacion {
+    position: fixed;
+    top: 10%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.puntuacion h2 {
+    margin-top: 0;
+}
+
+.grupo-a,
+.grupo-b {
+    margin-bottom: 10px;
+}
+
+.grupo-a label,
+.grupo-b label {
+    display: inline-block;
+    width: 70px;
+}
+
+.grupo-a input,
+.grupo-b input {
+    width: 50px;
+}
+
+
 @keyframes bounce {
     0% {
         transform: translateY(0);
