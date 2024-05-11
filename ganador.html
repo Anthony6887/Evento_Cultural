@@ -4,18 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento Cultural Intercolegial 2024</title>
+    <title>Ganador</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
     <div class="container">
         <div class="inner-container">
+            <h1>¡Tenemos un ganador!</h1>
+            <div id="mensaje"></div>
+            <a href="index.html" class="boton-volver">Regresar al inicio</a>
         </div>
     </div>
-   
-
+    <script>
+        // Obtener el mensaje de la URL
+        var mensaje = decodeURIComponent(new URLSearchParams(window.location.search).get('mensaje'));
+        // Mostrar el mensaje en el div 'mensaje'
+        document.getElementById('mensaje').textContent = mensaje;
+    </script>
 </body>
-
 
 </html>

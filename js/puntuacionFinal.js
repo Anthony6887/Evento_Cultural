@@ -60,17 +60,21 @@ function reiniciarPuntuaciones() {
     document.getElementById('puntuacion-a').value = '0';
     document.getElementById('puntuacion-b').value = '0';
 }
-
 function mostrarGanador() {
     var puntuacionA = parseInt(localStorage.getItem('groupAPoints') || '0');
     var puntuacionB = parseInt(localStorage.getItem('groupBPoints') || '0');
-
+    
+    var mensaje;
     if (puntuacionA > puntuacionB) {
-        alert('El ganador es el Grupo A');
+        mensaje = 'El ganador es el Grupo A';
     } else if (puntuacionB > puntuacionA) {
-        alert('El ganador es el Grupo B');
+        mensaje = 'El ganador es el Grupo B';
     } else {
-        alert('Hay un empate');
+        mensaje = 'Hay un empate';
     }
-}
 
+    // Crear la URL con el mensaje como parámetro
+    var url = 'ganador.html?mensaje=' + encodeURIComponent(mensaje);
+    // Redirigir a la página ganador.html con el mensaje como parámetro
+    window.location.href = url;
+}
