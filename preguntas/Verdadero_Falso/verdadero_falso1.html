@@ -50,6 +50,7 @@
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
                 clearInterval(timerInterval); // Detener el temporizador
+                ocultarSlidebard(); // Ocultar la barra de carga
             } else {
                 // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
                 var message = document.getElementById("message");
@@ -63,12 +64,11 @@
             // Bloquear el botón de enviar respuesta
             document.getElementById("submitButton").disabled = true;
         });
-        
+
         function ocultarSlidebard() {
             // Ocultar el slidebard
             document.querySelector(".loaderBar").style.display = "none";
         }
-
 
         // Temporizador de 30 segundos
         var secondsLeft = 30;
@@ -85,14 +85,10 @@
                     message.textContent = "Tiempo agotado. Respuesta incorrecta.";
                     message.classList.add("error");
                     // Capturar la respuesta incorrecta en localStorage
-                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
-                    if (selectedIncorrectOption) {
-                        localStorage.setItem("respuesta_vacia_pregunta1", selectedIncorrectOption.value);
-                    } else {
-                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                        localStorage.setItem("respuesta_vacia_pregunta1", "");
-                    }
-                    // Recargar la página multiple_choice.html
+                    localStorage.setItem("respuesta_incorrecta_pregunta1", "");
+                    // Ocultar la barra de carga
+                    ocultarSlidebard();
+                    // Recargar la página verdadero_falso.html
                     window.location.href = '../../verdadero_falso.html';
                 }
             }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta 2</title>
+    <title>Pregunta 1</title>
     <link rel="stylesheet" href="../../css/estilov_pregunta_vf.css">
 </head>
 
@@ -14,7 +14,7 @@
             <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
             <br>
             <div class="loaderBar"></div>
-            <h1>Pregunta 2</h1>
+            <h1>Pregunta 1</h1>
             <p>¿La Antártida es el lugar más frío de la Tierra?</p>
             <div class="team-container">
                 <div>
@@ -44,14 +44,13 @@
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             // Verificar si la opción seleccionada es la correcta (opción A)
             if (selectedOption && selectedOption.value === "A") {
-                // Enviar la respuesta correcta al contador de puntos en la página de verdadero_falso.html
+                // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
                 localStorage.setItem("respuesta_pregunta6", "A");
-                // Redirigir a la página verdadero_falso.html
+                // Redirigir a la página multiple_choice.html
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
                 clearInterval(timerInterval); // Detener el temporizador
-                // Actualizar puntos en verdadero_falso.html
-                updateGroupPoints("A");
+                ocultarSlidebard(); // Ocultar la barra de carga
             } else {
                 // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
                 var message = document.getElementById("message");
@@ -61,14 +60,15 @@
                 if (selectedOption) {
                     localStorage.setItem("respuesta_incorrecta_pregunta6", selectedOption.value);
                 }
-                // Actualizar puntos en verdadero_falso.html
-                updateGroupPoints("B");
             }
             // Bloquear el botón de enviar respuesta
             document.getElementById("submitButton").disabled = true;
         });
 
-
+        function ocultarSlidebard() {
+            // Ocultar el slidebard
+            document.querySelector(".loaderBar").style.display = "none";
+        }
 
         // Temporizador de 30 segundos
         var secondsLeft = 30;
@@ -85,33 +85,14 @@
                     message.textContent = "Tiempo agotado. Respuesta incorrecta.";
                     message.classList.add("error");
                     // Capturar la respuesta incorrecta en localStorage
-                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
-                    if (selectedIncorrectOption) {
-                        localStorage.setItem("respuesta_vacia_pregunta6", selectedIncorrectOption.value);
-                    } else {
-                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                        localStorage.setItem("respuesta_vacia_pregunta6", "");
-                    }
+                    localStorage.setItem("respuesta_incorrecta_pregunta6", "");
+                    // Ocultar la barra de carga
+                    ocultarSlidebard();
                     // Recargar la página verdadero_falso.html
                     window.location.href = '../../verdadero_falso.html';
                 }
             }
         }, 1000); // 1 segundo en milisegundos
-
-        // Función para actualizar los puntos en verdadero_falso.html
-        function updateGroupPoints(selectedOption) {
-            var groupAPoints = localStorage.getItem("groupAPoints") || 0;
-            var groupBPoints = localStorage.getItem("groupBPoints") || 0;
-
-            if (selectedOption === "A") {
-                groupAPoints++;
-            } else {
-                groupBPoints++;
-            }
-
-            localStorage.setItem("groupAPoints", groupAPoints);
-            localStorage.setItem("groupBPoints", groupBPoints);
-        }
     </script>
 
 </body>
