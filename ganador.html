@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<!-- #Autores: Anthony Solis
+                Enrique Ortiz -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganador</title>
-  <!--   <link rel="stylesheet" href="estilos.css"> -->
+    <link rel="stylesheet" href="estilos.css">
     <script src="../../js/confetti.js" defer></script>
-    <link rel="stylesheet" href="confetti.css">
+    <link rel="stylesheet" href="/css/confetti.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+    padding: 0;
+    background-image: url('fondo.png');
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,18 +40,19 @@
     <div class="container">
         <div class="inner-container">
             <h1>¡Tenemos un ganador!</h1>
-            
-            <div id="mensaje"></div>    
-<br>
+            <div id="mensaje"></div>
+            <br>
             <a href="index.html" class="boton-volver">Regresar al inicio</a>
         </div>
     </div>
-    <script>
-        // Obtener el mensaje de la URL
-        var mensaje = decodeURIComponent(new URLSearchParams(window.location.search).get('mensaje'));
-        // Mostrar el mensaje en el div 'mensaje'
-        document.getElementById('mensaje').textContent = mensaje;
-    </script>
+
 </body>
 
 </html>
+
+<script>
+    // Obtener el mensaje de la URL
+    var mensaje = decodeURIComponent(new URLSearchParams(window.location.search).get('mensaje'));
+    // Mostrar el mensaje en el div 'mensaje'
+    document.getElementById('mensaje').textContent = mensaje;
+</script>

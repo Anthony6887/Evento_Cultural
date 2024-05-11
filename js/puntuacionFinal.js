@@ -70,7 +70,7 @@ function mostrarGanador() {
     } else if (puntuacionB > puntuacionA) {
         mensaje = 'El ganador es el Grupo B';
     } else {
-        mensaje = 'Hay un empate';
+        mensaje = '¡Empate!';
     }
 
     // Crear la URL con el mensaje como parámetro
