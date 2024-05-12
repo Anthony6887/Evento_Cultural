@@ -30,12 +30,37 @@
             </div>
             <div id="respuesta" style="display: none; color: red; text-align: center;">Antonio Neumane</div>
 
-            <a href="../../preguntas_con_pIstas.html" class="boton-volver" style="display: block; text-align: center; margin-top: 20px;">Volver al menú principal</a>
+            <button id="correctoBtn">Correcto</button>
+            <button id="incorrectoBtn">Incorrecto</button>
+            <div id="message" class="message"></div>
+            <a href="../../preguntas_con_pIstas.html" class="boton-volver"
+                style="display: block; text-align: center; margin-top: 20px;">Volver al menú principal</a>
 
         </div>
     </div>
 
+
     <script>
+
+
+        // Función para capturar si se presiona el botón "Incorrecto"
+        document.getElementById("incorrectoBtn").addEventListener("click", function () {
+            // Guardar en localStorage que se presionó "Incorrecto"
+            localStorage.setItem("respuesta_pregunta1PistaI", "Incorrecto");
+            message.textContent = "0";
+        });
+
+        // Función para capturar si se presiona el botón "Correcto"
+        document.getElementById("correctoBtn").addEventListener("click", function () {
+            // Guardar en localStorage que se presionó "Correcto"
+            var message = document.getElementById("message");
+            localStorage.setItem("respuesta_pregunta1Pista", "Correcto");
+            message.textContent = "+1";
+
+        });
+
+
+
         function mostrarRespuesta() {
             var respuesta = document.getElementById("respuesta");
             respuesta.style.display = "block";
@@ -61,20 +86,6 @@
         function showHint(hintNumber) {
             var hint = document.getElementById('hint' + hintNumber);
             hint.style.display = 'block';
-        }
-
-        function verificarRespuesta() {
-            var respuestaInput = document.getElementById('respuestaInput').value;
-            var respuestaCorrecta = "Antonio Neumane"; // Respuesta correcta
-
-            if (respuestaInput.trim().toLowerCase() === respuestaCorrecta.toLowerCase()) {
-                document.getElementById('respuestaMensaje').innerHTML = "¡Respuesta correcta!";
-                document.getElementById('respuestaMensaje').style.color = "green";
-                window.location.href = '../../preguntas_con_pIstas.html';
-            } else {
-                document.getElementById('respuestaMensaje').innerHTML = "Respuesta incorrecta. Intenta de nuevo.";
-                document.getElementById('respuestaMensaje').style.color = "red";
-            }
         }
 
 

@@ -17,28 +17,119 @@
                 <div class="group group-a">
                     <h2>Grupo A</h2>
                     <div class="points-counter">
-<!--                         <p>Puntos: <span id="group-a-points">0</span></p> -->
+                        <p>Puntos: <span id="group-a-points-pista">0</span></p>
                     </div>
                     <ul>
-                        <li><a href="preguntas/pistas/pistas1.html">Pregunta 1</a></li>
-                        <li><a href="preguntas/pistas/pistas2.html">Pregunta 2</a></li>
+                        <li><a id="pregunta1Pista" href="preguntas/pistas/pistas1.html">Pregunta 1</a></li>
+                        <li><a id="pregunta2Pista" href="preguntas/pistas/pistas2.html">Pregunta 2</a></li>
                     </ul>
                 </div>
                 <div class="group group-b">
                     <h2>Grupo B</h2>
                     <div class="points-counter">
-<!--                         <p>Puntos: <span id="group-b-points">0</span></p> -->
+                        <p>Puntos: <span id="group-b-points-pista">0</span></p>
                     </div>
                     <ul>
-                        <li><a href="preguntas/pistas/pistas3.html">Pregunta 3</a></li>
-                        <li><a href="preguntas/pistas/pistas4.html">Pregunta 4</a></li>
+                        <li><a id="pregunta3Pista" href="preguntas/pistas/pistas3.html">Pregunta 3</a></li>
+                        <li><a id="pregunta4Pista" href="preguntas/pistas/pistas4.html">Pregunta 4</a></li>
                     </ul>
                 </div>
             </div>
-            <a href="index.html" class="boton-volver" onclick="limpiarLocalStorage()">Volver al menú principal</a>
+            <a href="index.html" class="boton-volver">Volver al menú principal</a>
         </div>
     </div>
-    
+
 </body>
+
+<script>
+    // Esperar a que el DOM esté completamente cargado
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+        document.getElementById("pregunta1Pista").removeAttribute("disabled");
+
+        // Función para actualizar los puntos del Grupo A y Grupo B
+        function updateGroupPoints() {
+            // Obtener las respuestas correctas almacenadas en localStorage
+            var correctAnswer1 = localStorage.getItem("respuesta_pregunta1Pista");
+            var correctAnswer2 = localStorage.getItem("respuesta_pregunta2Pista");
+            var correctAnswer3 = localStorage.getItem("respuesta_pregunta3Pista");
+            var correctAnswer4 = localStorage.getItem("respuesta_pregunta4Pista");
+
+            // Contadores de puntos para Grupo A y Grupo B
+            var totalPointsA = 0;
+            var totalPointsB = 0;
+
+            // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo A
+            if (correctAnswer1 === "Correcto") {
+                totalPointsA++;
+            }
+            if (correctAnswer2 === "Correcto") {
+                totalPointsA++;
+            }
+
+            // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo B
+            if (correctAnswer3 === "Correcto") {
+                totalPointsA++;
+            }
+            if (correctAnswer4 === "Correcto") {
+                totalPointsB++;
+            }
+
+            // Obtener los contadores de puntos para los Grupos A y B
+            var groupAPointsPista = document.getElementById("group-a-points-pista");
+            var groupBPointsPista = document.getElementById("group-b-points-pista");
+
+            // Actualizar los contadores de puntos para los Grupos A y B
+            groupAPointsPista.textContent = totalPointsA;
+            groupBPointsPista.textContent = totalPointsB;
+
+            // Guardar los puntos de los Grupos A y B en localStorage
+            localStorage.setItem("groupAPointsPista", totalPointsA);
+            localStorage.setItem("groupBPointsPista", totalPointsB);
+
+            // Deshabilitar los enlaces de las preguntas incorrectas
+            var respuestaIncorrectaPregunta1 = localStorage.getItem("respuesta_incorrecta_pregunta1Pista");
+            var respuestaIncorrectaPregunta2 = localStorage.getItem("respuesta_incorrecta_pregunta2Pista");
+            var respuestaIncorrectaPregunta3 = localStorage.getItem("respuesta_incorrecta_pregunta3Pista");
+            var respuestaIncorrectaPregunta4 = localStorage.getItem("respuesta_incorrecta_pregunta4Pista");
+
+            var respuestaVaciaPregunta1 = localStorage.getItem("respuesta_vacia_pregunta1Pista");
+
+            if (respuestaIncorrectaPregunta1) {
+                document.getElementById("pregunta1Pista").setAttribute("disabled", true);
+                console.log("Pregunta 1 deshabilitada");
+            }
+            if (respuestaIncorrectaPregunta2) {
+                document.getElementById("pregunta2Pista").setAttribute("disabled", true);
+                console.log("Pregunta 2 deshabilitada");
+            }
+            if (respuestaIncorrectaPregunta3) {
+                document.getElementById("pregunta3Pista").setAttribute("disabled", true);
+                console.log("Pregunta 3 deshabilitada");
+            }
+            if (respuestaIncorrectaPregunta4) {
+                document.getElementById("pregunta4Pista").setAttribute("disabled", true);
+                console.log("Pregunta 4 deshabilitada");
+            }
+            if (correctAnswer1) {
+                document.getElementById("pregunta1Pista").setAttribute("disabled", true);
+                console.log("Pregunta 1 deshabilitada");
+            }
+            if (correctAnswer2) {
+                document.getElementById("pregunta2Pista").setAttribute("disabled", true);
+            }
+            if (correctAnswer3) {
+                document.getElementById("pregunta3Pista").setAttribute("disabled", true);
+            }
+            if (correctAnswer4) {
+                document.getElementById("pregunta4Pista").setAttribute("disabled", true);
+            }
+        }
+
+        // Llamar a la función para actualizar los puntos de los Grupos A y B
+        updateGroupPoints();
+    });
+</script>
 
 </html>

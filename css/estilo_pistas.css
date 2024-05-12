@@ -192,3 +192,38 @@ input[type="submit"]:hover,
     text-align: center; /* Centrar el texto */
     margin-top: 20px; /* Agregar un espacio superior */
 }
+#correctoBtn,
+#incorrectoBtn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
+
+#correctoBtn {
+    background-color: #008000; /* Color de fondo verde */
+    color: white; /* Color de texto blanco */
+}
+
+#correctoBtn:hover {
+    background-color: #006400; /* Color de fondo verde oscuro al pasar el mouse */
+}
+
+#incorrectoBtn {
+    background-color: #FF0000; /* Color de fondo rojo */
+    color: white; /* Color de texto blanco */
+}
+
+#incorrectoBtn:hover {
+    background-color: #8B0000; /* Color de fondo rojo oscuro al pasar el mouse */
+}
+
+.message {
+    text-align: center; /* Centrar el texto horizontalmente */
+    display: flex; /* Usar flexbox para centrar verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+

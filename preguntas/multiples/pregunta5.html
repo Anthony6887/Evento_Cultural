@@ -47,17 +47,20 @@
                 if (selectedOption && selectedOption.value === "D") {
                     // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
                     localStorage.setItem("respuesta_pregunta5", "D");
+                    var message = document.getElementById("message");
+                    message.textContent = "Respuesta Correcta.";
+                    
                     // Redirigir a la página multiple_choice.html
 
                 } else {
                     // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
                     var message = document.getElementById("message");
-                    message.textContent = "Respuesta incorrecta. Por favor, intenta de nuevo.";
+                    message.textContent = "Respuesta incorrecta.";
                     message.classList.add("error");
                     // Guardar el valor de la opción seleccionada en localStorage
                     if (selectedOption) {
                         localStorage.setItem("respuesta_incorrecta_pregunta5", selectedOption.value);
-                        window.location.href = '../../multiple_choice.html';
+
                     }
                     // Bloquear el botón de enviar respuesta
                     document.getElementById("submitButton").disabled = true;
@@ -77,7 +80,7 @@
                 var selectedOption = form.querySelector('input[name="respuesta"]:checked');
                 if (!selectedOption) {
                     var message = document.getElementById("message");
-                    message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                    message.textContent = "Tiempo agotado.";
                     message.classList.add("error");
                     // Capturar la respuesta incorrecta en localStorage
                     var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');

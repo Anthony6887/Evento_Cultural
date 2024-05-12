@@ -159,3 +159,26 @@ a:hover {
         transform: translateY(-10px);
     }
 }
+
+#pregunta1Pista[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 5 */
+#pregunta2Pista[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 6 */
+#pregunta3Pista[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 4 */
+#pregunta4Pista[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}   
