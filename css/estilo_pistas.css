@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    max-width: 600px;
+    max-width: 800px;
     background-color: #ffffff8c;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,13 @@ body {
     height: 80vh; /* Ajusta la altura del contenedor */
     margin-top: 8vh; /* Ajusta la posición vertical del contenedor */
 }
-
+h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 48px; /* Aumentamos el tamaño del título */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Añadimos más espacio al margen inferior */
+}
 
 .timer {
     text-align: center; /* Centrar el texto */
