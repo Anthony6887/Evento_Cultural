@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta 3</title>
+    <title>Pregunta 4</title>
     <link rel="stylesheet" href="../../css/estilo_pregunta.css">
 </head>
 
@@ -14,18 +14,18 @@
             <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
             <br>
             <div class="loaderBar"></div> 
-            <h1>Pregunta 3</h1>
-            <p>SINÓNIMO DE APOLTRONAR:</p>
+            <h1>Pregunta 4</h1>
+            <p>EL NOMBRE PELILEO PROVIENE DE LA LENGUA KICHUA QUE SIGNIFICA</p>
             <div class="team-container">
                 <div>
                     <h2>Equipo A</h2>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">A) REINAR</label><br>
+                        <label for="opcion_a">A) CACIQUE PODEROSO</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">B) DESCANSAR</label><br>
+                        <label for="opcion_b">B) LAGUNA ESPESA</label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">C) CAMINAR</label><br><br>
+                        <label for="opcion_c">C) FUERTE COMO LA ROCA</label><br><br>
                     </form>
                 </div>
             </div>
@@ -42,9 +42,9 @@
             // Obtener la opción seleccionada
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             // Verificar si la opción seleccionada es la correcta (opción A)
-            if (selectedOption && selectedOption.value === "B") {
+            if (selectedOption && selectedOption.value === "A") {
                 // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                localStorage.setItem("respuesta_pregunta3", "B");
+                localStorage.setItem("respuesta_pregunta1a", "A");
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
             } else {
@@ -54,7 +54,7 @@
                 message.classList.add("error");
                 // Guardar el valor de la opción seleccionada en localStorage
                 if (selectedOption) {
-                    localStorage.setItem("respuesta_incorrecta_pregunta2", selectedOption.value);
+                    localStorage.setItem("respuesta_incorrecta_pregunta1a", selectedOption.value);
 
                 }
                 // Bloquear el botón de enviar respuesta
@@ -79,10 +79,10 @@
                     // Capturar la respuesta incorrecta en localStorage
                     var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                     if (selectedIncorrectOption) {
-                        localStorage.setItem("respuesta_vacia_pregunta1", selectedIncorrectOption.value);
+                        localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
                     } else {
                         // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                        localStorage.setItem("respuesta_vacia_pregunta1", "");
+                        localStorage.setItem("respuesta_vacia_pregunta1a", "");
                     }
                     // Recargar la página multiple_choice.html
                     window.location.href = '../../multiple_choice.html';

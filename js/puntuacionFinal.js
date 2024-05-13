@@ -39,6 +39,13 @@ function reiniciarPuntuaciones() {
     localStorage.removeItem('respuesta_pregunta5');
     localStorage.removeItem('respuesta_pregunta6');
 
+    localStorage.removeItem('respuesta_pregunta1a');
+    localStorage.removeItem('respuesta_pregunta2a');
+    localStorage.removeItem('respuesta_pregunta3a');
+    localStorage.removeItem('respuesta_pregunta1b');
+    localStorage.removeItem('respuesta_pregunta2b');
+    localStorage.removeItem('respuesta_pregunta3b');
+
     localStorage.removeItem('respuesta_pregunta1VF');
     localStorage.removeItem('respuesta_pregunta2VF');
     localStorage.removeItem('respuesta_pregunta3VF');
@@ -63,12 +70,21 @@ function reiniciarPuntuaciones() {
     localStorage.removeItem('respuesta_incorrecta_pregunta5');
     localStorage.removeItem('respuesta_incorrecta_pregunta6');
 
+    localStorage.removeItem('respuesta_incorrecta_pregunta1a');
+    localStorage.removeItem('respuesta_incorrecta_pregunta2a');
+    localStorage.removeItem('respuesta_incorrecta_pregunta3a');
+    localStorage.removeItem('respuesta_incorrecta_pregunta1b');
+    localStorage.removeItem('respuesta_incorrecta_pregunta2b');
+    localStorage.removeItem('respuesta_incorrecta_pregunta3b');
+    
+
     localStorage.removeItem('respuesta_incorrecta_pregunta1VF');
     localStorage.removeItem('respuesta_incorrecta_pregunta2VF');
     localStorage.removeItem('respuesta_incorrecta_pregunta3VF');
     localStorage.removeItem('respuesta_incorrecta_pregunta4VF');
     localStorage.removeItem('respuesta_incorrecta_pregunta5VF');
     localStorage.removeItem('respuesta_incorrecta_pregunta6VF');
+
 
 
 

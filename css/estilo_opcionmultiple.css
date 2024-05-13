@@ -146,6 +146,33 @@ a {
     color: gray; /* Cambiar color del texto a gris */
 }
 
+#pregunta1a[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta2a[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta3a[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta1b[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta2b[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta3b[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+
 /* Pregunta 4 */
 #pregunta4[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
