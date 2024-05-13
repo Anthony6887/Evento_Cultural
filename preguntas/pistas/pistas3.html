@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta con Pistas</title>
+    <link rel="stylesheet" href="../../css/estilo_pistas.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
+            <br>
+            <div class="loaderBar"></div>
+            <div class="question">
+                <h1>   JUEGO DAME UNA PISTA</h1>
+            </div>
+            <div class="hints">
+                <button class="hint-btn" onclick="showHint(1)">Pista 1</button>
+                <button class="hint-btn" onclick="showHint(2)">Pista 2</button>
+                <button class="hint-btn" onclick="showHint(3)">Pista 3</button>
+                <button class="hint-btn" onclick="showHint(4)">Pista 4</button>
+                <button class="hint-btn" onclick="showHint(5)">Pista 5</button>
+                <button class="hint-btn" onclick="showHint(6)">Pista 6</button>
+                <button id="mostrarRespuestaBtn" onclick="mostrarRespuesta()">Mostrar Respuesta</button>
+            </div>
+            <div class="hints-content">
+                <div id="hint1" class="hint">1.	Pueblo indígena</div>
+                <div id="hint2" class="hint">2.	Ubicado en la sierra ecuatoriana</div>
+                <div id="hint3" class="hint">3.	Los hombres utilizan pantalón blanco</div>
+                <div id="hint4" class="hint">4.	Se dice que sus ancestros provienen de Bolivia</div>
+                <div id="hint5" class="hint">5.	Su comunidad está ubicada junto a la vía estatal</div>
+                <div id="hint6" class="hint">6.	Tienen la mas famosa plaza del Ecuador para comercializar sus artesanías</div>
+            </div>
+            <div id="respuesta" style="display: none; color: red; text-align: center;">Los otavaleños o pueblo otavalo</div>
+
+            <button id="correctoBtn">Correcto</button>
+            <button id="incorrectoBtn">Incorrecto</button>
+            <div id="message" class="message"></div>
+            <a href="../../preguntas_con_pIstas.html" class="boton-volver"
+                style="display: block; text-align: center; margin-top: 20px;">Volver al menú principal</a>
+
+        </div>
+    </div>
+
+
+    <script>
+
+
+        // Función para capturar si se presiona el botón "Incorrecto"
+        document.getElementById("incorrectoBtn").addEventListener("click", function () {
+            // Guardar en localStorage que se presionó "Incorrecto"
+            localStorage.setItem("respuesta_pregunta3PistaI", "Incorrecto");
+            message.textContent = "0";
+        });
+
+        // Función para capturar si se presiona el botón "Correcto"
+        document.getElementById("correctoBtn").addEventListener("click", function () {
+            // Guardar en localStorage que se presionó "Correcto"
+            var message = document.getElementById("message");
+            localStorage.setItem("respuesta_pregunta3Pista", "Correcto");
+            message.textContent = "+1";
+
+        });
+
+
+
+        function mostrarRespuesta() {
+            var respuesta = document.getElementById("respuesta");
+            respuesta.style.display = "block";
+        }
+
+        var tiempoRestante = 30; // Tiempo restante en segundos
+        var timerElement = document.getElementById('timer');
+
+        function actualizarTemporizador() {
+            timerElement.textContent = 'Tiempo restante: ' + tiempoRestante + ' segundos';
+            if (tiempoRestante <= 0) {
+                clearInterval(intervalId); // Detener el temporizador cuando el tiempo llega a cero
+                document.getElementById('verRespuestaBtn').disabled = true; // Deshabilitar el botón de ver respuesta
+                document.getElementById('respuestaMensaje').textContent = '¡Tiempo agotado!';
+                document.getElementById('respuestaMensaje').style.color = 'red';
+            }
+            tiempoRestante--;
+        }
+
+        // Actualizar el temporizador cada segundo
+        var intervalId = setInterval(actualizarTemporizador, 1000);
+
+        function showHint(hintNumber) {
+            var hint = document.getElementById('hint' + hintNumber);
+            hint.style.display = 'block';
+        }
+
+
+        // Temporizador de 30 segundos
+        var secondsLeft = 30;
+        var timerElement = document.getElementById("timer");
+        var timerInterval = setInterval(function () {
+            secondsLeft--;
+            timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            if (secondsLeft === 0) {
+                clearInterval(timerInterval);
+                var form = document.getElementById("formA");
+                var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+                if (!selectedOption) {
+                    var message = document.getElementById("message");
+                    message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                    message.classList.add("error");
+                    // Capturar la respuesta incorrecta en localStorage
+                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
+                    if (selectedIncorrectOption) {
+                        localStorage.setItem("respuesta_vacia_pregunta1", selectedIncorrectOption.value);
+                    } else {
+                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
+                        localStorage.setItem("respuesta_vacia_pregunta1", "");
+                    }
+                    // Recargar la página multiple_choice.html
+                    window.location.href = '../../verdadero_falso.html';
+                }
+            }
+        }, 1000); // 1 segundo en milisegundos
+    </script>
+</body>
+
+</html>
