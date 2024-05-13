@@ -15,17 +15,17 @@
             <br>
             <div class="loaderBar"></div>
             <h1>Pregunta 1</h1>
-            <p>¿Cuál es el lugar más frío de la tierra?</p>
+            <p>¿Los vegetales utilizan la energía del sol para sintetizar compuestos como?</p>
             <div class="team-container">
                 <div>
                     <h2>Equipo A</h2>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">A) La Antártida</label><br>
+                        <label for="opcion_a">A) Sales minerales</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">B) El Polo Norte</label><br>
+                        <label for="opcion_b">B) Nucleótidos</label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">C) El Monte Everest</label><br><br>
+                        <label for="opcion_c">C) Nucleótidos</label><br><br>
                     </form>
                 </div>
             </div>
@@ -45,9 +45,9 @@
             // Obtener la opción seleccionada
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             // Verificar si la opción seleccionada es la correcta (opción A)
-            if (selectedOption && selectedOption.value === "A") {
+            if (selectedOption && selectedOption.value === "C") {
                 // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                localStorage.setItem("respuesta_pregunta1", "A");
+                localStorage.setItem("respuesta_pregunta1", "C");
                 // Redirigir a la página multiple_choice.html
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
