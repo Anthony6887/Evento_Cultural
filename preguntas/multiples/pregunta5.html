@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta 4</title>
+    <title>Pregunta 2</title>
     <link rel="stylesheet" href="../../css/estilo_pregunta.css">
 </head>
 
@@ -14,18 +14,18 @@
             <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
             <br>
             <div class="loaderBar"></div> 
-            <h1>Pregunta 5</h1>
-            <p>¿Cual es el rio mas largo del mundo?</p>
+            <h1>Pregunta 2</h1>
+            <p>Aquellos agentes externos o internos que causan una respuesta por parte de los seres vivos, se denominan:</p>
             <div class="team-container">
                 <div>
                     <h2>Equipo B</h2>
                     <form id="formB">
-                        <input type="radio" id="opcion_d" name="respuesta" value="D">
-                        <label for="opcion_d">A) Nilo</label><br>
-                        <input type="radio" id="opcion_e" name="respuesta" value="E">
-                        <label for="opcion_e">B) Amazonas</label><br>
-                        <input type="radio" id="opcion_f" name="respuesta" value="F">
-                        <label for="opcion_f">C) Bravo</label><br><br>
+                        <input type="radio" id="opcion_d" name="respuesta" value="A">
+                        <label for="opcion_d">A) Transmisores</label><br>
+                        <input type="radio" id="opcion_e" name="respuesta" value="B">
+                        <label for="opcion_e">B) Estímulos</label><br>
+                        <input type="radio" id="opcion_f" name="respuesta" value="C">
+                        <label for="opcion_f">C) Receptores</label><br><br>
                     </form>
                 </div>
             </div>
@@ -44,9 +44,9 @@
                 // Obtener la opción seleccionada
                 var selectedOption = form.querySelector('input[name="respuesta"]:checked');
                 // Verificar si la opción seleccionada es la correcta (opción F)
-                if (selectedOption && selectedOption.value === "D") {
+                if (selectedOption && selectedOption.value === "B") {
                     // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                    localStorage.setItem("respuesta_pregunta5", "D");
+                    localStorage.setItem("respuesta_pregunta5", "B");
                     var message = document.getElementById("message");
                     message.textContent = "Respuesta Correcta.";
                     

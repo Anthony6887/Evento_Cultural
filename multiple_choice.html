@@ -34,9 +34,12 @@
                         <p>Puntos: <span id="group-b-points">0</span></p>
                     </div>
                     <ul>
-                        <li><a id="pregunta4" href="preguntas/multiples/pregunta4.html">Pregunta 4</a></li>
-                        <li><a id="pregunta5" href="preguntas/multiples/pregunta5.html">Pregunta 5</a></li>
-                        <li><a id="pregunta6" href="preguntas/multiples/pregunta6.html">Pregunta 6</a></li>
+                        <li><a id="pregunta4" href="preguntas/multiples/pregunta4.html">Pregunta 1</a></li>
+                        <li><a id="pregunta5" href="preguntas/multiples/pregunta5.html">Pregunta 2</a></li>
+                        <li><a id="pregunta6" href="preguntas/multiples/pregunta6.html">Pregunta 3</a></li>
+                        <li><a id="pregunta1b" href="preguntas/multiples/pregunta1.2.html">Pregunta 4</a></li>
+                        <li><a id="pregunta2b" href="preguntas/multiples/pregunta2.2.html">Pregunta 5</a></li>
+                        <li><a id="pregunta3b" href="preguntas/multiples/pregunta3.2.html">Pregunta 6</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,9 +67,9 @@
                 var correctAnswer2a = localStorage.getItem("respuesta_pregunta2a");
                 var correctAnswer3a = localStorage.getItem("respuesta_pregunta3a");
 
-                var correctAnswer1b = localStorage.getItem("respuesta_pregunta1a");
-                var correctAnswer2b = localStorage.getItem("respuesta_pregunta2a");
-                var correctAnswer3b = localStorage.getItem("respuesta_pregunta3a");
+                var correctAnswer1b = localStorage.getItem("respuesta_pregunta1b");
+                var correctAnswer2b = localStorage.getItem("respuesta_pregunta2b");
+                var correctAnswer3b = localStorage.getItem("respuesta_pregunta3b");
 
                 var correctAnswer4 = localStorage.getItem("respuesta_pregunta4");
                 var correctAnswer5 = localStorage.getItem("respuesta_pregunta5");
@@ -97,13 +100,22 @@
                 }
 
                 // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo B
-                if (correctAnswer4 === "F") {
+                if (correctAnswer4 === "A") {
                     totalPointsB++;
                 }
-                if (correctAnswer5 === "D") {
+                if (correctAnswer5 === "B") {
                     totalPointsB++;
                 }
-                if (correctAnswer6 === "E") {
+                if (correctAnswer6 === "C") {
+                    totalPointsB++;
+                }
+                if (correctAnswer1b === "A") {
+                    totalPointsB++;
+                }
+                if (correctAnswer2b === "A") {
+                    totalPointsB++;
+                }
+                if (correctAnswer3b === "A") {
                     totalPointsB++;
                 }
 
@@ -130,6 +142,10 @@
                 var respuestaIncorrectaPregunta1a = localStorage.getItem("respuesta_incorrecta_pregunta1a");
                 var respuestaIncorrectaPregunta2a = localStorage.getItem("respuesta_incorrecta_pregunta2a");
                 var respuestaIncorrectaPregunta3a = localStorage.getItem("respuesta_incorrecta_pregunta3a");
+
+                var respuestaIncorrectaPregunta1b = localStorage.getItem("respuesta_incorrecta_pregunta1b");
+                var respuestaIncorrectaPregunta2b = localStorage.getItem("respuesta_incorrecta_pregunta2b");
+                var respuestaIncorrectaPregunta3b = localStorage.getItem("respuesta_incorrecta_pregunta3b");
 
 
 
@@ -166,10 +182,15 @@
                 if (respuestaIncorrectaPregunta3a) {
                     document.getElementById("pregunta3a").setAttribute("disabled", true);
                 }
-                
-                
-
-
+                if (respuestaIncorrectaPregunta1b) {
+                    document.getElementById("pregunta1b").setAttribute("disabled", true);
+                }
+                if (respuestaIncorrectaPregunta2b) {
+                    document.getElementById("pregunta2b").setAttribute("disabled", true);
+                }
+                if (respuestaIncorrectaPregunta3b) {
+                    document.getElementById("pregunta3b").setAttribute("disabled", true);
+                }
 
                 if (correctAnswer1) {
                     document.getElementById("pregunta1").setAttribute("disabled", true);
@@ -197,6 +218,15 @@
                 }
                 if (correctAnswer3a) {
                     document.getElementById("pregunta3a").setAttribute("disabled", true);
+                }
+                if (correctAnswer1b) {
+                    document.getElementById("pregunta1b").setAttribute("disabled", true);
+                }
+                if (correctAnswer2b) {
+                    document.getElementById("pregunta2b").setAttribute("disabled", true);
+                }
+                if (correctAnswer3b) {
+                    document.getElementById("pregunta3b").setAttribute("disabled", true);
                 }
                 
                 

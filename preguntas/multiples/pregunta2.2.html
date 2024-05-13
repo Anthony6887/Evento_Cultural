@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 5</title>
+    <link rel="stylesheet" href="../../css/estilo_pregunta.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div id="timer" class="timer">Tiempo restante: 30 segundos</div>
+            <br>
+            <div class="loaderBar"></div> 
+            <h1>Pregunta 5</h1>
+            <p>¿Qué tipo de animal es la ballena?</p>
+            <div class="team-container">
+                <div>
+                    <h2>Equipo A</h2>
+                    <form id="formA">
+                        <input type="radio" id="opcion_a" name="respuesta" value="A">
+                        <label for="opcion_a">A) Mamífero</label><br>
+                        <input type="radio" id="opcion_b" name="respuesta" value="B">
+                        <label for="opcion_b">B) Pez</label><br>
+                        <input type="radio" id="opcion_c" name="respuesta" value="C">
+                        <label for="opcion_c">C) Crustáceo</label><br><br>
+                    </form>
+                </div>
+            </div>
+            <div id="message" class="message"></div>
+            <button id="submitButton" class="submit-button">Enviar respuesta</button>
+            <a href="../../multiple_choice.html" class="boton-volver">Volver al menú principal</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function () {
+            // Obtener el formulario
+            var form = document.getElementById("formA");
+            // Obtener la opción seleccionada
+            var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+            // Verificar si la opción seleccionada es la correcta (opción A)
+            if (selectedOption && selectedOption.value === "A") {
+                // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
+                localStorage.setItem("respuesta_pregunta2b", "A");
+                var message = document.getElementById("message");
+                message.textContent = "Respuesta Correcta.";
+            } else {
+                // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
+                var message = document.getElementById("message");
+                message.textContent = "Respuesta incorrecta.";
+                message.classList.add("error");
+                // Guardar el valor de la opción seleccionada en localStorage
+                if (selectedOption) {
+                    localStorage.setItem("respuesta_incorrecta_pregunta2b", selectedOption.value);
+
+                }
+                // Bloquear el botón de enviar respuesta
+                document.getElementById("submitButton").disabled = true;
+            }
+        });
+
+         // Temporizador de 30 segundos
+         var secondsLeft = 30;
+        var timerElement = document.getElementById("timer");
+        var timerInterval = setInterval(function () {
+            secondsLeft--;
+            timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            if (secondsLeft === 0) {
+                clearInterval(timerInterval);
+                var form = document.getElementById("formA");
+                var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+                if (!selectedOption) {
+                    var message = document.getElementById("message");
+                    message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                    message.classList.add("error");
+                    // Capturar la respuesta incorrecta en localStorage
+                    var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
+                    if (selectedIncorrectOption) {
+                        localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                    } else {
+                        // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
+                        localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                    }
+                    // Recargar la página multiple_choice.html
+                    window.location.href = '../../multiple_choice.html';
+                }
+            }
+        }, 1000); // 1 segundo en milisegundos
+    </script>
+
+</body>
+
+</html>
