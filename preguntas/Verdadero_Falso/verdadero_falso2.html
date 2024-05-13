@@ -15,7 +15,7 @@
             <br>
             <div class="loaderBar"></div>
             <h1>Pregunta 2</h1>
-            <p>¿La Antártida es el lugar más frío de la Tierra?</p>
+            <p>El principal exponente del género épico es William Shakespear</p>
             <div class="team-container">
                 <div>
                     <h2>Equipo A</h2>
@@ -43,9 +43,9 @@
             // Obtener la opción seleccionada
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             // Verificar si la opción seleccionada es la correcta (opción A)
-            if (selectedOption && selectedOption.value === "A") {
+            if (selectedOption && selectedOption.value === "B") {
                 // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                localStorage.setItem("respuesta_pregunta2VF", "A");
+                localStorage.setItem("respuesta_pregunta2VF", "B");
                 // Redirigir a la página multiple_choice.html
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
