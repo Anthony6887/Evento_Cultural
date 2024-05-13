@@ -15,17 +15,17 @@
             <br>
             <div class="loaderBar"></div> 
             <h1>Pregunta 2</h1>
-            <p>¿Quién escribió La Odisea?</p>
+            <p>Los ácidos nucleicos están compuestos por:</p>
             <div class="team-container">
                 <div>
                     <h2>Equipo A</h2>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">A) Platón</label><br>
+                        <label for="opcion_a">A) Carbohidratos, grupo fosfato y proteínas</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">B) Homero</label><br>
+                        <label for="opcion_b">B) Bases púricas, azúcar y carbohidratos</label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">C) Sócrates</label><br><br>
+                        <label for="opcion_c">C) Bases nitrogenadas, azúcares y grupo fosfato</label><br><br>
                     </form>
                 </div>
             </div>
@@ -42,9 +42,9 @@
             // Obtener la opción seleccionada
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             // Verificar si la opción seleccionada es la correcta (opción A)
-            if (selectedOption && selectedOption.value === "B") {
+            if (selectedOption && selectedOption.value === "C") {
                 // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                localStorage.setItem("respuesta_pregunta2", "B");
+                localStorage.setItem("respuesta_pregunta2", "C");
                 var message = document.getElementById("message");
                 message.textContent = "Respuesta Correcta.";
             } else {
