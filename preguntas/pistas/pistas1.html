@@ -36,8 +36,10 @@
             </div>
             <div id="respuesta" style="display: none; color: red; text-align: center;">Volcán Tungurahua</div>
 
-            <button id="correctoBtn">Correcto</button>
-            <button id="incorrectoBtn">Incorrecto</button>
+            <div class="button-container">
+                <button id="correctoBtn">Grupo A</button>
+                <button id="incorrectoBtn">Grupo B</button>
+            </div>
             <div id="message" class="message"></div>
             <a href="../../preguntas_con_pIstas.html" class="boton-volver"
                 style="display: block; text-align: center; margin-top: 20px;">Volver al menú principal</a>
@@ -52,15 +54,15 @@
         // Función para capturar si se presiona el botón "Incorrecto"
         document.getElementById("incorrectoBtn").addEventListener("click", function () {
             // Guardar en localStorage que se presionó "Incorrecto"
-            localStorage.setItem("respuesta_pregunta1PistaI", "Incorrecto");
-            message.textContent = "0";
+            localStorage.setItem("respuesta_pregunta1Pista", "GB");
+            message.textContent = "+1";
         });
 
         // Función para capturar si se presiona el botón "Correcto"
         document.getElementById("correctoBtn").addEventListener("click", function () {
             // Guardar en localStorage que se presionó "Correcto"
             var message = document.getElementById("message");
-            localStorage.setItem("respuesta_pregunta1Pista", "Correcto");
+            localStorage.setItem("respuesta_pregunta1Pista", "GA");
             message.textContent = "+1";
 
         });

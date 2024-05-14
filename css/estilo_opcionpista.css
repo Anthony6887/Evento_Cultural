@@ -80,6 +80,16 @@ a:hover {
     animation: bounce 0.5s infinite alternate;
 }
 
+#group-a-points-pista {
+    display: none;
+}
+
+#group-b-points-pista {
+    display: none;
+}
+
+
+
 .puntuacion {
     position: fixed;
     top: 10%;
@@ -102,7 +112,7 @@ a:hover {
 
 .group {
     width: 48%; /* Ajustamos el ancho de los grupos */
-    border-right: 2px solid #ccc; /* Añadimos una línea divisoria */
+    
 }
 
 .group:last-child {

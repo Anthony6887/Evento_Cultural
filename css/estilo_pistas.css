@@ -31,6 +31,15 @@ h1 {
     text-align: center; /* Centrar el texto */
 }
 
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente si el contenedor tiene una altura definida */
+
+}
+
+
 
 .question,
 .hints,

@@ -15,21 +15,21 @@
             <p>Selecciona una pregunta:</p>
             <div class="group-container">
                 <div class="group group-a">
-                    <h2>Grupo A</h2>
+                    <!-- <h2>Grupo A</h2> -->
                     <div class="points-counter">
-                        <p>Puntos: <span id="group-a-points-pista">0</span></p>
+                        <p><span id="group-a-points-pista"></span></p>
                     </div>
                     <ul>
                         <li><a id="pregunta1Pista" href="preguntas/pistas/pistas1.html">Pregunta 1</a></li>
                     </ul>
                 </div>
                 <div class="group group-b">
-                    <h2>Grupo B</h2>
+                   <!--  <h2>Grupo B</h2> -->
                     <div class="points-counter">
-                        <p>Puntos: <span id="group-b-points-pista">0</span></p>
+                        <p><span id="group-b-points-pista"></span></p>
                     </div>
                     <ul>
-                        <li><a id="pregunta3Pista" href="preguntas/pistas/pistas3.html">Pregunta 1</a></li>
+                        <li><a id="pregunta3Pista" href="preguntas/pistas/pistas3.html">Pregunta 2</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,17 +59,24 @@
             var totalPointsB = 0;
 
             // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo A
-            if (correctAnswer1 === "Correcto") {
+            if (correctAnswer1 === "GA") {
                 totalPointsA++;
+            }else
+            if (correctAnswer1 === "GB") {
+                totalPointsB++;
             }
             if (correctAnswer2 === "Correcto") {
                 totalPointsA++;
             }
 
             // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo B
-            if (correctAnswer3 === "Correcto") {
+            if (correctAnswer3 === "GA") {
+                totalPointsA++;
+            }else
+            if (correctAnswer3 === "GB") {
                 totalPointsB++;
             }
+
             if (correctAnswer4 === "Correcto") {
                 totalPointsB++;
             }
