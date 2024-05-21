@@ -4,7 +4,16 @@ body {
     background-color: #1453dcd6;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
-
+.loader {
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Utilizando un gradiente lineal para las franjas */
+    background: rgb(0, 38, 255);
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -16,8 +25,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    height: 80vh; /* Ajusta la altura del contenedor */
-    margin-top: 8vh; /* Ajusta la posición vertical del contenedor */
+    height: 85vh; /* Ajusta la altura del contenedor */
+    margin-top: 5vh; /* Ajusta la posición vertical del contenedor */
 }
 h1 {
     color: #000000;
@@ -25,7 +34,14 @@ h1 {
     font-size: 48px; /* Aumentamos el tamaño del título */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px; /* Añadimos más espacio al margen inferior */
+    
 }
+
+.button-center {
+    display: flex;
+    justify-content: center;
+}
+
 
 .timer {
     text-align: center; /* Centrar el texto */

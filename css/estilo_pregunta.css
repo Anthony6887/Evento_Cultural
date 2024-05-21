@@ -5,6 +5,16 @@ body {
     background-color: #1453dcd6;
 }
 
+.loader {
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Utilizando un gradiente lineal para las franjas */
+    background: rgb(0, 38, 255);
+}
 
 .container {
     max-width: 800px;
