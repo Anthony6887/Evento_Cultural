@@ -25,7 +25,7 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 48px; /* Aumentamos el tamaño del título */
+    font-size: 38px; /* Aumentamos el tamaño del título */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px; /* Añadimos más espacio al margen inferior */
 }
@@ -108,8 +108,8 @@ a:hover {
 
 .puntuacion {
     position: fixed;
-    top: 10%;
-    right: 20px;
+    margin: 20PX;
+    right: 5px;
     transform: translateY(-50%);
     background-color: #fff; /* Cambiamos el fondo a blanco */
     padding: 20px;
