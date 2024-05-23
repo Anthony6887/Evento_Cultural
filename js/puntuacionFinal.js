@@ -115,3 +115,6 @@ function mostrarGanador() {
     // Redirigir a la página ganador.html con el mensaje como parámetro
     window.location.href = url;
 }
+function volver(){
+    window.location.href = 'index.html';
+}

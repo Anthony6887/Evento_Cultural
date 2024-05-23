@@ -3,7 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1453dcd6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajustamos la altura del body para centrar el contenido */
 }
+
+/* Resto de tu CSS permanece igual */
 
 .loader {
     height: 20px;
@@ -12,18 +18,16 @@ body {
     position: relative;
     border: 1px solid #ccc;
     border-radius: 5px;
-    /* Utilizando un gradiente lineal para las franjas */
     background: rgb(0, 38, 255);
 }
 
 .container {
-    max-width:1395px;
-    margin: 50px;
+    max-width: 1395px;
     background-color: #ffffff8c;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 80vh;
+    height: auto; /* Cambiamos la altura a auto para que se ajuste al contenido */
 }
 
 .inner-container {
@@ -31,12 +35,12 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 42px;
     color: #333;
 }
 
 p {
-    font-size: 28px;
+    font-size: 38px;
     color: #666;
     margin-bottom: 20px;
 }
@@ -46,11 +50,11 @@ p {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 0px;
-    font-size: 20PX;
+    font-size: 40PX;
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -60,7 +64,7 @@ input[type="radio"] {
 
 button, .boton-volver {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -101,7 +105,7 @@ button:hover {
 
 .submit-button, .next-button, .boton-volver {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -109,7 +113,7 @@ button:hover {
 
 .timer {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 28px;
     color: #333;
 }
 

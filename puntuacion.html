@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntuacion</title>
+    <link rel="stylesheet" href="/css/puntuacion.css">
+    <script src="../../js/confetti.js" defer></script>
+    <style>
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puntuacion {
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="puntuacion">
+        <h2>Puntuación Total</h2>
+        <div class="grupo-a">
+            <label for="puntuacion-a">EQUIPO A:</label>
+            <input type="text" id="puntuacion-a" value="0" readonly>
+        </div>
+        <div class="grupo-b">
+            <label for="puntuacion-b">EQUIPO B:</label>
+            <input type="text" id="puntuacion-b" value="0" readonly>
+        </div>
+        <button id="reiniciar" onclick="reiniciarPuntuaciones()">Reiniciar</button>
+        <button id="ganador" onclick="mostrarGanador()">Ganador</button>
+        <button id="volver" onclick="volver()">Volver</button>
+    </div>
+
+</body>
+
+</html>
+<script src="/js/puntuacionFinal.js"></script>`;

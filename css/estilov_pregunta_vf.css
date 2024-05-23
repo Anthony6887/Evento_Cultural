@@ -3,18 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1453dcd6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajustamos la altura del body para centrar el contenido */
 }
 
-.loader {
-    height: 20px;
-    width: 100%;
-    margin-top: 10px;
-    position: relative;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    /* Utilizando un gradiente lineal para las franjas */
-    background: rgb(0, 38, 255);
-}
+/* Resto de tu CSS permanece igual */
+
 .container {
     max-width: 1395px;
     margin: 50px auto;
@@ -22,7 +18,8 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 80vh;
+    height: auto; /* Cambiamos la altura a auto para que se ajuste al contenido */
+    font-size: 24px; /* Aumentamos el tamaño de la fuente */
 }
 
 .inner-container {
@@ -30,12 +27,12 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px; /* Aumentamos el tamaño del título */
     color: #333;
 }
 
 p {
-    font-size: 28px;
+    font-size: 32px; /* Aumentamos el tamaño del texto */
     color: #666;
     margin-bottom: 20px;
 }
@@ -45,11 +42,11 @@ p {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 0px;
-    font-size: 20PX;
+    font-size: 28px; /* Aumentamos el tamaño de la fuente */
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 30px; /* Aumentamos el tamaño del título */
     margin-bottom: 10px;
 }
 
