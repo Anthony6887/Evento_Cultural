@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/fondo.png');
+    background-image: url('/fondo1.jpeg');
     background-size: cover;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-    color: #ffffff;
+    color: #000000;
     font-size: 48px; /* Aumentamos el tamaño del título */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px; /* Añadimos más espacio al margen inferior */

@@ -16,12 +16,13 @@ body {
     background: rgb(0, 38, 255);
 }
 .container {
-    max-width: 800px;
+    max-width: 1395px;
     margin: 50px auto;
     background-color: #ffffff8c;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 80vh;
 }
 
 .inner-container {
