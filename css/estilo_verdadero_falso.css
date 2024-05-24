@@ -52,7 +52,7 @@ li {
 }
 
 a {
-    display: block;
+    display: block; /* Cambia el enlace a bloque para que ocupe todo el espacio disponible */
     padding: 15px 30px;
     background-color: #0048ff;
     color: #fff;
@@ -85,6 +85,8 @@ a {
     background-color: #00cc00;
     text-align: center;
     margin-top: 20px;
+    font-size: 34px;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

@@ -103,11 +103,11 @@ function mostrarGanador() {
 
     var mensaje;
     if (sumaPuntosGrupoA > sumaPuntosGrupoB) {
-        mensaje = 'El ganador es el Grupo A con ' + sumaPuntosGrupoA + ' puntos.';
+        mensaje = 'Grupo A';
     } else if (sumaPuntosGrupoA < sumaPuntosGrupoB) {
-        mensaje = 'El ganador es el Grupo B con ' + sumaPuntosGrupoB + ' puntos.';
+        mensaje = 'Grupo B';
     } else {
-        mensaje = '¡Empate! Ambos grupos tienen ' + sumaPuntosGrupoA + ' puntos.';
+        mensaje = '¡Empate!';
     }
 
     // Crear la URL con el mensaje como parámetro
