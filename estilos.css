@@ -2,57 +2,69 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('fondo1.jpeg');
-    background-size: cover;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
 }
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 91vh;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el contenido al final del contenedor principal */
 }
 
 .inner-container {
-    max-width: 85%;
-    padding: 80px;
-    background-color: rgba(255, 255, 255, 0.263);
+    max-width: 100%;
+    gap: 100px; /* Añade un espacio entre los elementos del contenedor */
+    display: flex;
+    padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     text-align: center;
-    font-size: 20px; /* Aumentamos el tamaño de la fuente */
+    justify-content: right;
 }
 
 h1 {
     color: #000000;
-    font-size: 38px; /* Aumentamos el tamaño del título */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 60px; /* Aumentamos el tamaño del título */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px; /* Añadimos más espacio al margen inferior */
 }
 
 p {
-    margin-bottom: 40px; /* Aumentamos el espacio entre párrafos */
-    font-size: 20px; /* Aumentamos el tamaño del texto */
+    display: flex;
+    text-align: center;
+    justify-content: flex-end; /* Alinea el texto a la derecha dentro del párrafo */
+    margin-bottom: 40px; /* Aumenta el espacio entre el párrafo y los botones */
+    font-size: 20px; /* Aumenta el tamaño del texto */
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Cambia el diseño a flexbox */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si no caben en una sola línea */
 }
 
 li {
-    margin: 15px; /* Aumentamos el espacio entre elementos de la lista */
+    margin: 2px;
+    flex: 0 0 35%; /* Define que los elementos no se estiren */
 }
 
+
 a {
-    display: inline-block;
-    padding: 20px 40px; /* Aumentamos el espacio alrededor del texto del botón */
+    display: flex;
+    padding: 20px 20px; /* Aumentamos el espacio alrededor del texto del botón */
     background-color: #0044ff;
+    justify-content: center;
+    text-align: center;
     color: #fff;
     text-decoration: none;
+    font-size: 27px;
     border-radius: 30px; /* Aumentamos el radio del borde del botón */
     transition: background-color 0.3s ease;
 }
@@ -64,20 +76,6 @@ a:hover {
 /* Agregamos una animación a los botones al hacer hover */
 a:hover {
     animation: bounce 0.5s infinite alternate;
-}
-
-.puntuacion {
-    position: fixed;
-    top: 10%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.puntuacion h2 {
-    margin-top: 0;
 }
 
 .grupo-a,
@@ -96,7 +94,6 @@ a:hover {
     width: 50px;
 }
 
-
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -106,21 +103,7 @@ a:hover {
     }
 }
 
-.puntuacion {
-    position: fixed;
-    margin: 20PX;
-    right: 5px;
-    transform: translateY(-50%);
-    background-color: transparent; /* Cambiamos el fondo a blanco */
-    padding: 20px;
-}
 
-.puntuacion h2 {
-    margin-top: 0;
-    font-size: 24px; /* Aumentamos el tamaño del título */
-    font-weight: bold; /* Hacemos que el título sea más audaz */
-    color: #333; /* Cambiamos el color del texto */
-}
 
 .grupo-a,
 .grupo-b {
@@ -157,7 +140,6 @@ button#reiniciar:hover {
     background-color: #cc0000; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
 }
 
-
 button#ganador {
     padding: 10px 20px; /* Aumentamos el espacio alrededor del texto del botón */
     background-color: #0d8a17; /* Cambiamos el color del botón a rojo */
@@ -171,10 +153,3 @@ button#ganador {
 button#ganador:hover {
     background-color: #197012; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
 }
-
-
-
-
-
-
-

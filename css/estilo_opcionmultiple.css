@@ -14,25 +14,42 @@ body {
 }
 
 .inner-container {
-    max-width: 800px;
+    max-width: 100%;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.315);
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     animation: fadeIn 1s ease;
 }
 
 h1 {
-    margin-top: 50px;
     color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 60px; /* Aumentamos el tamaño del título */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Añadimos más espacio al margen inferior */
+    max-width: 100%;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+h2 {
     font-size: 32px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 p {
-    font-size: 18.5px;
+    font-size: 40px;
     margin-bottom: 30px;
+    text-align: center;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Añade estas reglas al final de tu archivo de estilos CSS */
@@ -60,38 +77,50 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.boton-volver {
-    display: block; /* Cambia el enlace a bloque para que ocupe todo el espacio disponible */
-    padding: 15px 30px;
-    background-color: #00ff00; /* Cambia el color de fondo a verde */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
+.inner-container {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
+
+.group-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.group {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 10px;
+}
+
+.points-counter {
+    text-align: center;
+}
+
+.boton-volver {
+    display: block;
+    background-color: #00cc00;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .group {
+        flex: 1 0 100%;
+    }
+}
+
 
 .boton-volver:hover {
     background-color: #00cc00; /* Cambia el tono de verde al pasar el mouse */
 }
 
-/* Añade estas reglas al final de tu archivo de estilos CSS */
-
-/* Añade estas reglas al final de tu archivo de estilos CSS */
-
-.group-container {
-    display: flex;
-    justify-content: space-between; /* Cambia la justificación para distribuir los grupos A y B */
-    align-items: flex-start;
-    margin-top: 50px; /* Agrega un margen superior para separar los grupos */
-    padding: 0 20px; /* Ajusta el relleno horizontal para separar del borde de la ventana */
-}
 
 
-.group {
-    flex: 1; /* Distribuye el espacio disponible entre los grupos */
-    text-align: center;
-    padding: 0 5px; /* Agrega un relleno horizontal para separar el contenido del borde */
-}
 
 .group-a {
     border-right: 2px solid #ccc; /* Agrega un borde derecho al grupo A */

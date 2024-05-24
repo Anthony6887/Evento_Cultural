@@ -20,7 +20,6 @@
             <p>En qué parte del tubo digestivo se absorben más nutrientes?</p>
             <div class="team-container">
                 <div>
-                    <h2>Equipo B</h2>
                     <form id="formB">
                         <input type="radio" id="opcion_d" name="respuesta" value="A">
                         <label for="opcion_d">A) Intestino delgado</label><br>
@@ -51,11 +50,11 @@
                     localStorage.setItem("respuesta_pregunta4", "A");
                     // Redirigir a la página multiple_choice.html
                     var message = document.getElementById("message");
-                    message.textContent = "Respuesta Correcta.";
+                    message.textContent = "CORRECTO";
                 } else {
                     // Mostrar un mensaje de respuesta incorrecta en caso de seleccionar una opción incorrecta
                     var message = document.getElementById("message");
-                    message.textContent = "Respuesta incorrecta.";
+                    message.textContent = " INCORRECTO";
                     message.classList.add("error");
                     // Guardar el valor de la opción seleccionada en localStorage
                     if (selectedOption) {
