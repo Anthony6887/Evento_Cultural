@@ -1,25 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1453dcd6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ajustamos la altura del body para centrar el contenido */
-}
-
-/* Resto de tu CSS permanece igual */
 
 .container {
-    max-width: 1395px;
-    margin: 50px auto;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
     background-color: #ffffff8c;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto; /* Cambiamos la altura a auto para que se ajuste al contenido */
-    font-size: 24px; /* Aumentamos el tamaño de la fuente */
 }
 
 .inner-container {
@@ -27,12 +12,12 @@ body {
 }
 
 h1 {
-    font-size: 36px; /* Aumentamos el tamaño del título */
+    font-size: 42px;
     color: #333;
 }
 
 p {
-    font-size: 32px; /* Aumentamos el tamaño del texto */
+    font-size: 38px;
     color: #666;
     margin-bottom: 20px;
 }
@@ -46,7 +31,7 @@ p {
 }
 
 h2 {
-    font-size: 30px; /* Aumentamos el tamaño del título */
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -86,8 +71,8 @@ button:hover {
 #message {
     margin-top: 20px;
     font-weight: bold;
+    font-size: 30px;
 }
-
 .submit-button:disabled,
 .next-button:disabled,
 .boton-volver:disabled {
@@ -97,11 +82,12 @@ button:hover {
 
 .submit-button, .next-button, .boton-volver {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 .timer {
     margin-top: 20px;
