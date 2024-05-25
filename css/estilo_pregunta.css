@@ -6,7 +6,7 @@
     position: relative;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: rgb(0, 38, 255);
+    background: purple;
 }
 
 .container {
@@ -59,19 +59,19 @@ button, .boton-volver {
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #e9a13d;
+    color: purple;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e9a13d;
 }
 
 .boton-volver {
     display: block;
     margin-top: 20px;
     text-decoration: none;
-    color: #007bff;
+    color:purple;
 }
 
 .boton-volver:hover {

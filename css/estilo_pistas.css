@@ -17,7 +17,7 @@
     height: 100%; /* Ajusta la altura del contenedor */
 }
 h1 {
-    color: #000000;
+    color: purple;
     text-align: center;
     font-size: 40px; /* Aumentamos el tamaño del título */
 }
@@ -56,8 +56,8 @@ form {
 }
 
 .hint-btn {
-    background-color: #0048ff;
-    color: white;
+    background-color: #e9a13d;
+    color: purple;
     font-size: 25px;
     border: none;
     padding: 10px 20px;
@@ -68,7 +68,7 @@ form {
 }
 
 .hint-btn:hover {
-    background-color: #002366;
+    background-color: #ebaa50;
 }
 
 .hint {
@@ -99,7 +99,7 @@ input[type="text"] {
 
 input[type="submit"],
 .boton-volver {
-    background-color: #0048ff;
+    background-color: #e9a13d;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -107,7 +107,7 @@ input[type="submit"],
 
 input[type="submit"]:hover,
 .boton-volver:hover {
-    background-color: #002366;
+    background-color: #e9a13d;
 }
 
 #respuestaMensaje {
@@ -116,8 +116,8 @@ input[type="submit"]:hover,
 
 #mostrarRespuestaBtn {
     font-size: 27px;
-    background-color: #0048ff;
-    color: white;
+    background-color: purple;
+    color: #e9a13d;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -126,7 +126,7 @@ input[type="submit"]:hover,
 }
 
 #mostrarRespuestaBtn:hover {
-    background-color: #002366;
+    background-color: purple;
 }
 
 #respuesta {
@@ -148,8 +148,8 @@ input[type="submit"]:hover,
 .boton-volver {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0048ff;
-    color: white;
+    background-color: #e9a13d;
+    color: purple;
     text-decoration: none;
     border-radius: 5px;
     font-size: 27px;
@@ -157,7 +157,7 @@ input[type="submit"]:hover,
 }
 
 .boton-volver:hover {
-    background-color: #002366;
+    background-color: #e9a13d;
 }
 .timer {
     margin-top: 20px;
@@ -224,21 +224,21 @@ input[type="submit"]:hover,
 }
 
 #correctoBtn {
-    background-color: #008000; /* Color de fondo verde */
+    background-color: purple; /* Color de fondo verde */
     color: white; /* Color de texto blanco */
 }
 
 #correctoBtn:hover {
-    background-color: #006400; /* Color de fondo verde oscuro al pasar el mouse */
+    background-color: rgb(126, 58, 126); /* Color de fondo verde oscuro al pasar el mouse */
 }
 
 #incorrectoBtn {
-    background-color: #FF0000; /* Color de fondo rojo */
+    background-color: purple; /* Color de fondo rojo */
     color: white; /* Color de texto blanco */
 }
 
 #incorrectoBtn:hover {
-    background-color: #8B0000; /* Color de fondo rojo oscuro al pasar el mouse */
+    background-color: rgb(126, 58, 126); /* Color de fondo rojo oscuro al pasar el mouse */
 }
 
 .message {

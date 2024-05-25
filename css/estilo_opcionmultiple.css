@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/fondo1.jpeg');
+    background-color: white;
+    /* background-image: url('/fondo1.jpeg'); */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -46,6 +47,7 @@ h2 {
     margin: 0 auto; /* Centra el elemento horizontalmente */
     max-width: 100%;
     box-sizing: border-box;
+    color: #e38213;
 }
 
 p {
@@ -75,8 +77,8 @@ li {
 a {
     display: block; /* Cambia el enlace a bloque para que ocupe todo el espacio disponible */
     padding: 15px 30px;
-    background-color: #0048ff;
-    color: #fff;
+    background-color: #e38213;
+    color: purple;
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
@@ -107,9 +109,10 @@ a {
 
 .boton-volver {
     display: block;
-    background-color: #00cc00;
+    background-color: #e38213;
     text-align: center;
     margin-top: 20px;
+    color: purple;
 }
 
 /* Media query para dispositivos más pequeños */
@@ -121,7 +124,7 @@ a {
 
 
 .boton-volver:hover {
-    background-color: #00cc00; /* Cambia el tono de verde al pasar el mouse */
+    background-color: #e38213; /* Cambia el tono de verde al pasar el mouse */
 }
 
 
@@ -148,20 +151,20 @@ a {
 .group a {
     display: block;
     padding: 10px 30px;
-    background-color: #0048ff;
-    color: #fff;
+    background-color: purple;
+    color: white;
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
 }
 
 .group a:hover {
-    background-color: #0095ff;
+    background-color: #e38213;
 }
 
 
 .group a:hover {
-    background-color: #0095ff;
+    background-color: purple;
 }
 
 /* CSS para deshabilitar enlaces de preguntas incorrectas */

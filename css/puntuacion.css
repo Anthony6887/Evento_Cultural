@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/fondo1.jpeg');
+    background-color: white;
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -45,7 +45,7 @@ html, body {
 
 h1{
 
-    color: #000000; /* Cambiamos el color del texto a blanco */
+    color: #e9a13d; /* Cambiamos el color del texto a blanco */
     font-size: 40px; /* Aumentamos el tamaño de la fuente */
     margin-bottom: 20px; /* Aumentamos el espacio entre el título y el contenido */
     font-size: 100px;
@@ -90,30 +90,32 @@ button#volver {
 }
 
 button#reiniciar {
+    
     background-color: #ff3333; /* Cambiamos el color del botón a rojo */
     color: #fff; /* Cambiamos el color del texto a blanco */
 }
+
 
 button#reiniciar:hover {
     background-color: #cc0000; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
 }
 
 button#ganador {
-    background-color: #0d8a17; /* Cambiamos el color del botón a verde */
-    color: #fff; /* Cambiamos el color del texto a blanco */
+    background-color: #e9a13d; /* Cambiamos el color del botón a verde */
+    color: purple; /* Cambiamos el color del texto a blanco */
 }
 
 button#ganador:hover {
-    background-color: #197012; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
+    background-color: #e9a13d; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
 }
 
 button#volver {
-    background-color: #091aff; /* Cambiamos el color del botón a azul */
-    color: #fff; /* Cambiamos el color del texto a blanco */
+    background-color: purple; /* Cambiamos el color del botón a azul */
+    color: #e9a13d; /* Cambiamos el color del texto a blanco */
 }
 
 button#volver:hover {
-    background-color: #0000cc; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
+    background-color:purple; /* Cambiamos el color de fondo al pasar el cursor sobre el botón */
 }
 
 /* Botón "Volver al menú principal" específico */

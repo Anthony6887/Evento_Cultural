@@ -1,73 +1,99 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/fondo1.jpeg');
+    background-color: white;
+    /* background-image: url('/fondo1.jpeg'); */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
 }
-
 html, body {
     width: 100%;
-    height: 90%; /* Cambiado de 90% a 100% */
+    height: 90%;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80%;
+    height: 100vh;
 }
 
 .inner-container {
-    width: 100%; /* Asegura que el contenedor interno ocupe todo el ancho */
-    height: 50%; /* Asegura que el contenedor interno ocupe todo el alto */
-    padding: 20px; /* Puedes ajustar el padding según sea necesario */
-    box-sizing: border-box;
+    max-width: 100%;
+    padding: 40px;
     border-radius: 10px;
     text-align: center;
     animation: fadeIn 1s ease;
 }
 
-h1, h2, p {
+h1 {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 60px; /* Aumentamos el tamaño del título */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Añadimos más espacio al margen inferior */
+    max-width: 100%;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
     max-width: 100%;
     box-sizing: border-box;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 40px;
+    color: #e38213;
 }
+
+p {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Añade estas reglas al final de tu archivo de estilos CSS */
 
 ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex; /* Cambia el diseño a flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si no caben en una sola línea */
 }
 
 li {
     margin: 10px;
-    flex: 0 0 35%;
-    font-size: 40px;
+    flex: 0 0 35%; /* Define el tamaño de los elementos. 45% para dejar espacio para el margen */
 }
 
 a {
-    display: block;
+    display: block; /* Cambia el enlace a bloque para que ocupe todo el espacio disponible */
     padding: 15px 30px;
-    background-color: #0048ff;
-    color: #fff;
+    background-color: #e38213;
+    color: purple;
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
+}
+
+.inner-container {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .group-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
 }
 
 .group {
@@ -83,134 +109,22 @@ a {
 
 .boton-volver {
     display: block;
-    background-color: #00cc00;
+    background-color: #e38213;
     text-align: center;
     margin-top: 20px;
-    font-size: 34px;
-    font-weight: bold;
+    color: purple;
 }
 
-
-#group-a-points-pista {
-    display: none;
-}
-
-#group-b-points-pista {
-    display: none;
-}
-
-.puntuacion {
-    position: fixed;
-    top: 10%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.puntuacion h2 {
-    margin-top: 0;
-}
-
-.group-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.group {
-    width: 48%; /* Ajustamos el ancho de los grupos */
-}
-
-.group:last-child {
-    border-right: none; /* Eliminamos la línea divisoria del último grupo */
-}
-
-.points-counter {
-    margin-bottom: 10px;
-}
-
-.grupo-a,
-.grupo-b {
-    margin-bottom: 20px;
-}
-
-.grupo-a label,
-.grupo-b label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.grupo-a input,
-.grupo-b input {
-    width: 50px;
-}
-
-/* Estilos para la barra de progreso del tiempo */
-.loaderBar {
-    width: calc(100% - 40px); /* Ajustado para que ocupe todo el ancho disponible */
-    height: 10px;
-    background: #F9F9F9;
-    border-radius: 10px;
-    border: 1px solid #006DFE;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto 20px; /* Centrado y espacio inferior */
-}
-
-.loaderBar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 5px;
-    background: repeating-linear-gradient(45deg, #0031F2 0 30px, #006DFE 0 40px) right/200% 100%;
-    animation: fillProgress 30s linear infinite; /* Ajustado para que dure 30 segundos */
-    animation-fill-mode: forwards;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
-}
-
-#pregunta1Pista[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 5 */
-#pregunta2Pista[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 6 */
-#pregunta3Pista[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 4 */
-#pregunta4Pista[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
+/* Media query para dispositivos más pequeños */
 @media (max-width: 768px) {
     .group {
         flex: 1 0 100%;
     }
 }
 
+
 .boton-volver:hover {
-    background-color: #00cc00;
+    background-color: #e38213; /* Cambia el tono de verde al pasar el mouse */
 }
 
 
@@ -224,14 +138,133 @@ a {
     margin: 10px;
 }
 
+.group a {
+    display: block;
+    padding: 10px 30px;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
 .group a:hover {
+    background-color: #e38213;
+}
+
+
+.group a:hover {
+    background-color: purple;
+}
+
+/* CSS para deshabilitar enlaces de preguntas incorrectas */
+/* Utiliza los identificadores de las preguntas para seleccionar los enlaces */
+/* Pregunta 4 */
+#pregunta1[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 5 */
+#pregunta2[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 6 */
+#pregunta3[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta1a[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta2a[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta3a[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta1b[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta2b[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+#pregunta3b[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+
+/* Pregunta 4 */
+#pregunta4[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 5 */
+#pregunta5[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 6 */
+#pregunta6[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta1VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 2 */
+#pregunta2VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 3 */
+#pregunta3VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 4 */
+#pregunta4VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 5 */
+#pregunta5VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+/* Pregunta 6 */
+#pregunta6VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+
+
+
+a:hover {
     background-color: #0095ff;
 }
 
-a:hover {
-    animation: bounce 0.5s infinite alternate;
-}
-
+/* Animación de aparición */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -243,6 +276,7 @@ a:hover {
     }
 }
 
+/* Animación de botones al hacer hover */
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -250,4 +284,8 @@ a:hover {
     100% {
         transform: translateY(-10px);
     }
+}
+
+a:hover {
+    animation: bounce 0.5s infinite alternate;
 }

@@ -20,12 +20,11 @@ html, body {
 
 .inner-container {
     max-width: 100%;
-    gap: 100px; /* Añade un espacio entre los elementos del contenedor */
     display: flex;
     padding: 50px;
     border-radius: 20px;
     text-align: center;
-    justify-content: right;
+    justify-content: center;
 }
 
 h1 {
@@ -57,17 +56,18 @@ ul {
 
 li {
     margin: 2px;
-    flex: 0 0 35%; /* Define que los elementos no se estiren */
+    flex: 0 0 55%; /* Define que los elementos no se estiren */
 }
 
 
 a {
     display: flex;
     padding: 20px 20px; /* Aumentamos el espacio alrededor del texto del botón */
-    background-color: #0044ff;
+    background-color: #e38213;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    font-weight: bold;
+    color: purple;
     text-decoration: none;
     font-size: 27px;
     border-radius: 30px; /* Aumentamos el radio del borde del botón */
@@ -75,7 +75,7 @@ a {
 }
 
 a:hover {
-    background-color: #008cff;
+    background-color: #e9a13d;
 }
 
 /* Agregamos una animación a los botones al hacer hover */
