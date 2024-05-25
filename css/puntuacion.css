@@ -16,8 +16,6 @@ html, body {
     align-items: center;
     
 }
-
-
 .container {
     display: flex;
     justify-content: center;
@@ -35,33 +33,38 @@ html, body {
     text-align: center;
     animation: fadeIn 1s ease;
 }
-
 .puntuacion {
     position: fixed; /* Asegura que la puntuación esté siempre visible */
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
-    background-color: #f0f0f0;
     text-align: center;
-    border: 2px solid black;
     padding: 40px; /* Aumentamos el padding */
     border-radius: 10px;
-    font-size: 28px; /* Aumentamos el tamaño de la fuente */
+    font-size: 58px; /* Aumentamos el tamaño de la fuente */
 }
 
+h1{
+
+    color: #000000; /* Cambiamos el color del texto a blanco */
+    font-size: 40px; /* Aumentamos el tamaño de la fuente */
+    margin-bottom: 20px; /* Aumentamos el espacio entre el título y el contenido */
+    font-size: 100px;
+}
 
 
 .grupo-a,
 .grupo-b {
-    margin-bottom: 30px; /* Aumentamos el espacio entre los grupos */
+    margin-bottom: 130px; /* Aumentamos el espacio entre los grupos */
 }
 
 .grupo-a label,
 .grupo-b label {
     display: inline-block;
-    width: 150px; /* Aumentamos el ancho del label para que sea más legible */
+    width: 300px; /* Aumentamos el ancho del label para que sea más legible */
     font-weight: bold; /* Hacemos que el texto del label sea más audaz */
-    color: #555; /* Cambiamos el color del texto */
-    font-size: 28px; /* Aumentamos el tamaño de la fuente */
+    color: #000000; /* Cambiamos el color del texto */
+    font-size: 40px; /* Aumentamos el tamaño de la fuente */
+    
 }
 
 .grupo-a input,
@@ -70,7 +73,9 @@ html, body {
     padding: 12px; /* Aumentamos el espacio dentro del input */
     border: 2px solid #ccc; /* Agregamos un borde para separar visualmente el input */
     border-radius: 10px; /* Redondeamos las esquinas del input */
-    font-size: 24px; /* Aumentamos el tamaño de la fuente */
+    font-size: 40px; /* Aumentamos el tamaño de la fuente */
+    text-align: center;
+    font-weight: bold;
 }
 
 button#reiniciar,
