@@ -53,6 +53,7 @@
             margin-bottom: 20px;
             /* Espacio inferior al título */
         }
+
         h2 {
             color: #000000;
             font-size: 80px;
@@ -66,7 +67,8 @@
             padding: 20px;
             border-radius: 10px;
             font-weight: bold;
-            color: purple;;
+            color: purple;
+            ;
         }
 
         .boton-volver {
@@ -77,6 +79,7 @@
             font-size: 36px;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
             transition: background-color 0.3s ease;
         }
 
@@ -100,23 +103,30 @@
 
 <body>
     <canvas id="world"></canvas>
-
     <div class="container">
         <div class="inner-container">
-            <h1><style>h1{color: orange;}</style>¡RESULTADO FINAL!</h1>
+            <h1 style="color: orange;">¡RESULTADO FINAL!</h1>
             <div id="mensaje"></div>
             <br>
-            <a href="quality.html" class="boton-volver">INICIO</a>
+            <a href="quality.html" class="boton-volver" id="botonEmpate" style="display:none;">PREGUNTAS QUALITY</a>
+
         </div>
     </div>
+
+    <script>
+        // Obtener el mensaje de la URL
+        var params = new URLSearchParams(window.location.search);
+        var mensaje = params.get('mensaje');
+
+        // Mostrar el mensaje en el div correspondiente
+        document.getElementById('mensaje').innerText = mensaje;
+
+        // Mostrar el botón de empate si el mensaje es "¡Hay un Empate!"
+        if (mensaje === '¡Hay un Empate!') {
+            document.getElementById('botonEmpate').style.display = 'inline-block';
+        }
+    </script>
 
 </body>
 
 </html>
-
-<script>
-    // Obtener el mensaje de la URL
-    var mensaje = decodeURIComponent(new URLSearchParams(window.location.search).get('mensaje'));
-    // Mostrar el mensaje en el div 'mensaje'
-    document.getElementById('mensaje').textContent = mensaje;
-</script>

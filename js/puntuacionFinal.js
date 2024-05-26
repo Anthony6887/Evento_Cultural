@@ -63,6 +63,9 @@ function reiniciarPuntuaciones() {
 
     localStorage.removeItem('respuesta_vacia_pregunta1');
 
+    localStorage.removeItem('respuesta_incorrecta_pregunta1q');
+    localStorage.removeItem('respuesta_vacia_pregunta1a');
+
     localStorage.removeItem('respuesta_incorrecta_pregunta1');
     localStorage.removeItem('respuesta_incorrecta_pregunta2');
     localStorage.removeItem('respuesta_incorrecta_pregunta3');
@@ -106,9 +109,8 @@ function mostrarGanador() {
         mensaje = 'GANADOR EQUIPO A';
     } else if (sumaPuntosGrupoA < sumaPuntosGrupoB) {
         mensaje = 'GANADOR EQUIPO B';
-    } else {
+    } else  {
         mensaje = '¡Hay un Empate!';
-        
     }
 
     // Crear la URL con el mensaje como parámetro

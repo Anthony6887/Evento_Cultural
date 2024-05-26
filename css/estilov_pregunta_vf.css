@@ -1,4 +1,15 @@
 
+
+.loader {
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: purple;
+}
+
 .container {
     justify-content: center;
     font-family: Arial, sans-serif;
@@ -13,19 +24,21 @@
 
 h1 {
     font-size: 42px;
-    color: #333;
+    color: black;
+    
 }
 
 p {
     font-size: 38px;
-    color: #666;
+    color: black;
     margin-bottom: 20px;
 }
 
 .team-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    text-align: left;
     margin-bottom: 0px;
     font-size: 28px; /* Aumentamos el tamaño de la fuente */
 }
@@ -49,19 +62,19 @@ button, .boton-volver {
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #e38213;
+    color: purple;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e38213;
 }
 
 .boton-volver {
     display: block;
     margin-top: 20px;
     text-decoration: none;
-    color: #007bff;
+    color: #e38213;
 }
 
 .boton-volver:hover {

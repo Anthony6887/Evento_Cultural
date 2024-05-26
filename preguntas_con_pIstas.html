@@ -12,7 +12,7 @@
     <div class="container">
         <div class="inner-container">
             <h2>DAME UNA PISTA</h2>
-            <p>Selecciona una pregunta:</p>
+            
             <div class="group-container">
                 <div class="group group-a">
                     <!-- <h2>Grupo A</h2> -->
@@ -55,15 +55,15 @@
             var correctAnswer4 = localStorage.getItem("respuesta_pregunta4Pista");
 
             // Contadores de puntos para Grupo A y Grupo B
-            var totalPointsA = 1;
-            var totalPointsB = 1;
+            var totalPointsA = 0;
+            var totalPointsB = 0;
 
             // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo A
             if (correctAnswer1 === "GA") {
-                totalPointsA++;
+                totalPointsA+= 2;
             }else
             if (correctAnswer1 === "GB") {
-                totalPointsB++;
+                totalPointsB+= 2;
             }
             if (correctAnswer2 === "Correcto") {
                 totalPointsA++;
@@ -71,14 +71,14 @@
 
             // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo B
             if (correctAnswer3 === "GA") {
-                totalPointsA++;
+                totalPointsA+= 2;
             }else
             if (correctAnswer3 === "GB") {
-                totalPointsB++;
+                totalPointsB+= 2;
             }
 
             if (correctAnswer4 === "Correcto") {
-                totalPointsB++;
+                totalPointsB+= 2;
             }
 
             // Obtener los contadores de puntos para los Grupos A y B

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/fondo1.jpeg');
+    background-color: white;
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -36,6 +36,7 @@ h1, h2, p {
     text-align: center;
     margin: 0 auto;
     font-size: 40px;
+    color: #e38213;
 }
 
 ul {
@@ -55,7 +56,7 @@ li {
 a {
     display: block;
     padding: 15px 30px;
-    background-color: #0048ff;
+    background-color: purple;
     color: #fff;
     text-decoration: none;
     border-radius: 20px;
@@ -83,7 +84,7 @@ a {
 
 .boton-volver {
     display: block;
-    background-color: #00cc00;
+    background-color: #e38213;
     text-align: center;
     margin-top: 20px;
     font-size: 34px;
@@ -153,7 +154,7 @@ a {
     height: 10px;
     background: #F9F9F9;
     border-radius: 10px;
-    border: 1px solid #006DFE;
+    border: 1px solid purple;
     position: relative;
     overflow: hidden;
     margin: 0 auto 20px; /* Centrado y espacio inferior */
@@ -210,7 +211,7 @@ a {
 }
 
 .boton-volver:hover {
-    background-color: #00cc00;
+    background-color: #e38213;
 }
 
 
@@ -226,7 +227,7 @@ a {
 }
 
 .group a:hover {
-    background-color: #0095ff;
+    background-color: purple;
 }
 
 a:hover {

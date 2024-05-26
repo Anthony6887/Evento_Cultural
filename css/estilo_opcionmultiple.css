@@ -127,17 +127,6 @@ a {
     background-color: #e38213; /* Cambia el tono de verde al pasar el mouse */
 }
 
-
-
-
-.group-a {
-    border-right: 2px solid #ccc; /* Agrega un borde derecho al grupo A */
-}
-
-.group-b {
-    border-left: 2px solid #ccc; /* Agrega un borde izquierdo al grupo B */
-}
-
 .group ul {
     list-style-type: none;
     padding: 0;

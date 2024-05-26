@@ -53,7 +53,7 @@
         document.getElementById("incorrectoBtn").addEventListener("click", function () {
             // Guardar en localStorage que se presionó "Incorrecto"
             localStorage.setItem("respuesta_pregunta3Pista", "GB");
-            message.textContent = "+1";
+            message.textContent = "Puntaje para el Equipo B";
         });
 
         // Función para capturar si se presiona el botón "Correcto"
@@ -61,7 +61,7 @@
             // Guardar en localStorage que se presionó "Correcto"
             var message = document.getElementById("message");
             localStorage.setItem("respuesta_pregunta3Pista", "GA");
-            message.textContent = "+1";
+            message.textContent = "Puntaje para el Equipo A";
 
         });
 
