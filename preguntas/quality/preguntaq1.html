@@ -18,18 +18,22 @@
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 1</h1>
             <p>¿La siguiente bandera de que país es?</p>
-            <div class="team-container">
-                <div>
-                    <img src="/img/siria.png" alt="Bandera de un país">
-                    <form id="formA">
+            <div class="quiz-container">
+                <img src="/img/siria.png" alt="Bandera de Siria" class="bandera">
+                <form id="formA" class="form-respuestas">
+                    <div>
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">Emiratos Árabes</label><br>
+                        <label for="opcion_a">Emiratos Árabes</label>
+                    </div>
+                    <div>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">Irak</label><br>
+                        <label for="opcion_b">Irak</label>
+                    </div>
+                    <div>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">Siria</label><br><br>
-                    </form>
-                </div>
+                        <label for="opcion_c">Siria</label>
+                    </div>
+                </form>
             </div>
             <div id="message" class="message"></div>
             <button id="submitButton" class="submit-button">Enviar respuesta</button>
@@ -48,7 +52,7 @@
             // Verificar si la opción seleccionada es la correcta (opción A)
             if (selectedOption && selectedOption.value === "C") {
                 // Enviar la respuesta correcta al contador de puntos en la página de multiple_choice.html
-                localStorage.setItem("respuesta_pregunta1q", "C");
+                localStorage.setItem("respuesta_preguntaq1", "C");
                 // Redirigir a la página multiple_choice.html
                 var message = document.getElementById("message");
                 message.textContent = "CORRECTO";
@@ -61,7 +65,7 @@
                 message.classList.add("error");
                 // Guardar el valor de la opción seleccionada en localStorage
                 if (selectedOption) {
-                    localStorage.setItem("respuesta_incorrecta_pregunta1q", selectedOption.value);
+                    localStorage.setItem("respuesta_incorrecta_preguntaq1", selectedOption.value);
                 }
             }
             // Bloquear el botón de enviar respuesta

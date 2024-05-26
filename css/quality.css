@@ -157,106 +157,70 @@ a {
     background-color: purple;
 }
 
-/* CSS para deshabilitar enlaces de preguntas incorrectas */
-/* Utiliza los identificadores de las preguntas para seleccionar los enlaces */
-/* Pregunta 4 */
-#pregunta1[disabled] {
+#group-a-points-q {
+    display: none;
+}
+
+#group-b-points-q {
+    display: none;
+}
+
+
+#preguntaq1[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-/* Pregunta 5 */
-#pregunta2[disabled] {
+#preguntaq2[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-/* Pregunta 6 */
-#pregunta3[disabled] {
+#preguntaq3[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-#pregunta1a[disabled] {
+#preguntaq4[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-#pregunta2a[disabled] {
+#preguntaq5[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
-#pregunta3a[disabled] {
+#preguntaq6[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
-#pregunta1b[disabled] {
+#preguntaq7[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
-#pregunta2b[disabled] {
+#preguntaq8[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
-#pregunta3b[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-
-/* Pregunta 4 */
-#pregunta4[disabled] {
+#preguntaq9[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-/* Pregunta 5 */
-#pregunta5[disabled] {
+#preguntaq10[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-/* Pregunta 6 */
-#pregunta6[disabled] {
+#preguntaq11[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
 
-#pregunta1VF[disabled] {
+#preguntaq12[disabled] {
     pointer-events: none; /* Deshabilitar eventos del mouse */
     color: gray; /* Cambiar color del texto a gris */
 }
-
-/* Pregunta 2 */
-#pregunta2VF[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 3 */
-#pregunta3VF[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 4 */
-#pregunta4VF[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 5 */
-#pregunta5VF[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
-/* Pregunta 6 */
-#pregunta6VF[disabled] {
-    pointer-events: none; /* Deshabilitar eventos del mouse */
-    color: gray; /* Cambiar color del texto a gris */
-}
-
 
 
 

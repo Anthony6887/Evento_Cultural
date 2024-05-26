@@ -139,3 +139,40 @@ button:hover {
         width: 100%;
     }
 }
+
+.quiz-container {
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bandera {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+}
+
+.form-respuestas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.form-respuestas div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form-respuestas input[type="radio"] {
+    margin-right: 10px;
+}
+
+.form-respuestas label {
+    margin: 0;
+}

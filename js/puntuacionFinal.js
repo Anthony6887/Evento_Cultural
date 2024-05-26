@@ -62,8 +62,39 @@ function reiniciarPuntuaciones() {
     localStorage.removeItem('respuesta_pregunta1PistaI');
 
     localStorage.removeItem('respuesta_vacia_pregunta1');
+    localStorage.removeItem('respuesta_vacia_pregunta1aq');
 
-    localStorage.removeItem('respuesta_incorrecta_pregunta1q');
+
+    localStorage.removeItem('respuesta_preguntaq1');
+    localStorage.removeItem('respuesta_preguntaq2');
+    localStorage.removeItem('respuesta_preguntaq3');
+    localStorage.removeItem('respuesta_preguntaq4');
+    localStorage.removeItem('respuesta_preguntaq5');
+    localStorage.removeItem('respuesta_preguntaq6');
+    localStorage.removeItem('respuesta_preguntaq7');
+    localStorage.removeItem('respuesta_preguntaq8');
+    localStorage.removeItem('respuesta_preguntaq9');
+    localStorage.removeItem('respuesta_preguntaq10');
+    localStorage.removeItem('respuesta_preguntaq11');
+    localStorage.removeItem('respuesta_preguntaq12');
+
+    localStorage.removeItem('groupAPointsQ');
+    localStorage.removeItem('groupBPointsQ');
+
+
+    localStorage.removeItem('respuesta_incorrecta_preguntaq1');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq2');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq3');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq4');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq5');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq6');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq7');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq8');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq9');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq10');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq11');
+    localStorage.removeItem('respuesta_incorrecta_preguntaq12');
+
     localStorage.removeItem('respuesta_vacia_pregunta1a');
 
     localStorage.removeItem('respuesta_incorrecta_pregunta1');

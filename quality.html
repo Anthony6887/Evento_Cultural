@@ -14,24 +14,30 @@
             <h2>QUALITY</p>
             <div class="group-container">
                 <div class="group group-a">
+                    <div class="points-counter">
+                        <p><span id="group-a-points-q"></span></p>
+                    </div>
                     <ul>
-                        <li><a id="pregunta1" href="preguntas/quality/preguntaq1.html">Pregunta 1</a></li>
-                        <li><a id="pregunta2" href="preguntas/multiples/pregunta2.html">Pregunta 2</a></li>
-                        <li><a id="pregunta1" href="preguntas/quality/preguntaq1.html">Pregunta 5</a></li>
-                        <li><a id="pregunta2" href="preguntas/multiples/pregunta2.html">Pregunta 6</a></li>
-                        <li><a id="pregunta1" href="preguntas/quality/preguntaq1.html">Pregunta 9</a></li>
-                        <li><a id="pregunta2" href="preguntas/multiples/pregunta2.html">Pregunta 10</a></li>
+                        <li><a id="preguntaq1" href="preguntas/quality/preguntaq1.html">Pregunta 1</a></li>
+                        <li><a id="preguntaq2" href="preguntas/quality/preguntaq2.html">Pregunta 2</a></li>
+                        <li><a id="preguntaq5" href="preguntas/quality/preguntaq5.html">Pregunta 5</a></li>
+                        <li><a id="preguntaq6" href="preguntas/quality/preguntaq6.html">Pregunta 6</a></li>
+                        <li><a id="preguntaq9" href="preguntas/quality/preguntaq9.html">Pregunta 9</a></li>
+                        <li><a id="preguntaq10" href="preguntas/quality/preguntaq10.html">Pregunta 10</a></li>
                         
                     </ul>
                 </div>
                 <div class="group group-b">
+                    <div class="points-counter">
+                        <p><span id="group-b-points-q"></span></p>
+                    </div>
                     <ul>
-                        <li><a id="pregunta4" href="preguntas/multiples/pregunta4.html">Pregunta 3</a></li>
-                        <li><a id="pregunta5" href="preguntas/multiples/pregunta5.html">Pregunta 4</a></li>
-                        <li><a id="pregunta1" href="preguntas/quality/preguntaq1.html">Pregunta 7</a></li>
-                        <li><a id="pregunta2" href="preguntas/multiples/pregunta2.html">Pregunta 8</a></li>
-                        <li><a id="pregunta1" href="preguntas/quality/preguntaq1.html">Pregunta 11</a></li>
-                        <li><a id="pregunta2" href="preguntas/multiples/pregunta2.html">Pregunta 12</a></li>
+                        <li><a id="preguntaq3" href="preguntas/quality/preguntaq3.html">Pregunta 3</a></li>
+                        <li><a id="preguntaq4" href="preguntas/quality/preguntaq4.html">Pregunta 4</a></li>
+                        <li><a id="preguntaq7" href="preguntas/quality/preguntaq7.html">Pregunta 7</a></li>
+                        <li><a id="preguntaq8" href="preguntas/quality/preguntaq8.html">Pregunta 8</a></li>
+                        <li><a id="preguntaq11" href="preguntas/quality/preguntaq11.html">Pregunta 11</a></li>
+                        <li><a id="preguntaq12" href="preguntas/quality/preguntaq12.html">Pregunta 12</a></li>
 
                     </ul>
                 </div>
@@ -47,26 +53,24 @@
         document.addEventListener("DOMContentLoaded", function () {
 
 
-                document.getElementById("pregunta1").removeAttribute("disabled");
+                document.getElementById("preguntaq1").removeAttribute("disabled");
 
             // Función para actualizar los puntos del Grupo A y Grupo B
             function updateGroupPoints() {
                 // Obtener las respuestas correctas almacenadas en localStorage
-                var correctAnswer1 = localStorage.getItem("respuesta_pregunta1");
-                var correctAnswer2 = localStorage.getItem("respuesta_pregunta2");
-                var correctAnswer3 = localStorage.getItem("respuesta_pregunta3");
+                var correctAnswer1 = localStorage.getItem("respuesta_preguntaq1");
+                var correctAnswer2 = localStorage.getItem("respuesta_preguntaq2");
+                var correctAnswer3 = localStorage.getItem("respuesta_preguntaq3");
+                var correctAnswer4 = localStorage.getItem("respuesta_preguntaq4");
+                var correctAnswer5 = localStorage.getItem("respuesta_preguntaq5");
+                var correctAnswer6 = localStorage.getItem("respuesta_preguntaq6");
+                var correctAnswer7 = localStorage.getItem("respuesta_preguntaq7");
+                var correctAnswer8 = localStorage.getItem("respuesta_preguntaq8");
+                var correctAnswer9 = localStorage.getItem("respuesta_preguntaq9");
+                var correctAnswer10 = localStorage.getItem("respuesta_preguntaq10");
+                var correctAnswer11 = localStorage.getItem("respuesta_preguntaq11");
+                var correctAnswer12 = localStorage.getItem("respuesta_preguntaq12");
 
-                var correctAnswer1a = localStorage.getItem("respuesta_pregunta1a");
-                var correctAnswer2a = localStorage.getItem("respuesta_pregunta2a");
-                var correctAnswer3a = localStorage.getItem("respuesta_pregunta3a");
-
-                var correctAnswer1b = localStorage.getItem("respuesta_pregunta1b");
-                var correctAnswer2b = localStorage.getItem("respuesta_pregunta2b");
-                var correctAnswer3b = localStorage.getItem("respuesta_pregunta3b");
-
-                var correctAnswer4 = localStorage.getItem("respuesta_pregunta4");
-                var correctAnswer5 = localStorage.getItem("respuesta_pregunta5");
-                var correctAnswer6 = localStorage.getItem("respuesta_pregunta6");
 
                 // Contadores de puntos para Grupo A y Grupo B
                 var totalPointsA = 0;
@@ -82,144 +86,142 @@
                 if (correctAnswer3 === "B") {
                     totalPointsA++;
                 }
-                if (correctAnswer1a === "A") {
-                    totalPointsA++;
-                }
-                if (correctAnswer2a === "B") {
-                    totalPointsA++;
-                }
-                if (correctAnswer3a === "B") {
-                    totalPointsA++;
-                }
-
-                // Verificar si las respuestas seleccionadas son correctas y sumar puntos para Grupo B
                 if (correctAnswer4 === "A") {
-                    totalPointsB++;
+                    totalPointsA++;
                 }
                 if (correctAnswer5 === "B") {
-                    totalPointsB++;
+                    totalPointsA++;
                 }
                 if (correctAnswer6 === "C") {
-                    totalPointsB++;
+                    totalPointsA++;
                 }
-                if (correctAnswer1b === "A") {
-                    totalPointsB++;
+                if (correctAnswer7 === "C") {
+                    totalPointsA++;
                 }
-                if (correctAnswer2b === "A") {
-                    totalPointsB++;
+                if (correctAnswer8 === "C") {
+                    totalPointsA++;
                 }
-                if (correctAnswer3b === "A") {
-                    totalPointsB++;
+                if (correctAnswer9 === "B") {
+                    totalPointsA++;
+                }
+                if (correctAnswer10 === "A") {
+                    totalPointsA++;
+                }
+                if (correctAnswer11 === "B") {
+                    totalPointsA++;
+                }
+                if (correctAnswer12 === "C") {
+                    totalPointsA++;
                 }
 
                 // Obtener los contadores de puntos para los Grupos A y B
-                var groupAPoints = document.getElementById("group-a-points");
-                var groupBPoints = document.getElementById("group-b-points");
+                var groupAPoints = document.getElementById("group-a-points-q");
+                var groupBPoints = document.getElementById("group-b-points-q");
 
                 // Actualizar los contadores de puntos para los Grupos A y B
                 groupAPoints.textContent = totalPointsA;
                 groupBPoints.textContent = totalPointsB;
 
                 // Guardar los puntos de los Grupos A y B en localStorage
-                localStorage.setItem("groupAPoints", totalPointsA);
-                localStorage.setItem("groupBPoints", totalPointsB);
+                localStorage.setItem("groupAPointsQ", totalPointsA);
+                localStorage.setItem("groupBPointsQ", totalPointsB);
 
                 // Deshabilitar los enlaces de las preguntas incorrectas
-                var respuestaIncorrectaPregunta1 = localStorage.getItem("respuesta_incorrecta_pregunta1");
-                var respuestaIncorrectaPregunta2 = localStorage.getItem("respuesta_incorrecta_pregunta2");
-                var respuestaIncorrectaPregunta3 = localStorage.getItem("respuesta_incorrecta_pregunta3");
-                var respuestaIncorrectaPregunta4 = localStorage.getItem("respuesta_incorrecta_pregunta4");
-                var respuestaIncorrectaPregunta5 = localStorage.getItem("respuesta_incorrecta_pregunta5");
-                var respuestaIncorrectaPregunta6 = localStorage.getItem("respuesta_incorrecta_pregunta6");
+                var respuestaIncorrectaPreguntaq1 = localStorage.getItem("respuesta_incorrecta_preguntaq1");
+                var respuestaIncorrectaPreguntaq2 = localStorage.getItem("respuesta_incorrecta_preguntaq2");
+                var respuestaIncorrectaPreguntaq3 = localStorage.getItem("respuesta_incorrecta_preguntaq3");
+                var respuestaIncorrectaPreguntaq4 = localStorage.getItem("respuesta_incorrecta_preguntaq4");
+                var respuestaIncorrectaPreguntaq5 = localStorage.getItem("respuesta_incorrecta_preguntaq5");
+                var respuestaIncorrectaPreguntaq6 = localStorage.getItem("respuesta_incorrecta_preguntaq6");
+                var respuestaIncorrectaPreguntaq7 = localStorage.getItem("respuesta_incorrecta_preguntaq7");
+                var respuestaIncorrectaPreguntaq8 = localStorage.getItem("respuesta_incorrecta_preguntaq8");
+                var respuestaIncorrectaPreguntaq9 = localStorage.getItem("respuesta_incorrecta_preguntaq9");
+                var respuestaIncorrectaPreguntaq10 = localStorage.getItem("respuesta_incorrecta_preguntaq10");
+                var respuestaIncorrectaPreguntaq11 = localStorage.getItem("respuesta_incorrecta_preguntaq11");
+                var respuestaIncorrectaPreguntaq12 = localStorage.getItem("respuesta_incorrecta_preguntaq12");
+                
 
-                var respuestaIncorrectaPregunta1a = localStorage.getItem("respuesta_incorrecta_pregunta1a");
-                var respuestaIncorrectaPregunta2a = localStorage.getItem("respuesta_incorrecta_pregunta2a");
-                var respuestaIncorrectaPregunta3a = localStorage.getItem("respuesta_incorrecta_pregunta3a");
-
-                var respuestaIncorrectaPregunta1b = localStorage.getItem("respuesta_incorrecta_pregunta1b");
-                var respuestaIncorrectaPregunta2b = localStorage.getItem("respuesta_incorrecta_pregunta2b");
-                var respuestaIncorrectaPregunta3b = localStorage.getItem("respuesta_incorrecta_pregunta3b");
 
 
 
                 var respuestaVaciaPregunta1 = localStorage.getItem("respuesta_vacia_pregunta1");
 
-                if (respuestaIncorrectaPregunta1) {
-                    document.getElementById("pregunta1").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq1) {
+                    document.getElementById("preguntaq1").setAttribute("disabled", true);
                     console.log("Pregunta 1 deshabilitada");
                 }
-                if (respuestaIncorrectaPregunta2) {
-                    document.getElementById("pregunta2").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq2) {
+                    document.getElementById("preguntaq2").setAttribute("disabled", true);
                     console.log("Pregunta 2 deshabilitada");
                 }
-                if (respuestaIncorrectaPregunta3) {
-                    document.getElementById("pregunta3").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq3) {
+                    document.getElementById("preguntaq3").setAttribute("disabled", true);
                     console.log("Pregunta 3 deshabilitada");
                 }
-                if (respuestaIncorrectaPregunta4) {
-                    document.getElementById("pregunta4").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq4) {
+                    document.getElementById("preguntaq4").setAttribute("disabled", true);
                     console.log("Pregunta 4 deshabilitada");
                 }
-                if (respuestaIncorrectaPregunta5) {
-                    document.getElementById("pregunta5").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq5) {
+                    document.getElementById("preguntaq5").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta6) {
-                    document.getElementById("pregunta6").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq6) {
+                    document.getElementById("preguntaq6").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta1a) {
-                    document.getElementById("pregunta1a").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq7) {
+                    document.getElementById("preguntaq7").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta2a) {
-                    document.getElementById("pregunta2a").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq8) {
+                    document.getElementById("preguntaq8").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta3a) {
-                    document.getElementById("pregunta3a").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq9) {
+                    document.getElementById("preguntaq9").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta1b) {
-                    document.getElementById("pregunta1b").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq10) {
+                    document.getElementById("preguntaq10").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta2b) {
-                    document.getElementById("pregunta2b").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq11) {
+                    document.getElementById("preguntaq11").setAttribute("disabled", true);
                 }
-                if (respuestaIncorrectaPregunta3b) {
-                    document.getElementById("pregunta3b").setAttribute("disabled", true);
+                if (respuestaIncorrectaPreguntaq12) {
+                    document.getElementById("preguntaq12").setAttribute("disabled", true);
                 }
 
                 if (correctAnswer1) {
-                    document.getElementById("pregunta1").setAttribute("disabled", true);
+                    document.getElementById("preguntaq1").setAttribute("disabled", true);
                 }
                 if (correctAnswer2) {
-                    document.getElementById("pregunta2").setAttribute("disabled", true);
+                    document.getElementById("preguntaq2").setAttribute("disabled", true);
                 }
                 if (correctAnswer3) {
-                    document.getElementById("pregunta3").setAttribute("disabled", true);
+                    document.getElementById("preguntaq3").setAttribute("disabled", true);
                 }
                 if (correctAnswer4) {
-                    document.getElementById("pregunta4").setAttribute("disabled", true);
+                    document.getElementById("preguntaq4").setAttribute("disabled", true);
                 }
                 if (correctAnswer5) {
-                    document.getElementById("pregunta5").setAttribute("disabled", true);
+                    document.getElementById("preguntaq5").setAttribute("disabled", true);
                 }
                 if (correctAnswer6) {
-                    document.getElementById("pregunta6").setAttribute("disabled", true);
+                    document.getElementById("preguntaq6").setAttribute("disabled", true);
                 }
-                if (correctAnswer1a) {
-                    document.getElementById("pregunta1a").setAttribute("disabled", true);
+                if (correctAnswer7) {
+                    document.getElementById("preguntaq7").setAttribute("disabled", true);
                 }
-                if (correctAnswer2a) {
-                    document.getElementById("pregunta2a").setAttribute("disabled", true);
+                if (correctAnswer8) {
+                    document.getElementById("preguntaq8").setAttribute("disabled", true);
                 }
-                if (correctAnswer3a) {
-                    document.getElementById("pregunta3a").setAttribute("disabled", true);
+                if (correctAnswer9) {
+                    document.getElementById("preguntaq9").setAttribute("disabled", true);
                 }
-                if (correctAnswer1b) {
-                    document.getElementById("pregunta1b").setAttribute("disabled", true);
+                if (correctAnswer10) {
+                    document.getElementById("preguntaq10").setAttribute("disabled", true);
                 }
-                if (correctAnswer2b) {
-                    document.getElementById("pregunta2b").setAttribute("disabled", true);
+                if (correctAnswer11) {
+                    document.getElementById("preguntaq11").setAttribute("disabled", true);
                 }
-                if (correctAnswer3b) {
-                    document.getElementById("pregunta3b").setAttribute("disabled", true);
+                if (correctAnswer12) {
+                    document.getElementById("preguntaq12").setAttribute("disabled", true);
                 }
                 
                 
