@@ -139,3 +139,33 @@ a:hover {
         transform: translateY(-10px);
     }
 }
+
+#pregunta1VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta2VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta3VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta4VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta5VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}
+
+#pregunta6VF[disabled] {
+    pointer-events: none; /* Deshabilitar eventos del mouse */
+    color: gray; /* Cambiar color del texto a gris */
+}

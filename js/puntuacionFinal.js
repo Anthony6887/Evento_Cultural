@@ -125,6 +125,7 @@ function reiniciarPuntuaciones() {
     document.getElementById('puntuacion-a').value = '0';
     document.getElementById('puntuacion-b').value = '0';
 }
+
 function mostrarGanador() {
 
     // Obtener los puntos del grupo A y del grupo B del localStorage
