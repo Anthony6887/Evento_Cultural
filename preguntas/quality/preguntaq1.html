@@ -78,7 +78,7 @@
         var timerInterval;
 
         document.getElementById("startButton").addEventListener("click", function () {
-            var secondsLeft = 30;
+            var secondsLeft = 3;
             var totalTime = secondsLeft;
             var timerElement = document.getElementById("timer");
             var loaderElement = document.getElementById("loader");
@@ -101,7 +101,7 @@
                     var selectedOption = form.querySelector('input[name="respuesta"]:checked');
                     if (!selectedOption) {
                         var message = document.getElementById("message");
-                        message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                        message.textContent = "Tiempo agotado.";
                         message.classList.add("error");
                         // Capturar la respuesta incorrecta en localStorage
                         var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
@@ -109,10 +109,10 @@
                             localStorage.setItem("respuesta_vacia_pregunta1aq", selectedIncorrectOption.value);
                         } else {
                             // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                            localStorage.setItem("respuesta_vacia_pregunta1aq", "");
+                            localStorage.setItem("respuesta_vacia_pregunta1aq", "vacio");
                         }
                         // Recargar la página multiple_choice.html
-                        alert("Tiempo agotado.");
+                        window.location.href = "../../quality.html";
                     }
                 }
             }, 1000); // 1 segundo en milisegundos

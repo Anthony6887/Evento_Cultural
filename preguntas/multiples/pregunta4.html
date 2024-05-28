@@ -17,16 +17,16 @@
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 1</h1>
-            <p>En qué parte del tubo digestivo se absorben más nutrientes?</p>
+            <p>¿QUÉ SON LOS GRUPOS DE LA TABLA PERIÓDICA?</p>
             <div class="team-container">
                 <div>
                     <form id="formB">
                         <input type="radio" id="opcion_d" name="respuesta" value="A">
-                        <label for="opcion_d">Intestino delgado</label><br>
+                        <label for="opcion_d">LAS COLUMNAS VERTICALES DE LA TABLA PERIÓDICA</label><br>
                         <input type="radio" id="opcion_e" name="respuesta" value="B">
-                        <label for="opcion_e">Intestino grueso</label><br>
+                        <label for="opcion_e">LAS FILAS HORIZONTALES DE LA TABLA PERIÓDICA.</label><br>
                         <input type="radio" id="opcion_f" name="respuesta" value="C">
-                        <label for="opcion_f">Páncreas</label><br><br>
+                        <label for="opcion_f">LOS BLOQUES DE LA TABLA PERIÓDICA (S, P, D, F).</label><br><br>
                     </form>
                 </div>
             </div>
@@ -67,55 +67,55 @@
             });
         });
 
-         // Variables del temporizador y la barra de carga
+        // Variables del temporizador y la barra de carga
         var timerInterval;
 
-document.getElementById("startButton").addEventListener("click", function () {
-    var secondsLeft = 30;
-    var totalTime = secondsLeft;
-    var timerElement = document.getElementById("timer");
-    var loaderElement = document.getElementById("loader");
+        document.getElementById("startButton").addEventListener("click", function () {
+            var secondsLeft = 3;
+            var totalTime = secondsLeft;
+            var timerElement = document.getElementById("timer");
+            var loaderElement = document.getElementById("loader");
 
-    // Inicializar el temporizador y la barra de carga
-    timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
-    loaderElement.style.width = "0%";
+            // Inicializar el temporizador y la barra de carga
+            timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            loaderElement.style.width = "0%";
 
-    timerInterval = setInterval(function () {
-        secondsLeft--;
-        timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
+            timerInterval = setInterval(function () {
+                secondsLeft--;
+                timerElement.textContent = "Tiempo restante: " + secondsLeft + " segundos";
 
-        // Actualizar la barra de carga
-        var progress = ((totalTime - secondsLeft) / totalTime) * 100;
-        loaderElement.style.width = progress + "%";
+                // Actualizar la barra de carga
+                var progress = ((totalTime - secondsLeft) / totalTime) * 100;
+                loaderElement.style.width = progress + "%";
 
-        if (secondsLeft === 0) {
-            clearInterval(timerInterval);
-            var form = document.getElementById("formA");
-            var selectedOption = form.querySelector('input[name="respuesta"]:checked');
-            if (!selectedOption) {
-                var message = document.getElementById("message");
-                message.textContent = "Tiempo agotado. Respuesta incorrecta.";
-                message.classList.add("error");
-                // Capturar la respuesta incorrecta en localStorage
-                var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
-                if (selectedIncorrectOption) {
-                    localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
-                } else {
-                    // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                    localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                if (secondsLeft === 0) {
+                    clearInterval(timerInterval);
+                    var form = document.getElementById("formB");
+                    var selectedOption = form.querySelector('input[name="respuesta"]:checked');
+                    if (!selectedOption) {
+                        var message = document.getElementById("message");
+                        message.textContent = "Tiempo agotado.";
+                        message.classList.add("error");
+                        // Capturar la respuesta incorrecta en localStorage
+                        var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
+                        if (selectedIncorrectOption) {
+                            localStorage.setItem("respuesta_vacia_pregunta1b1", selectedIncorrectOption.value);
+                        } else {
+                            // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
+                            localStorage.setItem("respuesta_vacia_pregunta1b1", "vacio");
+                        }
+                        // Recargar la página multiple_choice.html
+                        window.location.href = "../../multiple_choice.html";
+                    }
                 }
-                // Recargar la página multiple_choice.html
-                alert("Tiempo agotado.");
-            }
-        }
-    }, 1000); // 1 segundo en milisegundos
+            }, 1000); // 1 segundo en milisegundos
 
-    // Deshabilitar el botón de inicio para evitar múltiples clics
-    document.getElementById("startButton").disabled = true;
-});
-        
+            // Deshabilitar el botón de inicio para evitar múltiples clics
+            document.getElementById("startButton").disabled = true;
+        });
+
     </script>
-    
+
 
 </body>
 

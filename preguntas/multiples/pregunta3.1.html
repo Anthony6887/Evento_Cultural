@@ -17,16 +17,16 @@
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 6</h1>
-            <p>¿Dónde se originaron los juegos olímpicos?</p>
+            <p>¿QUÉ SON LOS HUMANOS?</p>
             <div class="team-container">
                 <div>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">Roma</label><br>
+                        <label for="opcion_a">HERBÍVOROS</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">Grecia</label><br>
+                        <label for="opcion_b">OMNÍVOROS</label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">Alejandría</label><br><br>
+                        <label for="opcion_c">CARNÍVOROS</label><br><br>
                     </form>
                 </div>
             </div>
@@ -67,7 +67,7 @@
         var timerInterval;
 
 document.getElementById("startButton").addEventListener("click", function () {
-    var secondsLeft = 30;
+    var secondsLeft = 3;
     var totalTime = secondsLeft;
     var timerElement = document.getElementById("timer");
     var loaderElement = document.getElementById("loader");
@@ -90,18 +90,18 @@ document.getElementById("startButton").addEventListener("click", function () {
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             if (!selectedOption) {
                 var message = document.getElementById("message");
-                message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                message.textContent = "Tiempo agotado.";
                 message.classList.add("error");
                 // Capturar la respuesta incorrecta en localStorage
                 var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                 if (selectedIncorrectOption) {
-                    localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                    localStorage.setItem("respuesta_vacia_pregunta1a6", selectedIncorrectOption.value);
                 } else {
                     // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                    localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                    localStorage.setItem("respuesta_vacia_pregunta1a6", "vacio");
                 }
                 // Recargar la página multiple_choice.html
-                alert("Tiempo agotado.");
+                window.location.href = "../../multiple_choice.html";
             }
         }
     }, 1000); // 1 segundo en milisegundos

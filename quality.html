@@ -140,6 +140,12 @@
                 var respuestaIncorrectaPreguntaq11 = localStorage.getItem("respuesta_incorrecta_preguntaq11");
                 var respuestaIncorrectaPreguntaq12 = localStorage.getItem("respuesta_incorrecta_preguntaq12");
                 
+                var vacio1 = localStorage.getItem("respuesta_vacia_pregunta1aq");
+
+                if (vacio1) {
+                    document.getElementById("preguntaq1").setAttribute("disabled", true);
+                    console.log("Pregunta 1 deshabilitada");
+                }
 
 
 

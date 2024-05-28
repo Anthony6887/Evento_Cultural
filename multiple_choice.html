@@ -148,7 +148,69 @@
 
 
 
-                var respuestaVaciaPregunta1 = localStorage.getItem("respuesta_vacia_pregunta1");
+                var respuestaVaciaPregunta2 = localStorage.getItem("respuesta_vacia_pregunta1a1");
+                var respuestaVaciaPregunta3 = localStorage.getItem("respuesta_vacia_pregunta1a2");
+                var respuestaVaciaPregunta4 = localStorage.getItem("respuesta_vacia_pregunta1a3");
+                var respuestaVaciaPregunta5 = localStorage.getItem("respuesta_vacia_pregunta1a4");
+                var respuestaVaciaPregunta6 = localStorage.getItem("respuesta_vacia_pregunta1a5");
+                var respuestaVaciaPregunta1a = localStorage.getItem("respuesta_vacia_pregunta1a6");
+                var respuestaVaciaPregunta2a = localStorage.getItem("respuesta_vacia_pregunta1b1");
+                var respuestaVaciaPregunta3a = localStorage.getItem("respuesta_vacia_pregunta1b2");
+                var respuestaVaciaPregunta1b = localStorage.getItem("respuesta_vacia_pregunta1b3");
+                var respuestaVaciaPregunta2b = localStorage.getItem("respuesta_vacia_pregunta1b4");
+                var respuestaVaciaPregunta3b = localStorage.getItem("respuesta_vacia_pregunta1b5");
+                var respuestaVaciaPregunta1c = localStorage.getItem("respuesta_vacia_pregunta1b6");
+
+
+                if (respuestaVaciaPregunta2) {
+                    document.getElementById("pregunta1").setAttribute("disabled", true);
+                    console.log("Pregunta 1 deshabilitada");
+                }
+                if (respuestaVaciaPregunta3) {
+                    document.getElementById("pregunta2").setAttribute("disabled", true);
+                    console.log("Pregunta 2 deshabilitada");
+                }
+                if (respuestaVaciaPregunta4) {
+                    document.getElementById("pregunta3").setAttribute("disabled", true);
+                    console.log("Pregunta 3 deshabilitada");
+                }
+                if (respuestaVaciaPregunta5) {
+                    document.getElementById("pregunta1a").setAttribute("disabled", true);
+                    console.log("Pregunta 4 deshabilitada");
+                }
+                if (respuestaVaciaPregunta6) {
+                    document.getElementById("pregunta2a").setAttribute("disabled", true);
+                    console.log("Pregunta 5 deshabilitada");
+                }
+                if (respuestaVaciaPregunta1a) {
+                    document.getElementById("pregunta3a").setAttribute("disabled", true);
+                    console.log("Pregunta 6 deshabilitada");
+                }
+                if (respuestaVaciaPregunta2a) {
+                    document.getElementById("pregunta4").setAttribute("disabled", true);
+                    console.log("Pregunta 1 deshabilitada");
+                }
+                if (respuestaVaciaPregunta3a) {
+                    document.getElementById("pregunta5").setAttribute("disabled", true);
+                    console.log("Pregunta 2 deshabilitada");
+                }
+                if (respuestaVaciaPregunta1b) {
+                    document.getElementById("pregunta6").setAttribute("disabled", true);
+                    console.log("Pregunta 3 deshabilitada");
+                }
+                if (respuestaVaciaPregunta2b) {
+                    document.getElementById("pregunta1b").setAttribute("disabled", true);
+                    console.log("Pregunta 4 deshabilitada");
+                }
+                if (respuestaVaciaPregunta3b) {
+                    document.getElementById("pregunta2b").setAttribute("disabled", true);
+                    console.log("Pregunta 5 deshabilitada");
+                }
+                if (respuestaVaciaPregunta1c) {
+                    document.getElementById("pregunta3b").setAttribute("disabled", true);
+                    console.log("Pregunta 6 deshabilitada");
+                }
+
 
                 if (respuestaIncorrectaPregunta1) {
                     document.getElementById("pregunta1").setAttribute("disabled", true);

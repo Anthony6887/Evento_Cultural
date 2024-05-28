@@ -17,16 +17,16 @@
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 5</h1>
-            <p>¿Qué tipo de animal es la ballena?</p>
+            <p>¿CUÁL ES EL OCÉANO MÁS GRANDE DE LA TIERRA?</p>
             <div class="team-container">
                 <div>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">Mamífero</label><br>
+                        <label for="opcion_a">OCÉANO PACÍFICO</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">Pez</label><br>
+                        <label for="opcion_b">OCÉANO ATLÁNTICO</label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">Crustáceo</label><br><br>
+                        <label for="opcion_c">OCÉANO ÁRTICO</label><br><br>
                     </form>
                 </div>
             </div>
@@ -35,7 +35,6 @@
             <a href="../../multiple_choice.html" class="boton-volver">Volver al modo de juego</a>
         </div>
     </div>
-
     <script>
         document.getElementById("submitButton").addEventListener("click", function () {
             // Obtener el formulario
@@ -67,7 +66,7 @@
         var timerInterval;
 
 document.getElementById("startButton").addEventListener("click", function () {
-    var secondsLeft = 30;
+    var secondsLeft = 3;
     var totalTime = secondsLeft;
     var timerElement = document.getElementById("timer");
     var loaderElement = document.getElementById("loader");
@@ -90,18 +89,18 @@ document.getElementById("startButton").addEventListener("click", function () {
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             if (!selectedOption) {
                 var message = document.getElementById("message");
-                message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                message.textContent = "Tiempo agotado.";
                 message.classList.add("error");
                 // Capturar la respuesta incorrecta en localStorage
                 var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                 if (selectedIncorrectOption) {
-                    localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                    localStorage.setItem("respuesta_vacia_pregunta1b5", selectedIncorrectOption.value);
                 } else {
                     // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                    localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                    localStorage.setItem("respuesta_vacia_pregunta1b5", "vacio");
                 }
                 // Recargar la página multiple_choice.html
-                alert("Tiempo agotado.");
+                window.location.href = "../../multiple_choice.html";
             }
         }
     }, 1000); // 1 segundo en milisegundos

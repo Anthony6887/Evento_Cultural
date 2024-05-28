@@ -16,11 +16,11 @@
             <div id="loader" class="loader"></div>
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
-            <h1>Pregunta 5</h1>
-            <p>El Cubismo fue el primer movimiento artístico de vanguardia del siglo XX  que aparece con Pablo Picasso.</p>
+            <h1>Pregunta 2</h1>
+            <p>CUÁNDO LEEMOS UN POEMA “ESCUCHAMOS” UNA VOZ QUE EXPRESA LAS EMOCIONES Y LAS IDEAS, ESTA VOZ SE LA CONOCE COMO HABLANTE LÍRICO</p>
             <div class="team-container">
                 <div>
-                    <h2>Equipo A</h2>
+                    <h2>Equipo B</h2>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
                         <label for="opcion_a">Verdadero</label><br>
@@ -33,7 +33,7 @@
             <br>
             <div id="message" class="message"></div>
             <button id="submitButton" class="submit-button">Enviar respuesta</button>
-            <a href="../../verdadero_falso.html" class="boton-volver">Volver al menú principal</a>
+            <a href="../../verdadero_falso.html" class="boton-volver">Volver al menú</a>
 
         </div>
     </div>
@@ -77,7 +77,7 @@
         var timerInterval;
 
         document.getElementById("startButton").addEventListener("click", function () {
-            var secondsLeft = 30;
+            var secondsLeft = 3;
             var totalTime = secondsLeft;
             var timerElement = document.getElementById("timer");
             var loaderElement = document.getElementById("loader");
@@ -105,13 +105,13 @@
                         // Capturar la respuesta incorrecta en localStorage
                         var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                         if (selectedIncorrectOption) {
-                            localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                            localStorage.setItem("respuesta_vacia_pregunta1a5v", selectedIncorrectOption.value);
                         } else {
                             // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                            localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                            localStorage.setItem("respuesta_vacia_pregunta1a5v", "vacio");
                         }
                         // Recargar la página multiple_choice.html
-                        alert("Tiempo agotado.");
+                        window.location.href = "../../verdadero_falso.html";
                     }
                 }
             }, 1000); // 1 segundo en milisegundos

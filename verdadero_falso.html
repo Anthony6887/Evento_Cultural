@@ -110,6 +110,24 @@
                 var respuestaIncorrectaPregunta5VF = localStorage.getItem("respuesta_incorrecta_pregunta5VF");
                 var respuestaIncorrectaPregunta6VF = localStorage.getItem("respuesta_incorrecta_pregunta6VF");
 
+                var vacio1 = localStorage.getItem("respuesta_vacia_pregunta1a1v");
+                var vacio2 = localStorage.getItem("respuesta_vacia_pregunta1a2v");
+                var vacio4 = localStorage.getItem("respuesta_vacia_pregunta1a4v");
+                var vacio5 = localStorage.getItem("respuesta_vacia_pregunta1a5v");
+
+                if (vacio1) {
+                    document.getElementById("pregunta1VF").setAttribute("disabled", true);
+                }
+                if (vacio2) {
+                    document.getElementById("pregunta2VF").setAttribute("disabled", true);
+                }
+                if (vacio4) {
+                    document.getElementById("pregunta4VF").setAttribute("disabled", true);
+                }
+                if (vacio5) {
+                    document.getElementById("pregunta5VF").setAttribute("disabled", true);
+                }
+
                 if (respuestaIncorrectaPregunta1VF) {
                     document.getElementById("pregunta1VF").setAttribute("disabled", true);
                 }

@@ -17,16 +17,16 @@
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 2</h1>
-            <p>Los ácidos nucleicos están compuestos por:</p>
+            <p>LOS CROMOSOMAS SON LARGAS CADENAS DE ADN, LAS MISMAS QUE ESTÁN ASOCIADAS A:</p>
             <div class="team-container">
                 <div>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">Carbohidratos, grupo fosfato y proteínas</label><br>
+                        <label for="opcion_a">ENZIMAS</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">Bases púricas, azúcar y carbohidratos</label><br>
+                        <label for="opcion_b">LÍPIDOS </label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">Bases nitrogenadas, azúcares y grupo fosfato</label><br><br>
+                        <label for="opcion_c">PROTEÍNAS</label><br><br>
                     </form>
                 </div>
             </div>
@@ -90,18 +90,18 @@ document.getElementById("startButton").addEventListener("click", function () {
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             if (!selectedOption) {
                 var message = document.getElementById("message");
-                message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                message.textContent = "Tiempo agotado.";
                 message.classList.add("error");
                 // Capturar la respuesta incorrecta en localStorage
                 var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                 if (selectedIncorrectOption) {
-                    localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                    localStorage.setItem("respuesta_vacia_pregunta1a2", selectedIncorrectOption.value);
                 } else {
                     // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                    localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                    localStorage.setItem("respuesta_vacia_pregunta1a2", "vacio");
                 }
                 // Recargar la página multiple_choice.html
-                alert("Tiempo agotado.");
+                window.location.href = "../../multiple_choice.html";
             }
         }
     }, 1000); // 1 segundo en milisegundos

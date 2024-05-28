@@ -17,16 +17,16 @@
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 2</h1>
-            <p>Aquellos agentes externos o internos que causan una respuesta por parte de los seres vivos, se denominan:</p>
+            <p>EN QUÉ FECHA NACE EL ECUADOR COMO REPÚBLICA</p>
             <div class="team-container">
                 <div>
                     <form id="formB">
                         <input type="radio" id="opcion_d" name="respuesta" value="A">
-                        <label for="opcion_d">Transmisores</label><br>
+                        <label for="opcion_d">13 DE JUNIO DE 1832</label><br>
                         <input type="radio" id="opcion_e" name="respuesta" value="B">
-                        <label for="opcion_e">Estímulos</label><br>
+                        <label for="opcion_e">13 DE MAYO DE 1830</label><br>
                         <input type="radio" id="opcion_f" name="respuesta" value="C">
-                        <label for="opcion_f">Receptores</label><br><br>
+                        <label for="opcion_f">13 DE JULIO 1830</label><br><br>
                     </form>
                 </div>
             </div>
@@ -73,7 +73,7 @@
         var timerInterval;
 
 document.getElementById("startButton").addEventListener("click", function () {
-    var secondsLeft = 30;
+    var secondsLeft = 3;
     var totalTime = secondsLeft;
     var timerElement = document.getElementById("timer");
     var loaderElement = document.getElementById("loader");
@@ -92,22 +92,22 @@ document.getElementById("startButton").addEventListener("click", function () {
 
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            var form = document.getElementById("formA");
+            var form = document.getElementById("formB");
             var selectedOption = form.querySelector('input[name="respuesta"]:checked');
             if (!selectedOption) {
                 var message = document.getElementById("message");
-                message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                message.textContent = "Tiempo agotado.";
                 message.classList.add("error");
                 // Capturar la respuesta incorrecta en localStorage
                 var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                 if (selectedIncorrectOption) {
-                    localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                    localStorage.setItem("respuesta_vacia_pregunta1b2", selectedIncorrectOption.value);
                 } else {
                     // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                    localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                    localStorage.setItem("respuesta_vacia_pregunta1b2", "vacio");
                 }
                 // Recargar la página multiple_choice.html
-                alert("Tiempo agotado.");
+                window.location.href = "../../multiple_choice.html";
             }
         }
     }, 1000); // 1 segundo en milisegundos

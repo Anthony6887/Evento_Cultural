@@ -16,16 +16,16 @@
             <div id="loader" class="loader"></div>
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
-            <h1>Pregunta 4</h1>
-            <p>El Cantar de gesta es un  subgénero del género épico que narra las hazañas de un héroe cuyas virtudes manifiestan modelos para un pueblo.</p>
+            <h1>Pregunta 1</h1>
+            <p>EL POEMA XX FUE ESCRITO POR GABRIELA MISTRAL</p>
             <div class="team-container">
                 <div>
-                    <h2>Equipo A</h2>
+                    <h2>Equipo B</h2>
                     <form id="formA">
-                        <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">Verdadero</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">Falso</label><br>
+                        <label for="opcion_b">Verdadero</label><br>
+                        <input type="radio" id="opcion_a" name="respuesta" value="A">
+                        <label for="opcion_A">Falso</label><br>
 
                     </form>
                 </div>
@@ -76,7 +76,7 @@
         var timerInterval;
 
         document.getElementById("startButton").addEventListener("click", function () {
-            var secondsLeft = 30;
+            var secondsLeft = 3;
             var totalTime = secondsLeft;
             var timerElement = document.getElementById("timer");
             var loaderElement = document.getElementById("loader");
@@ -104,13 +104,13 @@
                         // Capturar la respuesta incorrecta en localStorage
                         var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                         if (selectedIncorrectOption) {
-                            localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                            localStorage.setItem("respuesta_vacia_pregunta1a4v", selectedIncorrectOption.value);
                         } else {
                             // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                            localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                            localStorage.setItem("respuesta_vacia_pregunta1a4v", "vacio");
                         }
                         // Recargar la página multiple_choice.html
-                        alert("Tiempo agotado.");
+                        window.location.href = "../../verdadero_falso.html";
                     }
                 }
             }, 1000); // 1 segundo en milisegundos

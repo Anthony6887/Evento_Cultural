@@ -17,16 +17,16 @@
             <br>
             <button id="startButton" class="start-button"><i class="fas fa-play"></i> Iniciar</button>
             <h1>Pregunta 4</h1>
-            <p>EL NOMBRE PELILEO PROVIENE DE LA LENGUA KICHUA QUE SIGNIFICA</p>
+            <p>¿EN QUÉ PARTE DEL ÁTOMO SE ENCUENTRA LA MAYOR PARTE DE SU MASA?</p>
             <div class="team-container">
                 <div>
                     <form id="formA">
                         <input type="radio" id="opcion_a" name="respuesta" value="A">
-                        <label for="opcion_a">CACIQUE PODEROSO</label><br>
+                        <label for="opcion_a">NÚCLEO</label><br>
                         <input type="radio" id="opcion_b" name="respuesta" value="B">
-                        <label for="opcion_b">LAGUNA ESPESA</label><br>
+                        <label for="opcion_b">CORTEZA</label><br>
                         <input type="radio" id="opcion_c" name="respuesta" value="C">
-                        <label for="opcion_c">FUERTE COMO LA ROCA</label><br><br>
+                        <label for="opcion_c">NUBE DE ELECTRONES</label><br><br> 
                     </form>
                 </div>
             </div>
@@ -66,7 +66,7 @@
         var timerInterval;
 
         document.getElementById("startButton").addEventListener("click", function () {
-            var secondsLeft = 30;
+            var secondsLeft = 3;
             var totalTime = secondsLeft;
             var timerElement = document.getElementById("timer");
             var loaderElement = document.getElementById("loader");
@@ -89,18 +89,18 @@
                     var selectedOption = form.querySelector('input[name="respuesta"]:checked');
                     if (!selectedOption) {
                         var message = document.getElementById("message");
-                        message.textContent = "Tiempo agotado. Respuesta incorrecta.";
+                        message.textContent = "Tiempo agotado.";
                         message.classList.add("error");
                         // Capturar la respuesta incorrecta en localStorage
                         var selectedIncorrectOption = form.querySelector('input[name="respuesta"]:checked');
                         if (selectedIncorrectOption) {
-                            localStorage.setItem("respuesta_vacia_pregunta1a", selectedIncorrectOption.value);
+                            localStorage.setItem("respuesta_vacia_pregunta1a4", selectedIncorrectOption.value);
                         } else {
                             // Si no se selecciona ninguna opción, guardar como respuesta incorrecta vacía
-                            localStorage.setItem("respuesta_vacia_pregunta1a", "");
+                            localStorage.setItem("respuesta_vacia_pregunta1a4", "vacio");
                         }
                         // Recargar la página multiple_choice.html
-                        alert("Tiempo agotado.");
+                        window.location.href = "../../multiple_choice.html";
                     }
                 }
             }, 1000); // 1 segundo en milisegundos
