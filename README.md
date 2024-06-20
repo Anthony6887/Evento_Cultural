@@ -7,8 +7,6 @@ Bienvenido al repositorio de la aplicación de concurso intercolegial. Esta apli
 -   [Instalación](#instalaci%C3%B3n)
 -   [Uso](#uso)
 -   [Estructura del Proyecto](#estructura-del-proyecto)
--   [Contribución](#contribuci%C3%B3n)
--   [Licencia](#licencia)
 
 ## Descripción General
 
