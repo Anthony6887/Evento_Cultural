@@ -23,16 +23,12 @@ Para instalar y ejecutar esta aplicación en tu entorno local, sigue estos pasos
 1.  Clona este repositorio en tu máquina local.
     
     bash
-    
-    Copiar código
-    
+        
     `git clone https://github.com/Anthony6887/Evento_Cultural.git` 
     
 2.  Navega al directorio del proyecto.
     
     bash
-    
-    Copiar código
     
     `cd Evento_Cultural` 
       
@@ -42,8 +38,6 @@ Para instalar y ejecutar esta aplicación en tu entorno local, sigue estos pasos
 Para iniciar la aplicación, utiliza el siguiente comando:
 
 bash
-
-Copiar código
 
 `Open with Live Server` 
 
@@ -67,10 +61,6 @@ Este módulo presenta preguntas más complejas y proporciona pistas para ayudar 
 ## Estructura del Proyecto
 
 La estructura del proyecto es la siguiente:
-
-csharp
-
-Copiar código
 
 `concurso-intercolegial/
 │
